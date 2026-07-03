@@ -14,11 +14,23 @@ const urls: LinkTarget[] = [
 ];
 
 const unique = [...new Map(urls.map((item) => [normalizeUrl(item.url), item])).values()];
-const concurrency = Number.parseInt(process.env.LINK_CHECK_CONCURRENCY ?? "8", 10);
-const timeoutMs = Number.parseInt(process.env.LINK_CHECK_TIMEOUT_MS ?? "12000", 10);
-const retries = Number.parseInt(process.env.LINK_CHECK_RETRIES ?? "1", 10);
+const concurrency = readIntegerEnv("LINK_CHECK_CONCURRENCY", 8, 1);
+const timeoutMs = readIntegerEnv("LINK_CHECK_TIMEOUT_MS", 12000, 1);
+const retries = readIntegerEnv("LINK_CHECK_RETRIES", 1, 0);
 const failures: string[] = [];
 let cursor = 0;
+
+function readIntegerEnv(name: string, defaultValue: number, min: number): number {
+  const raw = process.env[name];
+  if (raw === undefined || raw === "") return defaultValue;
+
+  const value = Number(raw);
+  if (!Number.isInteger(value) || value < min) {
+    throw new Error(`${name} must be an integer >= ${min}`);
+  }
+
+  return value;
+}
 
 async function request(url: string, method: "HEAD" | "GET", signal: AbortSignal): Promise<Response> {
   return fetch(url, {

@@ -32,6 +32,20 @@ function isNonEmptyStringArray(value: unknown): value is string[] {
   return isStringArray(value) && value.length > 0;
 }
 
+function hasLineBreak(value: string): boolean {
+  return /[\r\n]/.test(value);
+}
+
+function validateSingleLine(value: unknown, label: string, line: number): void {
+  if (typeof value === "string" && hasLineBreak(value)) {
+    fail(`${label} must be a single line`, line);
+  }
+}
+
+function isNonEmptySingleLineStringArray(value: unknown): value is string[] {
+  return isNonEmptyStringArray(value) && value.every((item) => !hasLineBreak(item));
+}
+
 function lineForYamlField(field: string, value?: unknown): number {
   const lines = dataSource.split(/\r?\n/);
   const valueText = ["boolean", "number", "string"].includes(typeof value) ? String(value) : undefined;
@@ -134,6 +148,8 @@ const typedCatalog = (isRecord(catalog) ? catalog : {}) as Partial<Catalog>;
 for (const field of ["name", "title", "description", "generatedFrom"] as const) {
   if (!isNonEmptyString(typedCatalog[field])) {
     fail(`catalog.${field} is required`, lineForYamlField(field));
+  } else {
+    validateSingleLine(typedCatalog[field], `catalog.${field}`, lineForYamlField(field));
   }
 }
 if (!Array.isArray(typedCatalog.categories) || typedCatalog.categories.length === 0) {
@@ -156,8 +172,10 @@ for (const group of Array.isArray(qqGroups) ? qqGroups : []) {
   const label = isNonEmptyString(group.name) ? group.name : "<unknown qq group>";
   const line = lineForYamlField("name", group.name);
   if (!isNonEmptyString(group.name)) fail(`${label}: name is required`, line);
+  validateSingleLine(group.name, `${label}: name`, line);
   validateHttpUrl(group.url, label, lineForYamlField("url", group.url));
   if (!isNonEmptyString(group.note)) fail(`${label}: note is required`, lineForYamlField("note", group.note));
+  validateSingleLine(group.note, `${label}: note`, lineForYamlField("note", group.note));
 }
 
 const categoryIds = new Set<string>();
@@ -186,6 +204,7 @@ for (const category of Array.isArray(typedCatalog.categories) ? typedCatalog.cat
   } else if (categoryNames.has(categoryName)) {
     fail(`duplicate category name "${categoryName}"`, lineForYamlField("name", categoryName));
   } else {
+    validateSingleLine(categoryName, `category "${categoryIdText}" name`, lineForYamlField("name", categoryName));
     categoryNames.add(categoryName);
   }
 
@@ -233,6 +252,7 @@ for (const category of Array.isArray(typedCatalog.categories) ? typedCatalog.cat
     } else if (sectionNames.has(sectionName)) {
       fail(`duplicate section name "${categoryIdText}/${sectionName}"`, lineForYamlField("name", sectionName));
     } else {
+      validateSingleLine(sectionName, `section "${categoryIdText}/${sectionIdText}" name`, lineForYamlField("name", sectionName));
       sectionNames.add(sectionName);
     }
 
@@ -292,14 +312,22 @@ for (const resource of resources) {
     resourceIds.add(resource.id);
   }
 
-  if (!isNonEmptyString(resource.title)) fail(`${label}: title is required`, line);
+  if (!isNonEmptyString(resource.title)) {
+    fail(`${label}: title is required`, line);
+  } else {
+    validateSingleLine(resource.title, `${label}: title`, line);
+  }
   if (typeof resource.description !== "string") {
     fail(`${label}: description must be a string`, line);
   } else if (!resource.description && resource.categoryId !== "featured") {
     fail(`${label}: description is required`, line);
+  } else {
+    validateSingleLine(resource.description, `${label}: description`, line);
   }
   if (resource.note !== undefined && typeof resource.note !== "string") {
     fail(`${label}: note must be a string`, line);
+  } else {
+    validateSingleLine(resource.note, `${label}: note`, line);
   }
 
   const validUrl = validateHttpUrl(resource.url, label, line);
@@ -315,14 +343,14 @@ for (const resource of resources) {
     fail(`${label}: metadata is required`, line);
     continue;
   }
-  if (!isNonEmptyStringArray(metadata.language)) {
-    fail(`${label}: metadata.language must be a non-empty string array`, line);
+  if (!isNonEmptySingleLineStringArray(metadata.language)) {
+    fail(`${label}: metadata.language must be a non-empty single-line string array`, line);
   }
   if (!isNonEmptyString(metadata.difficulty) || !DIFFICULTIES.has(metadata.difficulty)) {
     fail(`${label}: metadata.difficulty is invalid`, line);
   }
-  if (!isNonEmptyStringArray(metadata.topics)) {
-    fail(`${label}: metadata.topics must be a non-empty string array`, line);
+  if (!isNonEmptySingleLineStringArray(metadata.topics)) {
+    fail(`${label}: metadata.topics must be a non-empty single-line string array`, line);
   }
 }
 
