@@ -4,6 +4,13 @@ import { DATA_FILE, type Catalog, type FlattenedResource, type Resource, normali
 
 const DIFFICULTIES = new Set(["beginner", "intermediate", "advanced", "unknown"]);
 const ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
+const CATALOG_KEYS = new Set(["name", "title", "description", "generatedFrom", "duplicatePolicy", "qqGroups", "categories"]);
+const DUPLICATE_POLICY_KEYS = new Set(["allowCategoryIds"]);
+const QQ_GROUP_KEYS = new Set(["name", "url", "note"]);
+const CATEGORY_KEYS = new Set(["id", "name", "resources", "sections"]);
+const SECTION_KEYS = new Set(["id", "name", "resources"]);
+const RESOURCE_KEYS = new Set(["id", "title", "url", "description", "note", "metadata"]);
+const METADATA_KEYS = new Set(["language", "difficulty", "topics"]);
 
 const dataSource = await readFile(DATA_FILE, "utf8");
 const errors: ValidationError[] = [];
@@ -76,6 +83,14 @@ function fail(message: string, line = 1): void {
   errors.push({ message, line });
 }
 
+function validateAllowedKeys(record: UnknownRecord, allowedKeys: Set<string>, label: string): void {
+  for (const key of Object.keys(record)) {
+    if (!allowedKeys.has(key)) {
+      fail(`${label} has unknown field "${key}"`, lineForYamlField(key));
+    }
+  }
+}
+
 try {
   catalog = parse(dataSource) as unknown;
 } catch (error) {
@@ -126,6 +141,7 @@ function collectResources({
       fail(`resource in "${sectionId ? `${categoryId}/${sectionId}` : categoryId}" must be an object`);
       continue;
     }
+    validateAllowedKeys(resource, RESOURCE_KEYS, "resource");
 
     rows.push({
       ...(resource as unknown as Resource),
@@ -141,6 +157,8 @@ function collectResources({
 
 if (!isRecord(catalog)) {
   fail("catalog must be a YAML object");
+} else {
+  validateAllowedKeys(catalog, CATALOG_KEYS, "catalog");
 }
 
 const typedCatalog = (isRecord(catalog) ? catalog : {}) as Partial<Catalog>;
@@ -168,6 +186,7 @@ for (const group of Array.isArray(qqGroups) ? qqGroups : []) {
     fail("qq group must be an object", lineForYamlField("qqGroups"));
     continue;
   }
+  validateAllowedKeys(group, QQ_GROUP_KEYS, "qq group");
 
   const label = isNonEmptyString(group.name) ? group.name : "<unknown qq group>";
   const line = lineForYamlField("name", group.name);
@@ -185,6 +204,7 @@ for (const category of Array.isArray(typedCatalog.categories) ? typedCatalog.cat
     fail("category must be an object", lineForYamlField("categories"));
     continue;
   }
+  validateAllowedKeys(category, CATEGORY_KEYS, "category");
 
   const categoryId = category.id;
   const categoryName = category.name;
@@ -233,6 +253,7 @@ for (const category of Array.isArray(typedCatalog.categories) ? typedCatalog.cat
       fail(`section in "${categoryIdText}" must be an object`, lineForYamlField("sections"));
       continue;
     }
+    validateAllowedKeys(section, SECTION_KEYS, `section "${categoryIdText}"`);
 
     const sectionId = section.id;
     const sectionName = section.name;
@@ -279,6 +300,8 @@ const urls = new Map<string, FlattenedResource[]>();
 const duplicatePolicy = typedCatalog.duplicatePolicy;
 if (duplicatePolicy !== undefined && !isRecord(duplicatePolicy)) {
   fail("catalog.duplicatePolicy must be an object", lineForYamlField("duplicatePolicy"));
+} else if (isRecord(duplicatePolicy)) {
+  validateAllowedKeys(duplicatePolicy, DUPLICATE_POLICY_KEYS, "catalog.duplicatePolicy");
 }
 
 const allowCategoryIds = isRecord(duplicatePolicy) ? duplicatePolicy.allowCategoryIds : undefined;
@@ -343,6 +366,7 @@ for (const resource of resources) {
     fail(`${label}: metadata is required`, line);
     continue;
   }
+  validateAllowedKeys(metadata, METADATA_KEYS, `${label}: metadata`);
   if (!isNonEmptySingleLineStringArray(metadata.language)) {
     fail(`${label}: metadata.language must be a non-empty single-line string array`, line);
   }
