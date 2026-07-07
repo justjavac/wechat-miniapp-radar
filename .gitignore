@@ -4,6 +4,7 @@ node_modules/
 .playwright-cli/
 out/
 .vercel/
+docs/
 
 *.log
 tsconfig.tsbuildinfo

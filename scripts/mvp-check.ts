@@ -33,14 +33,6 @@ async function readJson<T>(file: string): Promise<T | null> {
   }
 }
 
-async function readText(file: string): Promise<string | null> {
-  try {
-    return await readFile(file, "utf8");
-  } catch {
-    return null;
-  }
-}
-
 function checkFile(name: string, file: string) {
   if (existsSync(file)) pass(name, `${file} exists.`);
   else record(name, "fail", `${file} is missing.`);
@@ -176,16 +168,6 @@ for (const path of ["/api/cron/enrich", "/api/cron/weekly"]) {
   const cron = vercel?.crons?.find((item) => item.path === path);
   record(`vercel-cron:${path}`, cron ? "pass" : "fail", cron ? `${path} scheduled as ${cron.schedule}.` : `${path} is missing.`);
 }
-
-const implementationPlan = await readText("docs/miniprogram-radar-master-implementation-plan.md");
-const implementationTracker = await readText("docs/miniprogram-radar-implementation-tracker.md");
-record(
-  "docs:implementation-status",
-  implementationPlan?.includes("当前交付状态") && implementationTracker?.includes("当前问题清单") && implementationTracker.includes("下一步执行清单") ? "pass" : "warn",
-  implementationPlan?.includes("当前交付状态") && implementationTracker?.includes("当前问题清单") && implementationTracker.includes("下一步执行清单")
-    ? "Implementation status, issues, and next steps are documented."
-    : "Implementation status, issue tracking, or next steps are missing."
-);
 
 checkProductionUrl();
 checkEnv("DATABASE_URL");
