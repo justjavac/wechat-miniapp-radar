@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Bot, Radar } from "lucide-react";
+import { ArrowRight, Bot, Radar, ScanSearch } from "lucide-react";
 import { RadarExplorer } from "@/components/radar-explorer";
 import { StatStrip } from "@/components/stat-strip";
 import { buttonVariants } from "@/components/ui/button";
@@ -13,16 +13,19 @@ export default async function HomePage() {
 
   return (
     <div className="space-y-8">
-      <section className="grid gap-6 lg:grid-cols-[minmax(0,1.25fr)_minmax(320px,0.75fr)] lg:items-stretch">
-        <div className="space-y-5">
-          <div className="inline-flex min-h-8 items-center gap-2 rounded-md border border-border bg-surface px-3 text-xs font-semibold text-muted-foreground">
+      <section className="hero-field relative overflow-hidden rounded-lg border border-border px-4 py-5 shadow-radar sm:px-6 sm:py-7 lg:grid lg:grid-cols-[minmax(0,1.05fr)_minmax(360px,0.95fr)] lg:gap-8 lg:p-8 lg:items-center">
+        <div className="space-y-6">
+          <div className="inline-flex min-h-8 items-center gap-2 rounded-md border border-border bg-surface/80 px-3 text-xs font-semibold text-muted-foreground">
             <Radar aria-hidden="true" className="h-4 w-4 text-primary" />
             AI 驱动的小程序生态选型与风险评估工具
           </div>
           <div className="max-w-3xl">
-            <h1 className="text-4xl font-black leading-tight text-foreground sm:text-5xl">小程序雷达</h1>
+            <h1 className="text-4xl font-black leading-tight text-foreground sm:text-5xl">
+              小程序雷达
+              <span className="mt-2 block text-2xl font-black text-primary sm:text-3xl">把链接清单变成技术判断</span>
+            </h1>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              把 awesome 列表升级为可筛选、可评估、可对比的生态情报工具。先基于现有资源库给出推荐状态、风险等级、维护状态和替代方案。
+              面向小程序框架、组件库、SDK 和工程工具，给出推荐状态、风险等级、维护状态、替代方案和证据来源。
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -35,24 +38,40 @@ export default async function HomePage() {
               选型顾问
             </Link>
           </div>
-        </div>
-
-        <div className="radar-grid rounded-lg border border-border p-5 shadow-radar">
-          <div className="border-b border-border pb-4">
-            <p className="text-xs font-semibold text-muted-foreground">Radar signal</p>
-            <h2 className="mt-2 text-2xl font-bold">从链接清单到技术判断</h2>
-          </div>
-          <div className="mt-4 grid gap-3 text-sm">
+          <div className="grid gap-4 border-t border-border pt-5 sm:grid-cols-3">
             {[
-              ["推荐", "适合新项目优先评估"],
-              ["需评估", "需要结合团队和场景验证"],
-              ["不建议", "存在停维或迁移风险"]
-            ].map(([label, copy]) => (
-              <div className="grid grid-cols-[72px_minmax(0,1fr)] items-center gap-3 rounded-md border border-border bg-surface/90 p-3" key={label}>
-                <span className="font-mono text-sm font-bold text-primary">{label}</span>
-                <span className="text-muted-foreground">{copy}</span>
+              ["资源", stats.total],
+              ["推荐", stats.adopt],
+              ["高风险", stats.highRisk]
+            ].map(([label, value]) => (
+              <div className="hero-metric" key={label}>
+                <p className="text-xs font-semibold text-muted-foreground">{label}</p>
+                <p className="mt-1 font-mono text-2xl font-black text-foreground">{value}</p>
               </div>
             ))}
+          </div>
+        </div>
+
+        <div className="mt-6 lg:mt-0">
+          <div className="hero-radar" aria-label="Radar 信号概览">
+            <div className="hero-sweep" aria-hidden="true" />
+            <div className="hero-node">
+              <ScanSearch aria-hidden="true" className="h-8 w-8" />
+            </div>
+            <span className="signal-chip signal-chip-one">推荐方案</span>
+            <span className="signal-chip signal-chip-two" data-tone="warn">
+              需评估
+            </span>
+            <span className="signal-chip signal-chip-three" data-tone="danger">
+              迁移风险
+            </span>
+            <div className="absolute bottom-4 left-4 right-4 rounded-md border border-border bg-surface/90 p-4 backdrop-blur">
+              <p className="text-xs font-semibold text-muted-foreground">Radar signal</p>
+              <h2 className="mt-2 text-xl font-bold">从数据、证据到选型建议</h2>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                每个资源都关联状态、风险、适用场景和替代方案，方便快速定位可采用与需迁移的项目。
+              </p>
+            </div>
           </div>
         </div>
       </section>

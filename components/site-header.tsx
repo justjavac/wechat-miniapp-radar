@@ -1,14 +1,15 @@
 import Link from "next/link";
 import { Activity, ClipboardCheck, GitCompareArrows, Newspaper, Radar, Search, ShieldCheck } from "lucide-react";
 import { QuickSearch } from "@/components/quick-search";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navItems = [
-  { href: "/radar", label: "Radar", icon: Radar },
-  { href: "/compare", label: "Compare", icon: GitCompareArrows },
-  { href: "/advisor", label: "Advisor", icon: Search },
-  { href: "/doctor", label: "Doctor", icon: ClipboardCheck },
-  { href: "/weekly", label: "Weekly", icon: Newspaper },
-  { href: "/admin", label: "Admin", icon: ShieldCheck }
+  { href: "/radar", label: "雷达", title: "Radar", icon: Radar },
+  { href: "/compare", label: "对比", title: "Compare", icon: GitCompareArrows },
+  { href: "/advisor", label: "顾问", title: "Advisor", icon: Search },
+  { href: "/doctor", label: "体检", title: "Doctor", icon: ClipboardCheck },
+  { href: "/weekly", label: "周报", title: "Weekly", icon: Newspaper },
+  { href: "/admin", label: "管理", title: "Admin", icon: ShieldCheck }
 ];
 
 export function SiteHeader() {
@@ -29,13 +30,14 @@ export function SiteHeader() {
         </Link>
         <div className="flex min-w-0 items-center gap-2">
           <QuickSearch />
+          <ThemeToggle />
           <nav aria-label="主导航" className="flex items-center gap-1 overflow-x-auto">
             {navItems.map((item) => (
               <Link
                 className="focus-ring inline-flex min-h-11 items-center gap-2 rounded-md px-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                 href={item.href}
                 key={item.href}
-                title={item.label}
+                title={item.title}
                 aria-label={item.label}
               >
                 <item.icon aria-hidden="true" className="h-4 w-4 shrink-0" />
