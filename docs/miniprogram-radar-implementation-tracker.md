@@ -72,6 +72,7 @@
 | 2026-07-07 | Vercel Preview MVP 校验 | `npm run mvp:check -- https://wechat-miniapp-radar-git-feature-wechat-miniapp-radar-justjavac.vercel.app` | 通过 | 49 pass / 10 warn / 0 fail；真实 AI 仍暂缓 |
 | 2026-07-07 | Vercel Preview 预检 | `npm run vercel:preflight -- https://wechat-miniapp-radar-git-feature-wechat-miniapp-radar-justjavac.vercel.app` | 通过 | 10 pass / 11 warn / 0 fail；warning 不阻断 Preview |
 | 2026-07-07 | UI/UX 预上线优化 | `npm run check`、`npm run build`、`npm run deploy:check` | 通过 | 使用 `ui-ux-pro-max` 和 `karpathy-coding-guidelines`；优化快速搜索加载/错误/焦点反馈，内部路由统一使用 `next/link` |
+| 2026-07-07 | 交互与性能补强 | `npm run check`、`npm run build`、Playwright 快速流验证 | 通过 | 使用 `ui-ux-pro-max`、`vercel-react-best-practices`、`karpathy-coding-guidelines` 和 `playwright`；补充搜索弹窗焦点陷阱、筛选按钮语义、结果计数播报、表单加载反馈和 Radar 输入 deferred filtering；本地 Vercel Analytics/Speed Insights 404 为预期 |
 | 2026-07-07 | PR 检查 | PR #360 `links`、`validate`、Vercel Preview | 通过 | PR 仍为 Draft，等待人工确认 Preview 后再合并 |
 
 ## 6. 下一步执行清单

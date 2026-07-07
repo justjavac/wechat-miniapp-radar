@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, ClipboardCheck, ExternalLink, Send } from "lucide-react";
+import { ArrowUpRight, ClipboardCheck, ExternalLink, LoaderCircle, Send } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -210,9 +210,9 @@ export function DoctorForm() {
             上传报告快照到 Blob
           </label>
 
-          {error ? <p className="text-sm font-medium text-danger">{error}</p> : null}
-          <Button disabled={loading} onClick={submit} type="button">
-            <Send aria-hidden="true" className="h-4 w-4" />
+          {error ? <p className="text-sm font-medium text-danger" role="alert">{error}</p> : null}
+          <Button disabled={loading} onClick={submit} type="button" aria-busy={loading}>
+            {loading ? <LoaderCircle aria-hidden="true" className="h-4 w-4 animate-spin" /> : <Send aria-hidden="true" className="h-4 w-4" />}
             {loading ? "体检中" : "开始体检"}
           </Button>
         </div>

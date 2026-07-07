@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type MouseEvent as ReactMouseEvent } from "react";
 import { CornerDownRight, Search, X } from "lucide-react";
 import { statusLabels, riskLabels } from "@/components/resource-labels";
 import { Button } from "@/components/ui/button";
@@ -40,28 +40,69 @@ export function QuickSearch() {
   const [loading, setLoading] = useState(false);
   const [searchError, setSearchError] = useState("");
   const triggerRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
   const trimmedQuery = query.trim();
 
-  const closeSearch = useCallback(() => {
+  const openSearch = useCallback(() => {
+    previousFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    setOpen(true);
+  }, []);
+
+  const closeSearch = useCallback((restoreFocus = true) => {
     setOpen(false);
     setLoading(false);
     setSearchError("");
-    triggerRef.current?.focus();
+    if (!restoreFocus) return;
+    window.setTimeout(() => {
+      const previousFocus = previousFocusRef.current;
+      if (previousFocus && document.contains(previousFocus)) {
+        previousFocus.focus();
+        return;
+      }
+      triggerRef.current?.focus();
+    }, 0);
   }, []);
+
+  function onBackdropClick(event: ReactMouseEvent<HTMLDivElement>) {
+    if (event.target === event.currentTarget) closeSearch();
+  }
+
+  function onDialogKeyDown(event: ReactKeyboardEvent<HTMLDivElement>) {
+    if (event.key !== "Tab") return;
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    const focusable = Array.from(
+      dialog.querySelectorAll<HTMLElement>("a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex='-1'])")
+    ).filter((element) => !element.hasAttribute("disabled") && element.getAttribute("aria-hidden") !== "true");
+    if (focusable.length === 0) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+      return;
+    }
+    if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
         event.preventDefault();
-        setOpen(true);
+        openSearch();
       }
       if (event.key === "Escape" && open) closeSearch();
     }
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [closeSearch, open]);
+  }, [closeSearch, open, openSearch]);
 
   useEffect(() => {
     if (!open) return;
@@ -80,6 +121,7 @@ export function QuickSearch() {
     const controller = new AbortController();
     setLoading(true);
     setSearchError("");
+    setResources([]);
     const timeout = window.setTimeout(async () => {
       const params = new URLSearchParams({ q: trimmedQuery, limit: "6" });
       const response = await fetch(`/api/resources?${params.toString()}`, { signal: controller.signal }).catch(() => null);
@@ -112,15 +154,23 @@ export function QuickSearch() {
 
   return (
     <>
-      <Button aria-label="快速搜索" onClick={() => setOpen(true)} ref={triggerRef} size="sm" type="button" variant="secondary">
+      <Button aria-label="快速搜索" onClick={openSearch} ref={triggerRef} size="sm" type="button" variant="secondary">
         <Search aria-hidden="true" className="h-4 w-4" />
         <span className="hidden md:inline">快速搜索</span>
         <span className="hidden rounded border border-border px-1.5 py-0.5 font-mono text-[11px] text-muted-foreground lg:inline">Ctrl K</span>
       </Button>
 
       {open ? (
-        <div className="fixed inset-0 z-50 bg-background/75 p-4 backdrop-blur-sm" role="presentation">
-          <div className="mx-auto mt-16 max-w-2xl overflow-hidden rounded-lg border border-border bg-surface shadow-radar" role="dialog" aria-modal="true" aria-label="快速搜索">
+        <div className="fixed inset-0 z-50 bg-background/75 p-4 backdrop-blur-sm" onClick={onBackdropClick} role="presentation">
+          <div
+            className="mx-auto mt-16 max-w-2xl overflow-hidden rounded-lg border border-border bg-surface shadow-radar"
+            ref={dialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="快速搜索"
+            aria-busy={loading}
+            onKeyDown={onDialogKeyDown}
+          >
             <div className="flex items-center gap-2 border-b border-border px-4 py-3">
               <Search aria-hidden="true" className="h-5 w-5 text-muted-foreground" />
               <input
@@ -133,7 +183,7 @@ export function QuickSearch() {
                 aria-label="搜索资源或命令"
                 aria-describedby="quick-search-status"
               />
-              <button className="focus-ring min-h-11 min-w-11 rounded-md p-2 text-muted-foreground hover:bg-muted hover:text-foreground" onClick={closeSearch} type="button" aria-label="关闭快速搜索">
+              <button className="focus-ring min-h-11 min-w-11 rounded-md p-2 text-muted-foreground hover:bg-muted hover:text-foreground" onClick={() => closeSearch()} type="button" aria-label="关闭快速搜索">
                 <X aria-hidden="true" className="h-5 w-5" />
               </button>
             </div>
@@ -152,7 +202,7 @@ export function QuickSearch() {
                       className="focus-ring grid gap-1 rounded-md px-3 py-2 hover:bg-muted"
                       href={`/resources/${resource.id}`}
                       key={resource.id}
-                      onClick={closeSearch}
+                      onClick={() => closeSearch(false)}
                     >
                       <span className="font-semibold">{cleanTitle(resource.title)}</span>
                       <span className="line-clamp-2 text-xs leading-5 text-muted-foreground">{resource.description}</span>
@@ -170,7 +220,7 @@ export function QuickSearch() {
                 <p className="px-3 pb-2 text-xs font-semibold text-muted-foreground">命令</p>
                 {visibleCommands.length > 0 ? (
                   visibleCommands.map((item) => (
-                    <Link className="focus-ring flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted" href={item.href} key={item.href} onClick={closeSearch}>
+                    <Link className="focus-ring flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted" href={item.href} key={item.href} onClick={() => closeSearch(false)}>
                       <CornerDownRight aria-hidden="true" className="h-4 w-4 text-primary" />
                       <span className="min-w-0">
                         <span className="block text-sm font-semibold">{item.label}</span>

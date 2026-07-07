@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import { Download, Search, SlidersHorizontal } from "lucide-react";
 import { ResourceCard } from "@/components/resource-card";
 import { statusLabels, riskLabels, typeLabels } from "@/components/resource-labels";
@@ -72,6 +72,7 @@ function SegmentedControl<T extends string>({
             key={option.value}
             onClick={() => onChange(option.value)}
             type="button"
+            aria-pressed={value === option.value}
           >
             {option.label}
           </button>
@@ -99,6 +100,7 @@ export function RadarExplorer({
   const [risk, setRisk] = useState<RiskLevel | "all">("all");
   const [type, setType] = useState<ResourceType | "all">("all");
   const [urlReady, setUrlReady] = useState(false);
+  const deferredQuery = useDeferredValue(query);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -127,7 +129,7 @@ export function RadarExplorer({
   }, [category, query, risk, status, type, useCase]);
 
   const filtered = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
+    const normalizedQuery = deferredQuery.trim().toLowerCase();
     return resources
       .filter((resource) => {
         const haystack = `${resource.title} ${resource.description} ${resource.category} ${resource.section ?? ""} ${resource.metadata.topics.join(" ")}`.toLowerCase();
@@ -140,7 +142,7 @@ export function RadarExplorer({
         return true;
       })
       .slice(0, limit ?? resources.length);
-  }, [category, limit, query, resources, risk, status, type, useCase]);
+  }, [category, deferredQuery, limit, resources, risk, status, type, useCase]);
 
   function resetFilters() {
     setQuery("");
@@ -220,7 +222,9 @@ export function RadarExplorer({
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-sm text-muted-foreground">当前匹配 {filtered.length} 个资源</p>
+        <p className="text-sm text-muted-foreground" role="status" aria-live="polite">
+          当前匹配 {filtered.length} 个资源
+        </p>
         <div className="flex flex-wrap gap-2">
           <a className={cn(buttonVariants({ variant: "secondary", size: "sm" }))} href={exportHref("json")}>
             <Download aria-hidden="true" className="h-4 w-4" />

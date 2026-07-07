@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Bot, Send } from "lucide-react";
+import { Bot, LoaderCircle, Send } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -59,8 +59,8 @@ export function AdvisorForm() {
           value={question}
         />
         {error ? <p className="mt-2 text-sm text-danger" role="alert">{error}</p> : null}
-        <Button className="mt-4 w-full" disabled={loading} onClick={submit} type="button">
-          <Send aria-hidden="true" className="h-4 w-4" />
+        <Button className="mt-4 w-full" disabled={loading} onClick={submit} type="button" aria-busy={loading}>
+          {loading ? <LoaderCircle aria-hidden="true" className="h-4 w-4 animate-spin" /> : <Send aria-hidden="true" className="h-4 w-4" />}
           {loading ? "生成中" : "生成建议"}
         </Button>
       </section>
