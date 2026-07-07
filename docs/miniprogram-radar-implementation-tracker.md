@@ -74,6 +74,7 @@
 | 2026-07-07 | UI/UX 预上线优化 | `npm run check`、`npm run build`、`npm run deploy:check` | 通过 | 使用 `ui-ux-pro-max` 和 `karpathy-coding-guidelines`；优化快速搜索加载/错误/焦点反馈，内部路由统一使用 `next/link` |
 | 2026-07-07 | 交互与性能补强 | `npm run check`、`npm run build`、Playwright 快速流验证 | 通过 | 使用 `ui-ux-pro-max`、`vercel-react-best-practices`、`karpathy-coding-guidelines` 和 `playwright`；补充搜索弹窗焦点陷阱、筛选按钮语义、结果计数播报、表单加载反馈和 Radar 输入 deferred filtering；本地 Vercel Analytics/Speed Insights 404 为预期 |
 | 2026-07-07 | 中文导航、主题切换与首页 Hero | `npm run check`、`npm run build`、Playwright 桌面/移动端检查 | 通过 | 导航菜单改为中文，专有名词保留英文；新增明亮/黑暗主题图标切换和首屏 Radar signal 动效；本地 Vercel Analytics/Speed Insights 404 为预期 |
+| 2026-07-07 | Vercel 风格与 Hero 遮挡修正 | Edge 桌面/移动/暗色截图验证、`npm run typecheck`、`npm run build`、`npm run deploy:check` | 通过 | `Radar signal` 改为独立摘要区，不再遮挡动画；主题切换保持 header 最右；配色收敛为 Vercel 式黑白灰、细边框和低动效 |
 | 2026-07-07 | PR 检查 | PR #360 `links`、`validate`、Vercel Preview | 通过 | PR 仍为 Draft，等待人工确认 Preview 后再合并 |
 
 ## 6. 下一步执行清单

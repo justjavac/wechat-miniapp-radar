@@ -3,35 +3,35 @@
 @tailwind utilities;
 
 :root {
-  --background: 72 24% 96%;
-  --foreground: 158 24% 10%;
-  --muted: 80 18% 90%;
-  --muted-foreground: 160 9% 36%;
-  --border: 78 16% 80%;
+  --background: 0 0% 98%;
+  --foreground: 0 0% 4%;
+  --muted: 0 0% 95%;
+  --muted-foreground: 0 0% 40%;
+  --border: 0 0% 90%;
   --surface: 0 0% 100%;
-  --primary: 164 72% 20%;
+  --primary: 0 0% 4%;
   --primary-foreground: 0 0% 100%;
-  --accent: 194 82% 42%;
+  --accent: 212 100% 45%;
   --accent-foreground: 0 0% 100%;
-  --warning: 41 94% 48%;
-  --danger: 0 72% 48%;
+  --warning: 38 92% 50%;
+  --danger: 0 84% 54%;
   --font-sans: "Segoe UI", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Cascadia Mono", "SFMono-Regular", Consolas, "Liberation Mono", ui-monospace, monospace;
 }
 
 .dark {
-  --background: 166 28% 8%;
-  --foreground: 158 21% 92%;
-  --muted: 164 18% 16%;
-  --muted-foreground: 158 11% 70%;
-  --border: 166 15% 26%;
-  --surface: 166 24% 11%;
-  --primary: 159 66% 58%;
-  --primary-foreground: 166 34% 8%;
-  --accent: 194 86% 62%;
-  --accent-foreground: 194 42% 8%;
-  --warning: 41 94% 58%;
-  --danger: 0 78% 66%;
+  --background: 0 0% 0%;
+  --foreground: 0 0% 93%;
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 64%;
+  --border: 0 0% 20%;
+  --surface: 0 0% 7%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 0 0% 4%;
+  --accent: 212 100% 55%;
+  --accent-foreground: 0 0% 100%;
+  --warning: 38 92% 58%;
+  --danger: 0 84% 63%;
 }
 
 * {
@@ -47,10 +47,10 @@ body {
   min-height: 100dvh;
   margin: 0;
   background:
-    linear-gradient(90deg, rgba(15, 77, 68, 0.04) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(15, 77, 68, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.34) 1px, transparent 1px),
+    linear-gradient(0deg, hsl(var(--border) / 0.34) 1px, transparent 1px),
     hsl(var(--background));
-  background-size: 36px 36px;
+  background-size: 48px 48px;
   color: hsl(var(--foreground));
   font-family: var(--font-sans);
   letter-spacing: 0;
@@ -59,8 +59,8 @@ body {
 
 .dark body {
   background:
-    linear-gradient(90deg, rgba(94, 234, 212, 0.05) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(94, 234, 212, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.34) 1px, transparent 1px),
+    linear-gradient(0deg, hsl(var(--border) / 0.34) 1px, transparent 1px),
     hsl(var(--background));
 }
 
@@ -83,49 +83,67 @@ select {
 
 .radar-grid {
   background:
-    linear-gradient(90deg, rgba(15, 77, 68, 0.08) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(15, 77, 68, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.55) 1px, transparent 1px),
+    linear-gradient(0deg, hsl(var(--border) / 0.55) 1px, transparent 1px),
     hsl(var(--surface));
   background-size: 28px 28px;
 }
 
 .dark .radar-grid {
   background:
-    linear-gradient(90deg, rgba(94, 234, 212, 0.08) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(94, 234, 212, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.55) 1px, transparent 1px),
+    linear-gradient(0deg, hsl(var(--border) / 0.55) 1px, transparent 1px),
     hsl(var(--surface));
   background-size: 28px 28px;
 }
 
 .hero-field {
   background:
-    linear-gradient(135deg, hsl(var(--surface)) 0%, hsl(var(--background)) 62%, hsl(var(--muted)) 100%);
+    radial-gradient(circle at 76% 22%, hsl(var(--accent) / 0.08), transparent 32%),
+    linear-gradient(180deg, hsl(var(--surface)) 0%, hsl(var(--background)) 100%);
 }
 
 .hero-radar {
   position: relative;
-  min-height: 320px;
+  display: grid;
+  min-height: 390px;
+  grid-template-rows: auto minmax(260px, 1fr);
   overflow: hidden;
   border-radius: 0.5rem;
   border: 1px solid hsl(var(--border));
+  background: hsl(var(--surface));
+}
+
+.hero-radar-summary {
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid hsl(var(--border));
+  background: hsl(var(--surface) / 0.92);
+  padding: 1rem;
+}
+
+.hero-radar-stage {
+  position: relative;
+  min-height: 260px;
+  overflow: hidden;
   background:
-    linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px),
-    linear-gradient(0deg, hsl(var(--border) / 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.6) 1px, transparent 1px),
+    linear-gradient(0deg, hsl(var(--border) / 0.5) 1px, transparent 1px),
     hsl(var(--surface));
   background-size: 32px 32px;
 }
 
-.hero-radar::before,
-.hero-radar::after {
+.hero-radar-stage::before,
+.hero-radar-stage::after {
   content: "";
   position: absolute;
-  inset: 15%;
+  inset: 11%;
   border-radius: 999px;
-  border: 1px solid hsl(var(--primary) / 0.28);
+  border: 1px solid hsl(var(--foreground) / 0.18);
 }
 
-.hero-radar::after {
-  inset: 29%;
+.hero-radar-stage::after {
+  inset: 27%;
 }
 
 .hero-sweep {
@@ -136,16 +154,16 @@ select {
   width: 72%;
   transform: translate(-50%, -50%);
   border-radius: 999px;
-  background: conic-gradient(from 0deg, transparent 0deg, hsl(var(--accent) / 0.08) 34deg, hsl(var(--primary) / 0.4) 48deg, transparent 62deg);
-  animation: radar-sweep 7s linear infinite;
+  background: conic-gradient(from 0deg, transparent 0deg, hsl(var(--accent) / 0.08) 34deg, hsl(var(--foreground) / 0.28) 48deg, transparent 62deg);
+  animation: radar-sweep 8s ease-in-out infinite;
 }
 
 .hero-sweep::after {
   content: "";
   position: absolute;
   inset: 48% 49% 0 49%;
-  background: hsl(var(--primary));
-  opacity: 0.55;
+  background: hsl(var(--foreground));
+  opacity: 0.34;
   transform-origin: top;
 }
 
@@ -160,10 +178,10 @@ select {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  border: 1px solid hsl(var(--primary) / 0.45);
+  border: 1px solid hsl(var(--foreground) / 0.24);
   background: hsl(var(--surface) / 0.88);
-  color: hsl(var(--primary));
-  box-shadow: 0 0 0 8px hsl(var(--primary) / 0.08), 0 24px 50px hsl(var(--foreground) / 0.14);
+  color: hsl(var(--foreground));
+  box-shadow: 0 0 0 8px hsl(var(--foreground) / 0.04);
 }
 
 .signal-chip {
@@ -178,7 +196,7 @@ select {
   padding: 0 0.75rem;
   font-size: 0.75rem;
   font-weight: 700;
-  box-shadow: 0 14px 35px hsl(var(--foreground) / 0.08);
+  box-shadow: 0 10px 24px hsl(var(--foreground) / 0.06);
 }
 
 .signal-chip::before {
@@ -186,8 +204,8 @@ select {
   height: 0.5rem;
   width: 0.5rem;
   border-radius: 999px;
-  background: hsl(var(--primary));
-  box-shadow: 0 0 0 4px hsl(var(--primary) / 0.14);
+  background: hsl(var(--foreground));
+  box-shadow: 0 0 0 4px hsl(var(--foreground) / 0.1);
 }
 
 .signal-chip[data-tone="warn"]::before {

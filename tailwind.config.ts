@@ -24,7 +24,7 @@ const config: Config = {
         mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "Consolas", "monospace"]
       },
       boxShadow: {
-        radar: "0 20px 60px rgba(18, 40, 35, 0.08)"
+        radar: "0 16px 40px rgba(0, 0, 0, 0.06)"
       }
     }
   },

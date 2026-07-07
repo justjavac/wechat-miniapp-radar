@@ -18,9 +18,9 @@ export function SiteHeader() {
       <a className="focus-ring sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-surface focus:px-4 focus:py-2" href="#main-content">
         跳到主要内容
       </a>
-      <div className="mx-auto flex min-h-16 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex min-h-16 w-full max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
         <Link className="focus-ring flex min-h-11 items-center gap-2 rounded-md" href="/">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground">
+          <span className="flex h-9 w-9 items-center justify-center rounded-md border border-border bg-foreground text-background">
             <Activity aria-hidden="true" className="h-5 w-5" />
           </span>
           <span className="min-w-0">
@@ -28,9 +28,7 @@ export function SiteHeader() {
             <span className="hidden text-xs text-muted-foreground sm:block">MiniProgram Radar</span>
           </span>
         </Link>
-        <div className="flex min-w-0 items-center gap-2">
-          <QuickSearch />
-          <ThemeToggle />
+        <div className="flex min-w-0 flex-1 items-center justify-end gap-2">
           <nav aria-label="主导航" className="flex items-center gap-1 overflow-x-auto">
             {navItems.map((item) => (
               <Link
@@ -45,6 +43,12 @@ export function SiteHeader() {
               </Link>
             ))}
           </nav>
+          <div className="shrink-0">
+            <QuickSearch />
+          </div>
+          <div className="shrink-0">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </header>
