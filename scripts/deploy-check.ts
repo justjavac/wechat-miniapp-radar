@@ -1,5 +1,5 @@
 import { existsSync } from "node:fs";
-import { readdir, readFile } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 import { describeUpstashRedisEnvRequirement, hasUpstashRedis } from "@/lib/upstash";
 
 type CheckStatus = "pass" | "warn" | "fail";
@@ -27,14 +27,6 @@ async function readText(file: string): Promise<string | null> {
     return await readFile(file, "utf8");
   } catch {
     return null;
-  }
-}
-
-async function listFiles(dir: string): Promise<string[]> {
-  try {
-    return await readdir(dir);
-  } catch {
-    return [];
   }
 }
 
@@ -274,69 +266,14 @@ checks.push(
   )
 );
 
-const docsFiles = await listFiles("docs");
-const coreDocs = [
-  "README.md",
-  "miniprogram-radar-product.md",
-  "miniprogram-radar-master-implementation-plan.md",
-  "miniprogram-radar-vercel-production-plan.md",
-  "miniprogram-radar-implementation-tracker.md"
-];
-const missingCoreDocs = coreDocs.filter((file) => !docsFiles.includes(file));
+const gitignore = await readText(".gitignore");
 checks.push(
   result(
-    "docs:core-files",
-    missingCoreDocs.length === 0 ? "pass" : "fail",
-    missingCoreDocs.length === 0 ? "Core implementation documents are present." : `Missing core docs: ${missingCoreDocs.join(", ")}.`
-  )
-);
-
-const stalePlanDocs = docsFiles.filter((file) =>
-  [
-    "miniprogram-radar-full-implementation-plan.md",
-    "miniprogram-radar-executable-implementation-plan.md",
-    "miniprogram-radar-implementation-plan.md",
-    "miniprogram-radar-execution-plan.md",
-    "miniprogram-radar-delivery-plan.md"
-  ].includes(file)
-);
-checks.push(
-  result(
-    "docs:no-duplicate-plans",
-    stalePlanDocs.length === 0 ? "pass" : "fail",
-    stalePlanDocs.length === 0 ? "Duplicate implementation plan documents are not present." : `Remove duplicate implementation plans: ${stalePlanDocs.join(", ")}.`
-  )
-);
-
-const docsIndex = await readText("docs/README.md");
-const requiredDocIndexLinks = [
-  "./miniprogram-radar-product.md",
-  "./miniprogram-radar-master-implementation-plan.md",
-  "./miniprogram-radar-vercel-production-plan.md",
-  "./miniprogram-radar-implementation-tracker.md"
-];
-const missingDocIndexLinks = requiredDocIndexLinks.filter((link) => !docsIndex?.includes(link));
-const docsIndexHasStaleLinks = /miniprogram-radar-(full|executable|implementation|execution|delivery)-plan\.md/.test(docsIndex ?? "");
-checks.push(
-  result(
-    "docs:index-links",
-    missingDocIndexLinks.length === 0 && !docsIndexHasStaleLinks ? "pass" : "fail",
-    missingDocIndexLinks.length === 0 && !docsIndexHasStaleLinks
-      ? "Docs index points to the core product, implementation, production, and tracker documents."
-      : `Docs index is missing links or contains stale links: ${missingDocIndexLinks.join(", ") || "stale duplicate-plan link"}.`
-  )
-);
-
-const implementationTracker = await readText("docs/miniprogram-radar-implementation-tracker.md");
-const requiredTrackerSections = ["## 2. 进度总览", "## 3. 当前问题清单", "## 4. 风险清单", "## 5. 验证记录", "## 6. 下一步执行清单"];
-const missingTrackerSections = requiredTrackerSections.filter((section) => !implementationTracker?.includes(section));
-checks.push(
-  result(
-    "docs:tracker-contract",
-    missingTrackerSections.length === 0 ? "pass" : "fail",
-    missingTrackerSections.length === 0
-      ? "Implementation tracker includes progress, issues, risks, verification evidence, and next steps."
-      : `Implementation tracker is missing sections: ${missingTrackerSections.join(", ")}.`
+    "docs:local-only",
+    gitignore?.split(/\r?\n/).some((line) => line.trim() === "docs/") ? "pass" : "fail",
+    gitignore?.split(/\r?\n/).some((line) => line.trim() === "docs/")
+      ? "docs/ is ignored and kept as local-only implementation notes."
+      : "docs/ should be ignored because implementation documents are local-only."
   )
 );
 

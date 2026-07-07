@@ -141,8 +141,6 @@ function renderReadme(catalog: Catalog): string {
     "npx miniprogram-radar resources --format=json --upload --out=resources.json",
     "npx miniprogram-radar compare --ids=github-com-nervjstaro,github-com-dcloudiouni-app --out=compare.md",
     "npx miniprogram-radar score --out=score.md",
-    "npx miniprogram-radar tracker --out=tracker.md",
-    "npx miniprogram-radar tracker --json",
     "npm run weekly -- -- --no-persist",
     "npx miniprogram-radar weekly --out=weekly.md",
     "npm run weekly:test",
@@ -215,11 +213,7 @@ function renderReadme(catalog: Catalog): string {
     "- 资源数据源：[`data/resources.yaml`](data/resources.yaml)",
     "- Web 应用：[`app`](app)",
     "- API：[`public/api/resources.json`](public/api/resources.json)",
-    "- 文档索引：[`docs/README.md`](docs/README.md)",
-    "- 产品方案：[`docs/miniprogram-radar-product.md`](docs/miniprogram-radar-product.md)",
-    "- 实施总方案：[`docs/miniprogram-radar-master-implementation-plan.md`](docs/miniprogram-radar-master-implementation-plan.md)",
-    "- Vercel 生产方案：[`docs/miniprogram-radar-vercel-production-plan.md`](docs/miniprogram-radar-vercel-production-plan.md)",
-    "- 实施追踪表：[`docs/miniprogram-radar-implementation-tracker.md`](docs/miniprogram-radar-implementation-tracker.md)",
+    "- 本地实施文档：`docs/` 仅保留在本地，不纳入版本库。",
     "- 本地校验：`npm run check`",
     ""
   ];

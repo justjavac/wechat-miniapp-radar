@@ -34,6 +34,7 @@ interface VerificationRow {
 interface TrackerReport {
   checkedAt: string;
   source: string;
+  available: boolean;
   updatedAt: string | null;
   summary: {
     phases: number;
@@ -54,7 +55,7 @@ const args = process.argv.slice(2);
 const jsonOutput = args.includes("--json") || process.env.npm_config_json === "true";
 const failOnOpen = args.includes("--fail-on-open") || process.env.npm_config_fail_on_open === "true";
 const outArg = args.find((arg) => arg.startsWith("--out="));
-const trackerPath = "docs/miniprogram-radar-implementation-tracker.md";
+const trackerPath = process.env.TRACKER_PATH || "docs/miniprogram-radar-implementation-tracker.md";
 
 if (args.includes("-h") || args.includes("--help")) {
   console.log(`Usage:
@@ -149,6 +150,7 @@ function buildReport(markdown: string): TrackerReport {
   return {
     checkedAt: new Date().toISOString(),
     source: trackerPath,
+    available: true,
     updatedAt: readUpdatedAt(markdown),
     summary: {
       phases: progress.length,
@@ -166,12 +168,35 @@ function buildReport(markdown: string): TrackerReport {
   };
 }
 
+function buildUnavailableReport(): TrackerReport {
+  return {
+    checkedAt: new Date().toISOString(),
+    source: trackerPath,
+    available: false,
+    updatedAt: null,
+    summary: {
+      phases: 0,
+      completed: 0,
+      inProgress: 0,
+      pendingProduction: 0,
+      openIssues: 0,
+      risks: 0,
+      verifications: 0
+    },
+    progress: [],
+    issues: [],
+    risks: [],
+    verifications: []
+  };
+}
+
 function renderMarkdown(report: TrackerReport) {
   const openIssues = report.issues.filter((issue) => !["已关闭", "关闭", "closed"].includes(issue.status.toLowerCase()));
   const lines = [
     "# 小程序雷达实施追踪状态",
     "",
     `来源：${report.source}`,
+    `状态：${report.available ? "available" : "local docs unavailable"}`,
     `更新时间：${report.updatedAt ?? "unknown"}`,
     `检查时间：${report.checkedAt}`,
     "",
@@ -186,10 +211,12 @@ function renderMarkdown(report: TrackerReport) {
     "",
     "## 下一步",
     "",
-    ...report.progress
-      .filter((row) => row.status !== "已完成")
-      .slice(0, 5)
-      .map((row) => `- ${row.phase}：${row.nextStep}`),
+    ...(report.progress.length > 0
+      ? report.progress
+          .filter((row) => row.status !== "已完成")
+          .slice(0, 5)
+          .map((row) => `- ${row.phase}：${row.nextStep}`)
+      : ["- 本地 docs/ 未提供，跳过实施追踪。"]),
     "",
     "## 打开问题",
     "",
@@ -199,8 +226,8 @@ function renderMarkdown(report: TrackerReport) {
   return `${lines.join("\n").trim()}\n`;
 }
 
-const markdown = await readFile(trackerPath, "utf8");
-const report = buildReport(markdown);
+const markdown = await readFile(trackerPath, "utf8").catch(() => null);
+const report = markdown ? buildReport(markdown) : buildUnavailableReport();
 const output = jsonOutput ? `${JSON.stringify(report, null, 2)}\n` : renderMarkdown(report);
 
 if (outArg) {
