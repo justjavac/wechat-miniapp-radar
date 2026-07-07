@@ -1,0 +1,1186 @@
+{
+  "id": "2026-07-06",
+  "title": "小程序生态周报 2026-07-06",
+  "generatedAt": "2026-07-06T13:28:33.917Z",
+  "stats": {
+    "total": 236,
+    "adopt": 18,
+    "trial": 8,
+    "assess": 200,
+    "hold": 10,
+    "highRisk": 10,
+    "categories": 7
+  },
+  "highlights": [
+    {
+      "id": "developers-weixin-qq-com-miniprogramdesignindex-html",
+      "title": "小程序设计指南",
+      "url": "https://developers.weixin.qq.com/miniprogram/design/index.html",
+      "description": "微信小程序官方设计规范与体验指南",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "beginner",
+        "topics": [
+          "官方文档"
+        ]
+      },
+      "category": "官方文档",
+      "categoryId": "official-docs",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "docs",
+        "status": "adopt",
+        "maintainStatus": "active",
+        "riskLevel": "low",
+        "summary": "微信小程序官方设计规范与体验指南。作为文档资源，当前适合优先评估。",
+        "useCases": [
+          "官方文档"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [],
+        "evidence": [
+          {
+            "type": "docs",
+            "label": "官方文档",
+            "url": "https://developers.weixin.qq.com/miniprogram/design/index.html"
+          }
+        ]
+      }
+    },
+    {
+      "id": "developers-weixin-qq-com-miniprogramdevframework",
+      "title": "小程序开发教程",
+      "url": "https://developers.weixin.qq.com/miniprogram/dev/framework/",
+      "description": "微信小程序官方开发教程与基础框架说明",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "beginner",
+        "topics": [
+          "官方文档"
+        ]
+      },
+      "category": "官方文档",
+      "categoryId": "official-docs",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "docs",
+        "status": "adopt",
+        "maintainStatus": "active",
+        "riskLevel": "low",
+        "summary": "微信小程序官方开发教程与基础框架说明。作为文档资源，当前适合优先评估。",
+        "useCases": [
+          "官方文档"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [],
+        "evidence": [
+          {
+            "type": "docs",
+            "label": "官方文档",
+            "url": "https://developers.weixin.qq.com/miniprogram/dev/framework/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "developers-weixin-qq-com-miniprogramdevframeworkmina-html",
+      "title": "小程序框架",
+      "url": "https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html",
+      "description": "微信小程序 MINA 框架官方说明",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "intermediate",
+        "topics": [
+          "官方文档"
+        ]
+      },
+      "category": "官方文档",
+      "categoryId": "official-docs",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "docs",
+        "status": "adopt",
+        "maintainStatus": "active",
+        "riskLevel": "low",
+        "summary": "微信小程序 MINA 框架官方说明。作为文档资源，当前适合优先评估。",
+        "useCases": [
+          "官方文档"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [],
+        "evidence": [
+          {
+            "type": "docs",
+            "label": "官方文档",
+            "url": "https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html"
+          }
+        ]
+      }
+    },
+    {
+      "id": "developers-weixin-qq-com-miniprogramdevcomponent",
+      "title": "小程序组件",
+      "url": "https://developers.weixin.qq.com/miniprogram/dev/component/",
+      "description": "微信小程序官方组件文档",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "unknown",
+        "topics": [
+          "官方文档",
+          "组件"
+        ]
+      },
+      "category": "官方文档",
+      "categoryId": "official-docs",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "docs",
+        "status": "adopt",
+        "maintainStatus": "active",
+        "riskLevel": "low",
+        "summary": "微信小程序官方组件文档。作为文档资源，当前适合优先评估。",
+        "useCases": [
+          "官方文档",
+          "组件"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [
+          "TDesign WeChat",
+          "Vant Weapp",
+          "WeUI"
+        ],
+        "evidence": [
+          {
+            "type": "docs",
+            "label": "官方文档",
+            "url": "https://developers.weixin.qq.com/miniprogram/dev/component/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "developers-weixin-qq-com-miniprogramdevapi",
+      "title": "小程序 API",
+      "url": "https://developers.weixin.qq.com/miniprogram/dev/api/",
+      "description": "微信小程序官方 API 文档",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "unknown",
+        "topics": [
+          "官方文档",
+          "API"
+        ]
+      },
+      "category": "官方文档",
+      "categoryId": "official-docs",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "docs",
+        "status": "adopt",
+        "maintainStatus": "active",
+        "riskLevel": "low",
+        "summary": "微信小程序官方 API 文档。作为文档资源，当前适合优先评估。",
+        "useCases": [
+          "官方文档",
+          "API"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [],
+        "evidence": [
+          {
+            "type": "docs",
+            "label": "官方文档",
+            "url": "https://developers.weixin.qq.com/miniprogram/dev/api/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "developers-weixin-qq-com-miniprogramdevdevtoolsdevtools-html",
+      "title": "小程序开发者工具",
+      "url": "https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html",
+      "description": "微信开发者工具官方文档",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "unknown",
+        "topics": [
+          "官方文档"
+        ]
+      },
+      "category": "官方文档",
+      "categoryId": "official-docs",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "docs",
+        "status": "adopt",
+        "maintainStatus": "active",
+        "riskLevel": "low",
+        "summary": "微信开发者工具官方文档。作为文档资源，当前适合优先评估。",
+        "useCases": [
+          "官方文档"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [],
+        "evidence": [
+          {
+            "type": "docs",
+            "label": "官方文档",
+            "url": "https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-dcloudiouni-app",
+      "title": "uni-app ★36.1k+",
+      "url": "https://github.com/dcloudio/uni-app",
+      "description": "使用 Vue 语法开发小程序、H5、App的统一框架",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN",
+          "Vue"
+        ],
+        "difficulty": "intermediate",
+        "topics": [
+          "工具",
+          "Vue"
+        ]
+      },
+      "category": "工具",
+      "categoryId": "tools",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "framework",
+        "status": "adopt",
+        "maintainStatus": "active",
+        "riskLevel": "low",
+        "summary": "使用 Vue 语法开发小程序、H5、App的统一框架。作为框架方案，当前适合优先评估。",
+        "useCases": [
+          "工具",
+          "Vue"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [
+          "Taro",
+          "原生小程序"
+        ],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/dcloudio/uni-app"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-nervjstaro",
+      "title": "Taro ★30.6k+",
+      "url": "https://github.com/NervJS/taro",
+      "description": "使用 React 的方式开发小程序的框架，同时支持生成多端应用",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN",
+          "React"
+        ],
+        "difficulty": "intermediate",
+        "topics": [
+          "工具",
+          "React",
+          "Taro"
+        ]
+      },
+      "category": "工具",
+      "categoryId": "tools",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "framework",
+        "status": "adopt",
+        "maintainStatus": "active",
+        "riskLevel": "low",
+        "summary": "使用 React 的方式开发小程序的框架，同时支持生成多端应用。作为框架方案，当前适合优先评估。",
+        "useCases": [
+          "工具",
+          "React",
+          "Taro"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [
+          "uni-app",
+          "MPX",
+          "原生小程序"
+        ],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/NervJS/taro"
+          }
+        ]
+      }
+    }
+  ],
+  "risks": [
+    {
+      "id": "github-com-tencentwepy",
+      "title": "WePY：组件化的小程序开发框架",
+      "url": "https://github.com/Tencent/wepy",
+      "description": "",
+      "note": ":100:",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "intermediate",
+        "topics": [
+          "置顶",
+          "WePY",
+          "组件"
+        ]
+      },
+      "category": "置顶",
+      "categoryId": "featured",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "framework",
+        "status": "hold",
+        "maintainStatus": "deprecated",
+        "riskLevel": "high",
+        "summary": "WePY：组件化的小程序开发框架。作为框架方案，当前不建议新项目直接采用。",
+        "useCases": [
+          "置顶",
+          "WePY",
+          "组件"
+        ],
+        "notRecommendedFor": [
+          "新项目技术选型",
+          "长期维护成本敏感的团队"
+        ],
+        "alternatives": [
+          "Taro",
+          "uni-app",
+          "原生小程序"
+        ],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/Tencent/wepy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-aben1188awesome-wepy",
+      "title": "WePY 开发资源汇总",
+      "url": "https://github.com/aben1188/awesome-wepy",
+      "description": "",
+      "note": ":100:",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "unknown",
+        "topics": [
+          "置顶",
+          "WePY"
+        ]
+      },
+      "category": "置顶",
+      "categoryId": "featured",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "framework",
+        "status": "hold",
+        "maintainStatus": "deprecated",
+        "riskLevel": "high",
+        "summary": "WePY 开发资源汇总。作为框架方案，当前不建议新项目直接采用。",
+        "useCases": [
+          "置顶",
+          "WePY"
+        ],
+        "notRecommendedFor": [
+          "新项目技术选型",
+          "长期维护成本敏感的团队"
+        ],
+        "alternatives": [
+          "Taro",
+          "uni-app",
+          "原生小程序"
+        ],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/aben1188/awesome-wepy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-tencentwepy-2",
+      "title": "WePY ★21.7k+",
+      "url": "https://github.com/Tencent/wepy",
+      "description": "支持组件化的小程序开发框架",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "intermediate",
+        "topics": [
+          "工具",
+          "WePY",
+          "组件"
+        ]
+      },
+      "category": "工具",
+      "categoryId": "tools",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "framework",
+        "status": "hold",
+        "maintainStatus": "deprecated",
+        "riskLevel": "high",
+        "summary": "支持组件化的小程序开发框架。作为框架方案，当前不建议新项目直接采用。",
+        "useCases": [
+          "工具",
+          "WePY",
+          "组件"
+        ],
+        "notRecommendedFor": [
+          "新项目技术选型",
+          "长期维护成本敏感的团队"
+        ],
+        "alternatives": [
+          "Taro",
+          "uni-app",
+          "原生小程序"
+        ],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/Tencent/wepy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-meituan-dianpingmpvue",
+      "title": "mpvue ★20.4k+",
+      "url": "https://github.com/Meituan-Dianping/mpvue",
+      "description": "基于 Vue.js 的小程序开发框架，从底层支持 Vue.js 语法和构建工具体系",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN",
+          "Vue"
+        ],
+        "difficulty": "intermediate",
+        "topics": [
+          "工具",
+          "Vue",
+          "mpvue"
+        ]
+      },
+      "category": "工具",
+      "categoryId": "tools",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "framework",
+        "status": "hold",
+        "maintainStatus": "deprecated",
+        "riskLevel": "high",
+        "summary": "基于 Vue.js 的小程序开发框架，从底层支持 Vue.js 语法和构建工具体系。作为框架方案，当前不建议新项目直接采用。",
+        "useCases": [
+          "工具",
+          "Vue",
+          "mpvue"
+        ],
+        "notRecommendedFor": [
+          "新项目技术选型",
+          "长期维护成本敏感的团队"
+        ],
+        "alternatives": [
+          "Taro",
+          "uni-app",
+          "原生小程序"
+        ],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/Meituan-Dianping/mpvue"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-qiu8310minappblobmasterpackagesminapp-vscodereadme-md",
+      "title": "minapp",
+      "url": "https://github.com/qiu8310/minapp/blob/master/packages/minapp-vscode/README.md",
+      "description": "vscode 插件（支持 原生/mpvue/wepy 框架）",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN",
+          "Vue"
+        ],
+        "difficulty": "intermediate",
+        "topics": [
+          "插件",
+          "Vue",
+          "WePY",
+          "mpvue"
+        ]
+      },
+      "category": "插件",
+      "categoryId": "plugins",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "framework",
+        "status": "hold",
+        "maintainStatus": "deprecated",
+        "riskLevel": "high",
+        "summary": "vscode 插件（支持 原生/mpvue/wepy 框架）。作为框架方案，当前不建议新项目直接采用。",
+        "useCases": [
+          "插件",
+          "Vue",
+          "WePY",
+          "mpvue"
+        ],
+        "notRecommendedFor": [
+          "新项目技术选型",
+          "长期维护成本敏感的团队"
+        ],
+        "alternatives": [
+          "Taro",
+          "uni-app",
+          "原生小程序"
+        ],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/qiu8310/minapp/blob/master/packages/minapp-vscode/README.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wepy-iniself-com",
+      "title": "WePY Plugin For IntelliJ Platform",
+      "url": "http://wepy.iniself.com",
+      "description": "让PhpStorm/WebStorm全面支持WePY的开发，包括API(原生/WePY)和组件(官方/自定义)的自动完成/错误检查/高亮/不依赖Vue/...",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN",
+          "Vue"
+        ],
+        "difficulty": "unknown",
+        "topics": [
+          "插件",
+          "Vue",
+          "WePY",
+          "组件",
+          "API"
+        ]
+      },
+      "category": "插件",
+      "categoryId": "plugins",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "docs",
+        "status": "hold",
+        "maintainStatus": "deprecated",
+        "riskLevel": "high",
+        "summary": "让PhpStorm/WebStorm全面支持WePY的开发，包括API(原生/WePY)和组件(官方/自定义)的自动完成/错误检查/高亮/不依赖Vue/...。作为文档资源，当前不建议新项目直接采用。",
+        "useCases": [
+          "插件",
+          "Vue",
+          "WePY",
+          "组件"
+        ],
+        "notRecommendedFor": [
+          "新项目技术选型",
+          "长期维护成本敏感的团队"
+        ],
+        "alternatives": [
+          "Taro",
+          "uni-app",
+          "原生小程序"
+        ],
+        "evidence": [
+          {
+            "type": "website",
+            "label": "官网",
+            "url": "http://wepy.iniself.com"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-calvinhongwepy-com-charts",
+      "title": "wepy-com-charts",
+      "url": "https://github.com/CalvinHong/wepy-com-charts",
+      "description": "微信小程序 wepy 图表控件",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "unknown",
+        "topics": [
+          "组件",
+          "WePY"
+        ]
+      },
+      "category": "组件",
+      "categoryId": "components",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "framework",
+        "status": "hold",
+        "maintainStatus": "deprecated",
+        "riskLevel": "high",
+        "summary": "微信小程序 wepy 图表控件。作为框架方案，当前不建议新项目直接采用。",
+        "useCases": [
+          "组件",
+          "WePY"
+        ],
+        "notRecommendedFor": [
+          "新项目技术选型",
+          "长期维护成本敏感的团队"
+        ],
+        "alternatives": [
+          "Taro",
+          "uni-app",
+          "原生小程序"
+        ],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/CalvinHong/wepy-com-charts"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-hzy0913mpvue-calendar",
+      "title": "mpvue-calendar",
+      "url": "https://github.com/Hzy0913/mpvue-calendar",
+      "description": "微信小程序/浏览器端的日历组件mpvue-calendar；基于mpvue平台 支持农历、按周切换、可自定义。",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN",
+          "Vue"
+        ],
+        "difficulty": "unknown",
+        "topics": [
+          "组件",
+          "Vue",
+          "mpvue"
+        ]
+      },
+      "category": "组件",
+      "categoryId": "components",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "framework",
+        "status": "hold",
+        "maintainStatus": "deprecated",
+        "riskLevel": "high",
+        "summary": "微信小程序/浏览器端的日历组件mpvue-calendar；基于mpvue平台 支持农历、按周切换、可自定义。。作为框架方案，当前不建议新项目直接采用。",
+        "useCases": [
+          "组件",
+          "Vue",
+          "mpvue"
+        ],
+        "notRecommendedFor": [
+          "新项目技术选型",
+          "长期维护成本敏感的团队"
+        ],
+        "alternatives": [
+          "Taro",
+          "uni-app",
+          "原生小程序"
+        ],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/Hzy0913/mpvue-calendar"
+          }
+        ]
+      }
+    }
+  ],
+  "needsAssessment": [
+    {
+      "id": "github-com-didichameleon",
+      "title": "chameleon ★8.6k+",
+      "url": "https://github.com/didi/chameleon",
+      "description": "一套代码运行多端，一端所见即多端所见",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "unknown",
+        "topics": [
+          "工具"
+        ]
+      },
+      "category": "工具",
+      "categoryId": "tools",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "tooling",
+        "status": "assess",
+        "maintainStatus": "stale",
+        "riskLevel": "medium",
+        "summary": "一套代码运行多端，一端所见即多端所见。作为工程工具，当前需要结合项目约束评估。",
+        "useCases": [
+          "工具"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [
+          "Taro",
+          "uni-app",
+          "原生小程序"
+        ],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/didi/chameleon"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-wechat-miniprogramkbone",
+      "title": "kbone ★4.2k+",
+      "url": "https://github.com/wechat-miniprogram/kbone",
+      "description": "Web 与小程序同构解决方案",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "unknown",
+        "topics": [
+          "工具"
+        ]
+      },
+      "category": "工具",
+      "categoryId": "tools",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "framework",
+        "status": "assess",
+        "maintainStatus": "stale",
+        "riskLevel": "medium",
+        "summary": "Web 与小程序同构解决方案。作为框架方案，当前需要结合项目约束评估。",
+        "useCases": [
+          "工具"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/wechat-miniprogram/kbone"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-remaxjsremax",
+      "title": "Remax ★4.2k+",
+      "url": "https://github.com/remaxjs/remax",
+      "description": "使用真正的 React 构建小程序",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN",
+          "React"
+        ],
+        "difficulty": "unknown",
+        "topics": [
+          "工具",
+          "React"
+        ]
+      },
+      "category": "工具",
+      "categoryId": "tools",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "framework",
+        "status": "assess",
+        "maintainStatus": "stale",
+        "riskLevel": "medium",
+        "summary": "使用真正的 React 构建小程序。作为框架方案，当前需要结合项目约束评估。",
+        "useCases": [
+          "工具",
+          "React"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [
+          "Taro",
+          "uni-app",
+          "原生小程序"
+        ],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/remaxjs/remax"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-chemzqmwept",
+      "title": "wept ★2.3k",
+      "url": "https://github.com/chemzqm/wept",
+      "description": "微信小程序实时运行环境",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "unknown",
+        "topics": [
+          "工具"
+        ]
+      },
+      "category": "工具",
+      "categoryId": "tools",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "tooling",
+        "status": "assess",
+        "maintainStatus": "stale",
+        "riskLevel": "medium",
+        "summary": "微信小程序实时运行环境。作为工程工具，当前需要结合项目约束评估。",
+        "useCases": [
+          "工具"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/chemzqm/wept"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-cytlewechat-web-devtools",
+      "title": "wechat_web_devtools ★2.3k+",
+      "url": "https://github.com/cytle/wechat_web_devtools",
+      "description": "Linux 下微信开发者工具",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "unknown",
+        "topics": [
+          "工具"
+        ]
+      },
+      "category": "工具",
+      "categoryId": "tools",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "tooling",
+        "status": "assess",
+        "maintainStatus": "unknown",
+        "riskLevel": "medium",
+        "summary": "Linux 下微信开发者工具。作为工程工具，当前需要结合项目约束评估。",
+        "useCases": [
+          "工具"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/cytle/wechat_web_devtools"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-tencentyunwafer",
+      "title": "wafer ★2.1k",
+      "url": "https://github.com/tencentyun/wafer",
+      "description": "快速构建具备弹性能力的微信小程序",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "unknown",
+        "topics": [
+          "工具"
+        ]
+      },
+      "category": "工具",
+      "categoryId": "tools",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "tooling",
+        "status": "assess",
+        "maintainStatus": "unknown",
+        "riskLevel": "medium",
+        "summary": "快速构建具备弹性能力的微信小程序。作为工程工具，当前需要结合项目约束评估。",
+        "useCases": [
+          "工具"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/tencentyun/wafer"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-didimpx",
+      "title": "MPX ★2.1k+",
+      "url": "https://github.com/didi/mpx",
+      "description": "增强型小程序框架，深度性能优化，支持跨小程序平台开发，完全兼容原生小程序组件",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "intermediate",
+        "topics": [
+          "工具",
+          "组件"
+        ]
+      },
+      "category": "工具",
+      "categoryId": "tools",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "framework",
+        "status": "assess",
+        "maintainStatus": "unknown",
+        "riskLevel": "medium",
+        "summary": "增强型小程序框架，深度性能优化，支持跨小程序平台开发，完全兼容原生小程序组件。作为框架方案，当前需要结合项目约束评估。",
+        "useCases": [
+          "工具",
+          "组件"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [
+          "TDesign WeChat",
+          "Vant Weapp",
+          "WeUI"
+        ],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/didi/mpx"
+          }
+        ]
+      }
+    },
+    {
+      "id": "github-com-maichonglabrador",
+      "title": "Labrador ★1.7k",
+      "url": "https://github.com/maichong/labrador",
+      "description": "支持 ES6/7 的微信小程序组件化开发框架",
+      "note": "",
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "intermediate",
+        "topics": [
+          "工具",
+          "组件"
+        ]
+      },
+      "category": "工具",
+      "categoryId": "tools",
+      "section": null,
+      "sectionId": null,
+      "radar": {
+        "type": "framework",
+        "status": "assess",
+        "maintainStatus": "unknown",
+        "riskLevel": "medium",
+        "summary": "支持 ES6/7 的微信小程序组件化开发框架。作为框架方案，当前需要结合项目约束评估。",
+        "useCases": [
+          "工具",
+          "组件"
+        ],
+        "notRecommendedFor": [],
+        "alternatives": [
+          "TDesign WeChat",
+          "Vant Weapp",
+          "WeUI"
+        ],
+        "evidence": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/maichong/labrador"
+          }
+        ]
+      }
+    }
+  ],
+  "signalDigest": {
+    "source": "score-snapshot",
+    "generatedAt": "2026-07-06T06:19:55.271Z",
+    "signals": [
+      {
+        "resourceId": "github-com-tencentwepy",
+        "title": "WePY：组件化的小程序开发框架",
+        "kind": "risk",
+        "message": "GitHub: https://github.com/Tencent/wepy",
+        "evidence": "GitHub: https://github.com/Tencent/wepy"
+      },
+      {
+        "resourceId": "github-com-aben1188awesome-wepy",
+        "title": "WePY 开发资源汇总",
+        "kind": "risk",
+        "message": "GitHub: https://github.com/aben1188/awesome-wepy",
+        "evidence": "GitHub: https://github.com/aben1188/awesome-wepy"
+      },
+      {
+        "resourceId": "github-com-tencentwepy-2",
+        "title": "WePY ★21.7k+",
+        "kind": "risk",
+        "message": "GitHub: https://github.com/Tencent/wepy",
+        "evidence": "GitHub: https://github.com/Tencent/wepy"
+      },
+      {
+        "resourceId": "github-com-meituan-dianpingmpvue",
+        "title": "mpvue ★20.4k+",
+        "kind": "risk",
+        "message": "GitHub: https://github.com/Meituan-Dianping/mpvue",
+        "evidence": "GitHub: https://github.com/Meituan-Dianping/mpvue"
+      },
+      {
+        "resourceId": "github-com-didichameleon",
+        "title": "chameleon ★8.6k+",
+        "kind": "assessment",
+        "message": "GitHub: https://github.com/didi/chameleon",
+        "evidence": "GitHub: https://github.com/didi/chameleon"
+      },
+      {
+        "resourceId": "github-com-wechat-miniprogramkbone",
+        "title": "kbone ★4.2k+",
+        "kind": "assessment",
+        "message": "GitHub: https://github.com/wechat-miniprogram/kbone",
+        "evidence": "GitHub: https://github.com/wechat-miniprogram/kbone"
+      },
+      {
+        "resourceId": "github-com-remaxjsremax",
+        "title": "Remax ★4.2k+",
+        "kind": "assessment",
+        "message": "GitHub: https://github.com/remaxjs/remax",
+        "evidence": "GitHub: https://github.com/remaxjs/remax"
+      },
+      {
+        "resourceId": "github-com-chemzqmwept",
+        "title": "wept ★2.3k",
+        "kind": "assessment",
+        "message": "GitHub: https://github.com/chemzqm/wept",
+        "evidence": "GitHub: https://github.com/chemzqm/wept"
+      },
+      {
+        "resourceId": "developers-weixin-qq-com-miniprogramdesignindex-html",
+        "title": "小程序设计指南",
+        "kind": "adopt",
+        "message": "官方文档: https://developers.weixin.qq.com/miniprogram/design/index.html",
+        "evidence": "官方文档: https://developers.weixin.qq.com/miniprogram/design/index.html"
+      },
+      {
+        "resourceId": "developers-weixin-qq-com-miniprogramdevframework",
+        "title": "小程序开发教程",
+        "kind": "adopt",
+        "message": "官方文档: https://developers.weixin.qq.com/miniprogram/dev/framework/",
+        "evidence": "官方文档: https://developers.weixin.qq.com/miniprogram/dev/framework/"
+      },
+      {
+        "resourceId": "developers-weixin-qq-com-miniprogramdevframeworkmina-html",
+        "title": "小程序框架",
+        "kind": "adopt",
+        "message": "官方文档: https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html",
+        "evidence": "官方文档: https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html"
+      },
+      {
+        "resourceId": "developers-weixin-qq-com-miniprogramdevcomponent",
+        "title": "小程序组件",
+        "kind": "adopt",
+        "message": "官方文档: https://developers.weixin.qq.com/miniprogram/dev/component/",
+        "evidence": "官方文档: https://developers.weixin.qq.com/miniprogram/dev/component/"
+      }
+    ]
+  },
+  "markdown": "# 小程序生态周报 2026-07-06\n\n生成时间：2026/7/6 21:28:33\n\n## 概览\n\n- 资源总量：236\n- 推荐采用：18\n- 需要评估：200\n- 高风险：10\n\n## Signal Digest\n\n- Source: score-snapshot\n- Snapshot: 2026/7/6 14:19:55\n- risk: [WePY：组件化的小程序开发框架](/resources/github-com-tencentwepy) - GitHub: https://github.com/Tencent/wepy Evidence: GitHub: https://github.com/Tencent/wepy\n- risk: [WePY 开发资源汇总](/resources/github-com-aben1188awesome-wepy) - GitHub: https://github.com/aben1188/awesome-wepy Evidence: GitHub: https://github.com/aben1188/awesome-wepy\n- risk: [WePY ★21.7k+](/resources/github-com-tencentwepy-2) - GitHub: https://github.com/Tencent/wepy Evidence: GitHub: https://github.com/Tencent/wepy\n- risk: [mpvue ★20.4k+](/resources/github-com-meituan-dianpingmpvue) - GitHub: https://github.com/Meituan-Dianping/mpvue Evidence: GitHub: https://github.com/Meituan-Dianping/mpvue\n- assessment: [chameleon ★8.6k+](/resources/github-com-didichameleon) - GitHub: https://github.com/didi/chameleon Evidence: GitHub: https://github.com/didi/chameleon\n- assessment: [kbone ★4.2k+](/resources/github-com-wechat-miniprogramkbone) - GitHub: https://github.com/wechat-miniprogram/kbone Evidence: GitHub: https://github.com/wechat-miniprogram/kbone\n- assessment: [Remax ★4.2k+](/resources/github-com-remaxjsremax) - GitHub: https://github.com/remaxjs/remax Evidence: GitHub: https://github.com/remaxjs/remax\n- assessment: [wept ★2.3k](/resources/github-com-chemzqmwept) - GitHub: https://github.com/chemzqm/wept Evidence: GitHub: https://github.com/chemzqm/wept\n- recommend: [小程序设计指南](/resources/developers-weixin-qq-com-miniprogramdesignindex-html) - 官方文档: https://developers.weixin.qq.com/miniprogram/design/index.html Evidence: 官方文档: https://developers.weixin.qq.com/miniprogram/design/index.html\n- recommend: [小程序开发教程](/resources/developers-weixin-qq-com-miniprogramdevframework) - 官方文档: https://developers.weixin.qq.com/miniprogram/dev/framework/ Evidence: 官方文档: https://developers.weixin.qq.com/miniprogram/dev/framework/\n- recommend: [小程序框架](/resources/developers-weixin-qq-com-miniprogramdevframeworkmina-html) - 官方文档: https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html Evidence: 官方文档: https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html\n- recommend: [小程序组件](/resources/developers-weixin-qq-com-miniprogramdevcomponent) - 官方文档: https://developers.weixin.qq.com/miniprogram/dev/component/ Evidence: 官方文档: https://developers.weixin.qq.com/miniprogram/dev/component/\n\n## 推荐关注\n\n- [小程序设计指南](/resources/developers-weixin-qq-com-miniprogramdesignindex-html)：微信小程序官方设计规范与体验指南。作为文档资源，当前适合优先评估。 证据：[官方文档](https://developers.weixin.qq.com/miniprogram/design/index.html)\n- [小程序开发教程](/resources/developers-weixin-qq-com-miniprogramdevframework)：微信小程序官方开发教程与基础框架说明。作为文档资源，当前适合优先评估。 证据：[官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/)\n- [小程序框架](/resources/developers-weixin-qq-com-miniprogramdevframeworkmina-html)：微信小程序 MINA 框架官方说明。作为文档资源，当前适合优先评估。 证据：[官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html)\n- [小程序组件](/resources/developers-weixin-qq-com-miniprogramdevcomponent)：微信小程序官方组件文档。作为文档资源，当前适合优先评估。 证据：[官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/)\n- [小程序 API](/resources/developers-weixin-qq-com-miniprogramdevapi)：微信小程序官方 API 文档。作为文档资源，当前适合优先评估。 证据：[官方文档](https://developers.weixin.qq.com/miniprogram/dev/api/)\n- [小程序开发者工具](/resources/developers-weixin-qq-com-miniprogramdevdevtoolsdevtools-html)：微信开发者工具官方文档。作为文档资源，当前适合优先评估。 证据：[官方文档](https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html)\n- [uni-app ★36.1k+](/resources/github-com-dcloudiouni-app)：使用 Vue 语法开发小程序、H5、App的统一框架。作为框架方案，当前适合优先评估。 证据：[GitHub](https://github.com/dcloudio/uni-app)\n- [Taro ★30.6k+](/resources/github-com-nervjstaro)：使用 React 的方式开发小程序的框架，同时支持生成多端应用。作为框架方案，当前适合优先评估。 证据：[GitHub](https://github.com/NervJS/taro)\n\n## 风险提醒\n\n- [WePY：组件化的小程序开发框架](/resources/github-com-tencentwepy)：WePY：组件化的小程序开发框架。作为框架方案，当前不建议新项目直接采用。 证据：[GitHub](https://github.com/Tencent/wepy)\n- [WePY 开发资源汇总](/resources/github-com-aben1188awesome-wepy)：WePY 开发资源汇总。作为框架方案，当前不建议新项目直接采用。 证据：[GitHub](https://github.com/aben1188/awesome-wepy)\n- [WePY ★21.7k+](/resources/github-com-tencentwepy-2)：支持组件化的小程序开发框架。作为框架方案，当前不建议新项目直接采用。 证据：[GitHub](https://github.com/Tencent/wepy)\n- [mpvue ★20.4k+](/resources/github-com-meituan-dianpingmpvue)：基于 Vue.js 的小程序开发框架，从底层支持 Vue.js 语法和构建工具体系。作为框架方案，当前不建议新项目直接采用。 证据：[GitHub](https://github.com/Meituan-Dianping/mpvue)\n- [minapp](/resources/github-com-qiu8310minappblobmasterpackagesminapp-vscodereadme-md)：vscode 插件（支持 原生/mpvue/wepy 框架）。作为框架方案，当前不建议新项目直接采用。 证据：[GitHub](https://github.com/qiu8310/minapp/blob/master/packages/minapp-vscode/README.md)\n- [WePY Plugin For IntelliJ Platform](/resources/wepy-iniself-com)：让PhpStorm/WebStorm全面支持WePY的开发，包括API(原生/WePY)和组件(官方/自定义)的自动完成/错误检查/高亮/不依赖Vue/...。作为文档资源，当前不建议新项目直接采用。 证据：[官网](http://wepy.iniself.com)\n- [wepy-com-charts](/resources/github-com-calvinhongwepy-com-charts)：微信小程序 wepy 图表控件。作为框架方案，当前不建议新项目直接采用。 证据：[GitHub](https://github.com/CalvinHong/wepy-com-charts)\n- [mpvue-calendar](/resources/github-com-hzy0913mpvue-calendar)：微信小程序/浏览器端的日历组件mpvue-calendar；基于mpvue平台 支持农历、按周切换、可自定义。。作为框架方案，当前不建议新项目直接采用。 证据：[GitHub](https://github.com/Hzy0913/mpvue-calendar)\n\n## 需要评估\n\n- [chameleon ★8.6k+](/resources/github-com-didichameleon)：一套代码运行多端，一端所见即多端所见。作为工程工具，当前需要结合项目约束评估。 证据：[GitHub](https://github.com/didi/chameleon)\n- [kbone ★4.2k+](/resources/github-com-wechat-miniprogramkbone)：Web 与小程序同构解决方案。作为框架方案，当前需要结合项目约束评估。 证据：[GitHub](https://github.com/wechat-miniprogram/kbone)\n- [Remax ★4.2k+](/resources/github-com-remaxjsremax)：使用真正的 React 构建小程序。作为框架方案，当前需要结合项目约束评估。 证据：[GitHub](https://github.com/remaxjs/remax)\n- [wept ★2.3k](/resources/github-com-chemzqmwept)：微信小程序实时运行环境。作为工程工具，当前需要结合项目约束评估。 证据：[GitHub](https://github.com/chemzqm/wept)\n- [wechat_web_devtools ★2.3k+](/resources/github-com-cytlewechat-web-devtools)：Linux 下微信开发者工具。作为工程工具，当前需要结合项目约束评估。 证据：[GitHub](https://github.com/cytle/wechat_web_devtools)\n- [wafer ★2.1k](/resources/github-com-tencentyunwafer)：快速构建具备弹性能力的微信小程序。作为工程工具，当前需要结合项目约束评估。 证据：[GitHub](https://github.com/tencentyun/wafer)\n- [MPX ★2.1k+](/resources/github-com-didimpx)：增强型小程序框架，深度性能优化，支持跨小程序平台开发，完全兼容原生小程序组件。作为框架方案，当前需要结合项目约束评估。 证据：[GitHub](https://github.com/didi/mpx)\n- [Labrador ★1.7k](/resources/github-com-maichonglabrador)：支持 ES6/7 的微信小程序组件化开发框架。作为框架方案，当前需要结合项目约束评估。 证据：[GitHub](https://github.com/maichong/labrador)\n"
+}

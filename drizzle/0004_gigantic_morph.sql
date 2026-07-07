@@ -1,0 +1,2 @@
+ALTER TABLE "resource_ai_summaries" ADD COLUMN "use_cases" jsonb DEFAULT '[]'::jsonb NOT NULL;--> statement-breakpoint
+ALTER TABLE "resource_ai_summaries" ADD COLUMN "not_recommended_for" jsonb DEFAULT '[]'::jsonb NOT NULL;

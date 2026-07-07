@@ -1,0 +1,5295 @@
+{
+  "generatedAt": "2026-07-07T00:08:14.081Z",
+  "mode": "rules",
+  "count": 236,
+  "summaries": [
+    {
+      "resourceId": "github-com-tencentwepy",
+      "title": "WePY：组件化的小程序开发框架",
+      "summary": "WePY：组件化的小程序开发框架。作为框架方案，当前不建议新项目直接采用。",
+      "recommendation": "WePY：组件化的小程序开发框架 不建议新项目直接采用，主要用于老项目维护、迁移评估或历史参考。",
+      "riskNotes": [
+        "当前维护状态：deprecated。",
+        "当前风险等级：high。",
+        "高风险资源需要优先确认是否停维、是否有迁移路径，以及是否存在更活跃替代方案。",
+        "可对比替代方案：Taro、uni-app、原生小程序。"
+      ],
+      "useCases": [
+        "置顶",
+        "WePY",
+        "组件"
+      ],
+      "notRecommendedFor": [
+        "新项目技术选型",
+        "长期维护成本敏感的团队",
+        "新项目从零开始选型。",
+        "缺少迁移预案或长期维护预算的生产项目。",
+        "要求持续升级和长期维护的核心业务。"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Tencent/wepy"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-aben1188awesome-wepy",
+      "title": "WePY 开发资源汇总",
+      "summary": "WePY 开发资源汇总。作为框架方案，当前不建议新项目直接采用。",
+      "recommendation": "WePY 开发资源汇总 不建议新项目直接采用，主要用于老项目维护、迁移评估或历史参考。",
+      "riskNotes": [
+        "当前维护状态：deprecated。",
+        "当前风险等级：high。",
+        "高风险资源需要优先确认是否停维、是否有迁移路径，以及是否存在更活跃替代方案。",
+        "可对比替代方案：Taro、uni-app、原生小程序。"
+      ],
+      "useCases": [
+        "置顶",
+        "WePY"
+      ],
+      "notRecommendedFor": [
+        "新项目技术选型",
+        "长期维护成本敏感的团队",
+        "新项目从零开始选型。",
+        "缺少迁移预案或长期维护预算的生产项目。",
+        "要求持续升级和长期维护的核心业务。"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/aben1188/awesome-wepy"
+        }
+      ]
+    },
+    {
+      "resourceId": "developers-weixin-qq-com-miniprogramdesignindex-html",
+      "title": "小程序设计指南",
+      "summary": "微信小程序官方设计规范与体验指南。作为文档资源，当前适合优先评估。",
+      "recommendation": "小程序设计指南 可以作为新项目优先评估方案，适合 官方文档。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。"
+      ],
+      "useCases": [
+        "官方文档"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "docs",
+          "label": "官方文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/design/index.html"
+        }
+      ]
+    },
+    {
+      "resourceId": "developers-weixin-qq-com-miniprogramdevframework",
+      "title": "小程序开发教程",
+      "summary": "微信小程序官方开发教程与基础框架说明。作为文档资源，当前适合优先评估。",
+      "recommendation": "小程序开发教程 可以作为新项目优先评估方案，适合 官方文档。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。"
+      ],
+      "useCases": [
+        "官方文档"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "docs",
+          "label": "官方文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/dev/framework/"
+        }
+      ]
+    },
+    {
+      "resourceId": "developers-weixin-qq-com-miniprogramdevframeworkmina-html",
+      "title": "小程序框架",
+      "summary": "微信小程序 MINA 框架官方说明。作为文档资源，当前适合优先评估。",
+      "recommendation": "小程序框架 可以作为新项目优先评估方案，适合 官方文档。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。"
+      ],
+      "useCases": [
+        "官方文档"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "docs",
+          "label": "官方文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html"
+        }
+      ]
+    },
+    {
+      "resourceId": "developers-weixin-qq-com-miniprogramdevcomponent",
+      "title": "小程序组件",
+      "summary": "微信小程序官方组件文档。作为文档资源，当前适合优先评估。",
+      "recommendation": "小程序组件 可以作为新项目优先评估方案，适合 官方文档、组件。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "官方文档",
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "docs",
+          "label": "官方文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/dev/component/"
+        }
+      ]
+    },
+    {
+      "resourceId": "developers-weixin-qq-com-miniprogramdevapi",
+      "title": "小程序 API",
+      "summary": "微信小程序官方 API 文档。作为文档资源，当前适合优先评估。",
+      "recommendation": "小程序 API 可以作为新项目优先评估方案，适合 官方文档、API。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。"
+      ],
+      "useCases": [
+        "官方文档",
+        "API"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "docs",
+          "label": "官方文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/dev/api/"
+        }
+      ]
+    },
+    {
+      "resourceId": "developers-weixin-qq-com-miniprogramdevdevtoolsdevtools-html",
+      "title": "小程序开发者工具",
+      "summary": "微信开发者工具官方文档。作为文档资源，当前适合优先评估。",
+      "recommendation": "小程序开发者工具 可以作为新项目优先评估方案，适合 官方文档。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。"
+      ],
+      "useCases": [
+        "官方文档"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "docs",
+          "label": "官方文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-dcloudiouni-app",
+      "title": "uni-app ★36.1k+",
+      "summary": "使用 Vue 语法开发小程序、H5、App的统一框架。作为框架方案，当前适合优先评估。",
+      "recommendation": "uni-app 可以作为新项目优先评估方案，适合 工具、Vue。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。",
+        "可对比替代方案：Taro、原生小程序。"
+      ],
+      "useCases": [
+        "工具",
+        "Vue"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/dcloudio/uni-app"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-nervjstaro",
+      "title": "Taro ★30.6k+",
+      "summary": "使用 React 的方式开发小程序的框架，同时支持生成多端应用。作为框架方案，当前适合优先评估。",
+      "recommendation": "Taro 可以作为新项目优先评估方案，适合 工具、React、Taro。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。",
+        "可对比替代方案：uni-app、MPX、原生小程序。"
+      ],
+      "useCases": [
+        "工具",
+        "React",
+        "Taro"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/NervJS/taro"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-tencentwepy-2",
+      "title": "WePY ★21.7k+",
+      "summary": "支持组件化的小程序开发框架。作为框架方案，当前不建议新项目直接采用。",
+      "recommendation": "WePY 不建议新项目直接采用，主要用于老项目维护、迁移评估或历史参考。",
+      "riskNotes": [
+        "当前维护状态：deprecated。",
+        "当前风险等级：high。",
+        "高风险资源需要优先确认是否停维、是否有迁移路径，以及是否存在更活跃替代方案。",
+        "可对比替代方案：Taro、uni-app、原生小程序。"
+      ],
+      "useCases": [
+        "工具",
+        "WePY",
+        "组件"
+      ],
+      "notRecommendedFor": [
+        "新项目技术选型",
+        "长期维护成本敏感的团队",
+        "新项目从零开始选型。",
+        "缺少迁移预案或长期维护预算的生产项目。",
+        "要求持续升级和长期维护的核心业务。"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Tencent/wepy"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-meituan-dianpingmpvue",
+      "title": "mpvue ★20.4k+",
+      "summary": "基于 Vue.js 的小程序开发框架，从底层支持 Vue.js 语法和构建工具体系。作为框架方案，当前不建议新项目直接采用。",
+      "recommendation": "mpvue 不建议新项目直接采用，主要用于老项目维护、迁移评估或历史参考。",
+      "riskNotes": [
+        "当前维护状态：deprecated。",
+        "当前风险等级：high。",
+        "高风险资源需要优先确认是否停维、是否有迁移路径，以及是否存在更活跃替代方案。",
+        "可对比替代方案：Taro、uni-app、原生小程序。"
+      ],
+      "useCases": [
+        "工具",
+        "Vue",
+        "mpvue"
+      ],
+      "notRecommendedFor": [
+        "新项目技术选型",
+        "长期维护成本敏感的团队",
+        "新项目从零开始选型。",
+        "缺少迁移预案或长期维护预算的生产项目。",
+        "要求持续升级和长期维护的核心业务。"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Meituan-Dianping/mpvue"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-didichameleon",
+      "title": "chameleon ★8.6k+",
+      "summary": "一套代码运行多端，一端所见即多端所见。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "chameleon 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：stale。",
+        "当前风险等级：medium。",
+        "可对比替代方案：Taro、uni-app、原生小程序。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [
+        "要求持续升级和长期维护的核心业务。"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/didi/chameleon"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-wechat-miniprogramkbone",
+      "title": "kbone ★4.2k+",
+      "summary": "Web 与小程序同构解决方案。作为框架方案，当前需要结合项目约束评估。",
+      "recommendation": "kbone 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：stale。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [
+        "要求持续升级和长期维护的核心业务。"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wechat-miniprogram/kbone"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-remaxjsremax",
+      "title": "Remax ★4.2k+",
+      "summary": "使用真正的 React 构建小程序。作为框架方案，当前需要结合项目约束评估。",
+      "recommendation": "Remax 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具、React。",
+      "riskNotes": [
+        "当前维护状态：stale。",
+        "当前风险等级：medium。",
+        "可对比替代方案：Taro、uni-app、原生小程序。"
+      ],
+      "useCases": [
+        "工具",
+        "React"
+      ],
+      "notRecommendedFor": [
+        "要求持续升级和长期维护的核心业务。"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/remaxjs/remax"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-chemzqmwept",
+      "title": "wept ★2.3k",
+      "summary": "微信小程序实时运行环境。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "wept 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：stale。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [
+        "要求持续升级和长期维护的核心业务。"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/chemzqm/wept"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-cytlewechat-web-devtools",
+      "title": "wechat_web_devtools ★2.3k+",
+      "summary": "Linux 下微信开发者工具。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "wechat_web_devtools 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/cytle/wechat_web_devtools"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-tencentyunwafer",
+      "title": "wafer ★2.1k",
+      "summary": "快速构建具备弹性能力的微信小程序。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "wafer 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/tencentyun/wafer"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-didimpx",
+      "title": "MPX ★2.1k+",
+      "summary": "增强型小程序框架，深度性能优化，支持跨小程序平台开发，完全兼容原生小程序组件。作为框架方案，当前需要结合项目约束评估。",
+      "recommendation": "MPX 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具、组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "工具",
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/didi/mpx"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-maichonglabrador",
+      "title": "Labrador ★1.7k",
+      "summary": "支持 ES6/7 的微信小程序组件化开发框架。作为框架方案，当前需要结合项目约束评估。",
+      "recommendation": "Labrador 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具、组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "工具",
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/maichong/labrador"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-lirilirilicia",
+      "title": "licia ★1.7k",
+      "summary": "支持小程序的 JS 工具库。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "licia 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/liriliri/licia"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-kaola-fedmegalo",
+      "title": "megalo ★1.6k",
+      "summary": "基于 Vue 的小程序开发框架。作为框架方案，当前需要结合项目约束评估。",
+      "recommendation": "megalo 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具、Vue。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具",
+        "Vue"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/kaola-fed/megalo"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-tencentcloudbase-framework",
+      "title": "CloudBase Framework ★1.1k",
+      "summary": "腾讯云开发开源一键部署工具，支持部署小程序及云开发应用。作为云服务方案，当前需要结合项目约束评估。",
+      "recommendation": "CloudBase Framework 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具、云开发。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具",
+        "云开发"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Tencent/cloudbase-framework"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-tinajstina",
+      "title": "tina ★1k+",
+      "summary": "轻巧的渐进式微信小程序框架。作为框架方案，当前需要结合项目约束评估。",
+      "recommendation": "tina 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/tinajs/tina"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-qiu8310minapp",
+      "title": "minapp ★800+",
+      "summary": "TypeScript 版小程序开发框架（兼容原生小程序代码）。作为框架方案，当前需要结合项目约束评估。",
+      "recommendation": "minapp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具、TypeScript。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具",
+        "TypeScript"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/qiu8310/minapp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-ecomfeokam",
+      "title": "Okam ★300+",
+      "summary": "使用类 Vue 方式开发小程序的渐进增强框架，支持生成微信/百度等主流平台的小程序。作为框架方案，当前需要结合项目约束评估。",
+      "recommendation": "Okam 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具、Vue。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具",
+        "Vue"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ecomfe/okam"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-xpmjsxpmjs",
+      "title": "xpmjs ★100+",
+      "summary": "微信小程序云端增强 SDK。作为SDK 资源，当前需要结合项目约束评估。",
+      "recommendation": "xpmjs 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具、SDK。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具",
+        "SDK"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/xpmjs/xpmjs"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-jeff2maweapp-workflow",
+      "title": "WeApp-Workflow ★100+",
+      "summary": "基于 Gulp 的微信小程序前端开发工作流。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "WeApp-Workflow 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Jeff2Ma/WeApp-Workflow"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-sonofmagicweapp-tailwindcss-webpack-plugin",
+      "title": "weapp-tailwindcss-webpack-plugin ★100+",
+      "summary": "在小程序里使用 TailwindCSS 吧。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "weapp-tailwindcss-webpack-plugin 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/sonofmagic/weapp-tailwindcss-webpack-plugin"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-mdsb100gulp-wxa-copy-npm",
+      "title": "gulp-wxa-copy-npm",
+      "summary": "微信小程序 gulp 插件，解决 npm 包管理和 babel-runtime。作为SDK 资源，当前需要结合项目约束评估。",
+      "recommendation": "gulp-wxa-copy-npm 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/mdsb100/gulp-wxa-copy-npm"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-haojyweact",
+      "title": "weact",
+      "summary": "用 JSX 快速开发小程序。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "weact 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/haojy/weact"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-cytlesocket-io-mp-client",
+      "title": "socket.io-mp-client",
+      "summary": "微信小程序 socket.io 客户端。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "socket.io-mp-client 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/cytle/socket.io-mp-client"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-genuifxpostcss-pxtorpx-pro",
+      "title": "postcss-pxtorpx-pro",
+      "summary": "postcss px 转 rpx 插件。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "postcss-pxtorpx-pro 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Genuifx/postcss-pxtorpx-pro"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-allanguyspx2rpx",
+      "title": "px2rpx",
+      "summary": "Px 转 Rpx 在线工具。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "px2rpx 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/allanguys/px2rpx"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-seanlongwxml-parser",
+      "title": "wxml-parser",
+      "summary": "JavaScript WXML parser。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "wxml-parser 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/seanlong/wxml-parser"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-wxmlfile",
+      "title": "@wxml/parser, @wxml/traverse, @wxml/generator",
+      "summary": "WXML babel like AST interpreter。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "@wxml/parser, @wxml/traverse, @wxml/generator 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wxmlfile"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-tolerance-goweappx",
+      "title": "weappx",
+      "summary": "基于 redux 的数据层管理框架。作为框架方案，当前需要结合项目约束评估。",
+      "recommendation": "weappx 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/tolerance-go/weappx"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-tolerance-goweapp-start",
+      "title": "weapp-start",
+      "summary": "基于插件机制的开发脚手架，改善原生小程序开发体验。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "weapp-start 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/tolerance-go/weapp-start"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-authingwxapp-graphql",
+      "title": "wxapp-graphql",
+      "summary": "小程序 GraphQL 客户端。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "wxapp-graphql 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Authing/wxapp-graphql"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-ksky521gulp-wxapp-boilerplate",
+      "title": "gulp-wxapp-boilerplate",
+      "summary": "小程序+小程序云 Gulp 开发脚手架，支持云函数 mock。作为工程工具，当前适合试用验证。",
+      "recommendation": "gulp-wxapp-boilerplate 适合在明确场景中试用验证，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：low。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ksky521/gulp-wxapp-boilerplate"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-cnyballkwenaox",
+      "title": "wenaox",
+      "summary": "小程序数据层管理 ，轻量性能好，支持中间件。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "wenaox 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/cnyballk/wenaox"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-authingauthing-wxapp-sdk",
+      "title": "authing-wxapp-sdk",
+      "summary": "身份认证 for 微信小程序。作为SDK 资源，当前需要结合项目约束评估。",
+      "recommendation": "authing-wxapp-sdk 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具、SDK。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具",
+        "SDK"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Authing/authing-wxapp-sdk"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-coolriceweapp-eslint-boilerplate",
+      "title": "weapp-eslint-boilerplate",
+      "summary": "微信小程序 Eslint 通用模板文件，节省自己配置的时间。作为示例项目，当前适合试用验证。",
+      "recommendation": "weapp-eslint-boilerplate 适合在明确场景中试用验证，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：low。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/CoolRice/weapp-eslint-boilerplate"
+        }
+      ]
+    },
+    {
+      "resourceId": "iexception-github-io-anka-docbookindex-html",
+      "title": "Anka",
+      "summary": "渐进式小程序开发工具集，提供通用的开发函数库及组件。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "Anka 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具、组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "工具",
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "website",
+          "label": "官网",
+          "url": "https://iexception.github.io/anka-doc/book/index.html"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-bakerjqweappbunxin",
+      "title": "WeAppBunXin",
+      "summary": "微信小程序开发之影分身术，一套代码生成多个小程序。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "WeAppBunXin 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/BakerJQ/WeAppBunXin"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-newfutureminiprogram-build",
+      "title": "miniprogram-build",
+      "summary": "小程序命令行编译工具(支持typescript,原生npm,资源文件压缩...)。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "miniprogram-build 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具、TypeScript、UI。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "工具",
+        "TypeScript",
+        "UI"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/NewFuture/miniprogram-build"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-sunnie1992weapp-gulp",
+      "title": "weapp-gulp",
+      "summary": "Gulp高效构建微信小程序，让开发变得更简单。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "weapp-gulp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/sunnie1992/weapp-gulp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-bigmeowcheers-mp",
+      "title": "cheers-mp",
+      "summary": "Almost零配置微信原生小程序脚手架，vue-cli般的体验~(ts、less、原生npm、云OSS、CI自动发布体验版)。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "cheers-mp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具、Vue。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具",
+        "Vue"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bigmeow/cheers-mp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-cicecwe-mobx",
+      "title": "we-mobx",
+      "summary": "在微信小程序中使用 MobX。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "we-mobx 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/cicec/we-mobx"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-weimobgroupweconsole",
+      "title": "weconsole",
+      "summary": "功能全面、界面与体验对标 Chrome devtools 的可定制化的小程序开发调试面板。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "weconsole 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/weimobGroup/WeConsole"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-msojocswechat-web-devtools-linux",
+      "title": "wechat-web-devtools-linux",
+      "summary": "Linux 下微信开发者工具。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "wechat-web-devtools-linux 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/msojocs/wechat-web-devtools-linux"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-chemzqmwxapp-vim",
+      "title": "wxapp.vim",
+      "summary": "提供微信小程序开发全方位支持的 vim 插件。作为SDK 资源，当前需要结合项目约束评估。",
+      "recommendation": "wxapp.vim 需要结合团队栈、维护状态和替代方案谨慎评估，适合 插件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "插件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/chemzqm/wxapp.vim"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-abbottonweapp-snippet-for-sublime-text-2-3",
+      "title": "weapp-snippet-for-sublime-text-2-3",
+      "summary": "为 sublime text 2&3 准备的微信小程序 snippet(停更)。作为SDK 资源，当前需要结合项目约束评估。",
+      "recommendation": "weapp-snippet-for-sublime-text-2-3 需要结合团队栈、维护状态和替代方案谨慎评估，适合 插件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "插件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Abbotton/weapp-snippet-for-sublime-text-2-3"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-lypeermatchmaker",
+      "title": "Matchmaker",
+      "summary": "IntelliJ IDEA 插件，注入方法。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "Matchmaker 需要结合团队栈、维护状态和替代方案谨慎评估，适合 插件、IDE。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "插件",
+        "IDE"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/lypeer/Matchmaker"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-qbrightwechatcode-complete",
+      "title": "wechatCode-complete",
+      "summary": "webstorm 插件（代码提示）。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "wechatCode-complete 需要结合团队栈、维护状态和替代方案谨慎评估，适合 插件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "插件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/qbright/wechatCode-complete"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-floydagithubwxapp",
+      "title": "wxapp",
+      "summary": "sublime plugin。作为SDK 资源，当前需要结合项目约束评估。",
+      "recommendation": "wxapp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 插件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "插件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/FloydaGithub/wxapp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-qiu8310minappblobmasterpackagesminapp-vscodereadme-md",
+      "title": "minapp",
+      "summary": "vscode 插件（支持 原生/mpvue/wepy 框架）。作为框架方案，当前不建议新项目直接采用。",
+      "recommendation": "minapp 不建议新项目直接采用，主要用于老项目维护、迁移评估或历史参考。",
+      "riskNotes": [
+        "当前维护状态：deprecated。",
+        "当前风险等级：high。",
+        "高风险资源需要优先确认是否停维、是否有迁移路径，以及是否存在更活跃替代方案。",
+        "可对比替代方案：Taro、uni-app、原生小程序。"
+      ],
+      "useCases": [
+        "插件",
+        "Vue",
+        "WePY",
+        "mpvue"
+      ],
+      "notRecommendedFor": [
+        "新项目技术选型",
+        "长期维护成本敏感的团队",
+        "新项目从零开始选型。",
+        "缺少迁移预案或长期维护预算的生产项目。",
+        "要求持续升级和长期维护的核心业务。"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/qiu8310/minapp/blob/master/packages/minapp-vscode/README.md"
+        }
+      ]
+    },
+    {
+      "resourceId": "segmentfault-com-a1190000007132719",
+      "title": "vscode 插件(代码提示)",
+      "summary": "VS Code 微信小程序代码提示插件介绍。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "vscode 插件(代码提示) 需要结合团队栈、维护状态和替代方案谨慎评估，适合 插件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "插件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "website",
+          "label": "官网",
+          "url": "https://segmentfault.com/a/1190000007132719"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-ritwickdeyvscode-live-sass-compiler",
+      "title": "vscode-live-sass-compiler",
+      "summary": "vscode插件根据.scss文件自动生成wxss文件。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "vscode-live-sass-compiler 需要结合团队栈、维护状态和替代方案谨慎评估，适合 插件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "插件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ritwickdey/vscode-live-sass-compiler"
+        }
+      ]
+    },
+    {
+      "resourceId": "wepy-iniself-com",
+      "title": "WePY Plugin For IntelliJ Platform",
+      "summary": "让PhpStorm/WebStorm全面支持WePY的开发，包括API(原生/WePY)和组件(官方/自定义)的自动完成/错误检查/高亮/不依赖Vue/...。作为文档资源，当前不建议新项目直接采用。",
+      "recommendation": "WePY Plugin For IntelliJ Platform 不建议新项目直接采用，主要用于老项目维护、迁移评估或历史参考。",
+      "riskNotes": [
+        "当前维护状态：deprecated。",
+        "当前风险等级：high。",
+        "高风险资源需要优先确认是否停维、是否有迁移路径，以及是否存在更活跃替代方案。",
+        "可对比替代方案：Taro、uni-app、原生小程序。"
+      ],
+      "useCases": [
+        "插件",
+        "Vue",
+        "WePY",
+        "组件"
+      ],
+      "notRecommendedFor": [
+        "新项目技术选型",
+        "长期维护成本敏感的团队",
+        "新项目从零开始选型。",
+        "缺少迁移预案或长期维护预算的生产项目。",
+        "要求持续升级和长期维护的核心业务。"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "website",
+          "label": "官网",
+          "url": "http://wepy.iniself.com"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-cnyballkwxml-vscode",
+      "title": "wxml",
+      "summary": "vscode插件--微信小程序格式化以及高亮组件(高度自定义)。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wxml 需要结合团队栈、维护状态和替代方案谨慎评估，适合 插件、组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "插件",
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/cnyballk/wxml-vscode"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-wux-weappwux-weapp-snippets",
+      "title": "wux-weapp-snippets",
+      "summary": "Wux Weapp Snippets for VS Code.。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wux-weapp-snippets 需要结合团队栈、维护状态和替代方案谨慎评估，适合 插件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "插件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wux-weapp/wux-weapp-snippets"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-wux-weappwux-weapp-atom-snippets",
+      "title": "wux-weapp-atom-snippets",
+      "summary": "Wux Weapp Snippets for Atom.。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wux-weapp-atom-snippets 需要结合团队栈、维护状态和替代方案谨慎评估，适合 插件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "插件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wux-weapp/wux-weapp-atom-snippets"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-wux-weappwux-weapp-sublime-snippets",
+      "title": "wux-weapp-sublime-snippets",
+      "summary": "Wux Weapp Snippets Plugin for Sublime Text 2/3.。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wux-weapp-sublime-snippets 需要结合团队栈、维护状态和替代方案谨慎评估，适合 插件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "插件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wux-weapp/wux-weapp-sublime-snippets"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-tencentweui-wxss",
+      "title": "weui-wxss ★12.4K+",
+      "summary": "同微信原生视觉体验一致的基础样式库。作为组件与 UI 方案，当前适合优先评估。",
+      "recommendation": "weui-wxss 可以作为新项目优先评估方案，适合 组件、UI。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件",
+        "UI"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Tencent/weui-wxss"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-youzanvant-weapp",
+      "title": "vant-weapp ★12.3k+",
+      "summary": "高颜值、好用、易扩展的微信小程序 UI 库。作为组件与 UI 方案，当前适合优先评估。",
+      "recommendation": "vant-weapp 可以作为新项目优先评估方案，适合 组件、UI。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件",
+        "UI"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/youzan/vant-weapp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-icindywxparse",
+      "title": "wxParse ★7.2K+",
+      "summary": "微信小程序富文本解析自定义组件，支持 HTML 及 markdown 解析。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wxParse 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/icindy/wxParse"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-jin-yufengmp-html",
+      "title": "mp-html ★1.4K+",
+      "summary": "小程序富文本组件，支持渲染和编辑 html，支持在微信、QQ、百度、支付宝、头条和 uni-app 平台使用。作为框架方案，当前适合优先评估。",
+      "recommendation": "mp-html 可以作为新项目优先评估方案，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。",
+        "可对比替代方案：Taro、原生小程序。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/jin-yufeng/mp-html"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-talkingdataiview-weapp",
+      "title": "iview-weapp ★5.5k+",
+      "summary": "一套高质量的微信小程序 UI 组件库。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "iview-weapp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、UI。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件",
+        "UI"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/TalkingData/iview-weapp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-wux-weappwux-weapp",
+      "title": "wux-weapp ★4.2k+",
+      "summary": "一套组件化、可复用、易扩展的微信小程序 UI 组件库。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wux-weapp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、UI。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件",
+        "UI"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wux-weapp/wux-weapp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-xiaolin3303wx-charts",
+      "title": "wx-charts ★4.1k+",
+      "summary": "微信小程序图表 charts 组件。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wx-charts 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/xiaolin3303/wx-charts"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-talelinlin-ui",
+      "title": "Lin UI ★2k+",
+      "summary": "一套设计优良、基于原生微信小程序语法的 UI 组件库。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "Lin UI 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、UI。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件",
+        "UI"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/TaleLin/lin-ui"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-tencenttdesign-miniprogram",
+      "title": "tdesign-miniprogram ★1.3k+",
+      "summary": "TDesign 适配微信小程序的组件库。作为组件与 UI 方案，当前适合优先评估。",
+      "recommendation": "tdesign-miniprogram 可以作为新项目优先评估方案，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Tencent/tdesign-miniprogram"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-toobugwemark",
+      "title": "wemark ★1.100+",
+      "summary": "微信小程序 Markdown 渲染库。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wemark 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/TooBug/wemark"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-1977474741image-cropper",
+      "title": "image-cropper ★900+",
+      "summary": "💯微信小程序图片裁剪组件。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "image-cropper 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/1977474741/image-cropper"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-o2teamwxapp-img-loader",
+      "title": "wxapp-img-loader ★400+",
+      "summary": "微信小程序图片预加载组件。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wxapp-img-loader 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/o2team/wxapp-img-loader"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-we-pluginwe-cropper",
+      "title": "we-cropper ★400+",
+      "summary": "微信小程序图片裁剪工具。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "we-cropper 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/we-plugin/we-cropper"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-jasonduwxa-plugin-canvas",
+      "title": "wxa-plugin-canvas ★300+",
+      "summary": "微信小程序朋友圈海报生成组件。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wxa-plugin-canvas 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、Canvas。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件",
+        "Canvas"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/jasondu/wxa-plugin-canvas"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-guyoungwezrender",
+      "title": "WeZRender ★300+",
+      "summary": "微信小程序 Canvas 开发。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "WeZRender 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、Canvas。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件",
+        "Canvas"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/guyoung/WeZRender"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-treadpitwx-calendar",
+      "title": "wx_calendar ★300+",
+      "summary": "小程序日历。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wx_calendar 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/treadpit/wx_calendar"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-youzouzouwxapp",
+      "title": "wxapp ★300+",
+      "summary": "微信小程序组件。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wxapp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/youzouzou/wxapp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-liujianswa-ui",
+      "title": "Wa-UI ★200+",
+      "summary": "针对微信小程序整合的一套 UI 库。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "Wa-UI 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、UI。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件",
+        "UI"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/liujians/Wa-UI"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-icindywxsearch",
+      "title": "wxSearch ★200+",
+      "summary": "微信小程序优雅的搜索框。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wxSearch 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/icindy/wxSearch"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-zhongjie-chenwx-scrollable-tab-view",
+      "title": "wx-scrollable-tab-view ★200+",
+      "summary": "小程序可滑动得 tab-view。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wx-scrollable-tab-view 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zhongjie-chen/wx-scrollable-tab-view"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-kiinlamwetoast",
+      "title": "wetoast ★100+",
+      "summary": "微信小程序 toast 增强插件。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wetoast 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/kiinlam/wetoast"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-zhongjie-chenwx-alphabetical-listview",
+      "title": "wx-alphabetical-listview ★100+",
+      "summary": "微信小程序带字母滑动的 listview。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wx-alphabetical-listview 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zhongjie-chen/wx-alphabetical-listview"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-zhongjie-chenwx-drawer",
+      "title": "wx-drawer ★100+",
+      "summary": "小程序模仿 QQ6.0 侧滑菜单。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wx-drawer 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zhongjie-chen/wx-drawer"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-hawx1993wxapp-charts",
+      "title": "wxapp-charts ★100+",
+      "summary": "微信小程序图表 charts 组件。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wxapp-charts 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/hawx1993/wxapp-charts"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-xiabingwuchartjs-wechat-mini-app",
+      "title": "chartjs-wechat-mini-app ★100+",
+      "summary": "chartjs 微信小程序适配。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "chartjs-wechat-mini-app 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/xiabingwu/chartjs-wechat-mini-app"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-joezheng2015wx-promise-request",
+      "title": "wx-promise-request ★100+",
+      "summary": "微信小程序请求队列管理库。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wx-promise-request 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/JoeZheng2015/wx-promise-request"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-we-pluginwe-swiper",
+      "title": "we-swiper ★100+",
+      "summary": "微信小程序触摸内容滑动解决方案。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "we-swiper 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/we-plugin/we-swiper"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-bobiscoolwxdraw",
+      "title": "wxDraw ★100+",
+      "summary": "微信小程序 2D 动画库。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wxDraw 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bobiscool/wxDraw"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-chenjinxinlovecityselect",
+      "title": "citySelect ★100+",
+      "summary": "微信小程序城市选择器。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "citySelect 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/chenjinxinlove/citySelect"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-charleslo1weapp-cookie",
+      "title": "weapp-cookie ★100+",
+      "summary": "一行代码让微信小程序支持 cookie 🍪🚀。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "weapp-cookie 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/charleslo1/weapp-cookie"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-lidong1665weixinproject",
+      "title": "WeiXinProject",
+      "summary": "微信小程序列表上拉刷新和上拉加载。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "WeiXinProject 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/lidong1665/WeiXinProject"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-calvinhongwepy-com-charts",
+      "title": "wepy-com-charts",
+      "summary": "微信小程序 wepy 图表控件。作为框架方案，当前不建议新项目直接采用。",
+      "recommendation": "wepy-com-charts 不建议新项目直接采用，主要用于老项目维护、迁移评估或历史参考。",
+      "riskNotes": [
+        "当前维护状态：deprecated。",
+        "当前风险等级：high。",
+        "高风险资源需要优先确认是否停维、是否有迁移路径，以及是否存在更活跃替代方案。",
+        "可对比替代方案：Taro、uni-app、原生小程序。"
+      ],
+      "useCases": [
+        "组件",
+        "WePY"
+      ],
+      "notRecommendedFor": [
+        "新项目技术选型",
+        "长期维护成本敏感的团队",
+        "新项目从零开始选型。",
+        "缺少迁移预案或长期维护预算的生产项目。",
+        "要求持续升级和长期维护的核心业务。"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/CalvinHong/wepy-com-charts"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-demi520wxapp-lock",
+      "title": "wxapp-lock",
+      "summary": "微信小程序手势解锁。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wxapp-lock 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/demi520/wxapp-lock"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-geminatemini-gesture-lock",
+      "title": "mini-gesture-lock",
+      "summary": "微信小程序手势解锁(无Android Canvas卡顿问题)。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "mini-gesture-lock 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、Canvas。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件",
+        "Canvas"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/geminate/mini-gesture-lock"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-weapp-socketioweapp-socket-io",
+      "title": "weapp.socket.io ★500+",
+      "summary": "socket.io 风格的 websocket 类库。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "weapp.socket.io 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/weapp-socketio/weapp.socket.io"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-leancloudweapp-polyfill",
+      "title": "weapp-polyfill",
+      "summary": "[w3c 标准 API polyfill。作为文档资源，当前需要结合项目约束评估。",
+      "recommendation": "weapp-polyfill 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、API。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件",
+        "API"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/leancloud/weapp-polyfill"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-youngjuningwx-promise-pro",
+      "title": "wx-promise-pro ★666+",
+      "summary": "微信小程序 Promise 库。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wx-promise-pro 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/youngjuning/wx-promise-pro"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-youngjuningwxmd5",
+      "title": "wxMD5",
+      "summary": "微信小程序 MD5 库。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wxMD5 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/youngjuning/wxMD5"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-youngjuningwxbase64",
+      "title": "wxBase64",
+      "summary": "微信小程序base64 库。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wxBase64 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/youngjuning/wxBase64"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-ianhoxing-weapp-component",
+      "title": "xing-weapp-component",
+      "summary": "微信小程序基础组件扩展。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "xing-weapp-component 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ianho/xing-weapp-component"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-zzjbeatyouwx-statuslayout",
+      "title": "wx-statuslayout",
+      "summary": "小程序页面状态切换组件。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wx-statuslayout 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ZzjBeatYou/wx-statuslayout"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-bigmeowminapp-api-promise",
+      "title": "minapp-api-promise",
+      "summary": "微信小程序所有 API promise 化。作为文档资源，当前需要结合项目约束评估。",
+      "recommendation": "minapp-api-promise 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、API。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件",
+        "API"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bigmeow/minapp-api-promise"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-bigmeowminapp-slider-left",
+      "title": "minapp-slider-left",
+      "summary": "微信小程序左划删除组件。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "minapp-slider-left 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、IDE。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件",
+        "IDE"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bigmeow/minapp-slider-left"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-kuckboy1994mp-canvas-drawer",
+      "title": "mp_canvas_drawer",
+      "summary": "canvas绘制图片助手，一个json就制作分享朋友圈图片。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "mp_canvas_drawer 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、Canvas。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件",
+        "Canvas"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/kuckboy1994/mp_canvas_drawer"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-ianhoxing-weapp-editor",
+      "title": "xing-weapp-editor",
+      "summary": "小程序图文编辑组件。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "xing-weapp-editor 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ianho/xing-weapp-editor"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-warjycue",
+      "title": "cue",
+      "summary": "A WX Compontent Tools。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "cue 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/WARJY/cue"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-phonycodewuss-weapp",
+      "title": "wuss-weapp",
+      "summary": "一款高质量，组件齐全，高自定义的微信小程序UI组件库。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wuss-weapp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、UI。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件",
+        "UI"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/phonycode/wuss-weapp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-pithyoneminiprogram-datepicker",
+      "title": "miniprogram-datepicker",
+      "summary": "小程序日期选择器（支持农历）。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "miniprogram-datepicker 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/pithyone/miniprogram-datepicker"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-vv13wx-api-promisify",
+      "title": "wx-api-promisify",
+      "summary": "优雅地将微信小程序API Promise化。作为文档资源，当前需要结合项目约束评估。",
+      "recommendation": "wx-api-promisify 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、API。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件",
+        "API"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/vv13/wx-api-promisify"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-iexceptionanka-brush",
+      "title": "anka-brush",
+      "summary": "一款为简化小程序里canvas画图操作而创建的工具库。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "anka-brush 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、Canvas。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件",
+        "Canvas"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/iException/anka-brush"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-iexceptionanka-tracker",
+      "title": "anka-tracker",
+      "summary": "小程序打点库，用于统计用户行为数据。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "anka-tracker 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/iException/anka-tracker"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-hzy0913mpvue-calendar",
+      "title": "mpvue-calendar",
+      "summary": "微信小程序/浏览器端的日历组件mpvue-calendar；基于mpvue平台 支持农历、按周切换、可自定义。。作为框架方案，当前不建议新项目直接采用。",
+      "recommendation": "mpvue-calendar 不建议新项目直接采用，主要用于老项目维护、迁移评估或历史参考。",
+      "riskNotes": [
+        "当前维护状态：deprecated。",
+        "当前风险等级：high。",
+        "高风险资源需要优先确认是否停维、是否有迁移路径，以及是否存在更活跃替代方案。",
+        "可对比替代方案：Taro、uni-app、原生小程序。"
+      ],
+      "useCases": [
+        "组件",
+        "Vue",
+        "mpvue"
+      ],
+      "notRecommendedFor": [
+        "新项目技术选型",
+        "长期维护成本敏感的团队",
+        "新项目从零开始选型。",
+        "缺少迁移预案或长期维护预算的生产项目。",
+        "要求持续升级和长期维护的核心业务。"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Hzy0913/mpvue-calendar"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-qizf7mp-swipe-card",
+      "title": "mp-swipe-card",
+      "summary": "小程序卡片滑动组件,类似探探的效果，貌似现在只支持左右滑动。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "mp-swipe-card 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/qizf7/mp-swipe-card"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-afishhhhhweapp-request",
+      "title": "weapp.request",
+      "summary": "为微信小程序提供的网络请求组件，是 wx.request 的扩展，基于 Promise API，添加缓存控制。。作为文档资源，当前需要结合项目约束评估。",
+      "recommendation": "weapp.request 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、API。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件",
+        "API"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/afishhhhh/weapp.request"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-newfutureminiprogram-network",
+      "title": "miniprogram-network",
+      "summary": "Redefine the Network API of MiniProgram(小程序网络请求库)。作为文档资源，当前需要结合项目约束评估。",
+      "recommendation": "miniprogram-network 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件、API。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件",
+        "API"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/NewFuture/miniprogram-network"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-chanceyuwe-validator",
+      "title": "we-validator",
+      "summary": "简单灵活的表单验证插件，支持小程序、浏览器以及Nodejs端使用。。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "we-validator 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ChanceYu/we-validator"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-zhongxuqiwx-pulltorefresh-view",
+      "title": "wx-pulltorefresh-view",
+      "summary": "简单灵活的下拉上拉刷新组件，支持微信小程序。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "wx-pulltorefresh-view 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zhongxuqi/wx-pulltorefresh-view"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-sunniejssol-weapp",
+      "title": "sol-weapp ★300+",
+      "summary": "微信小程序营销组件：红包雨、大转盘等营销组件。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "sol-weapp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/sunniejs/sol-weapp/"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-xjh22222228weapp-input-frame",
+      "title": "weapp-input-frame",
+      "summary": "微信小程序验证码输入框组件。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "weapp-input-frame 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/xjh22222228/weapp-input-frame"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-dlhandsomewe-debug",
+      "title": "we-debug",
+      "summary": "一款灵活、易于拓展的微信小程序调试工具。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "we-debug 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/dlhandsome/we-debug"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-tomfriwelweapp-qrcode",
+      "title": "weapp-qrcode",
+      "summary": "微信小程序生成二维码工具。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "weapp-qrcode 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/tomfriwel/weapp-qrcode"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-bigmeowcheers-mp-router",
+      "title": "cheers-mp-router",
+      "summary": "🚦精巧强大的小程序原生路由。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "cheers-mp-router 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bigmeow/cheers-mp-router"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-sherlocked93wx-updata",
+      "title": "wx-updata",
+      "summary": "微信小程序官方 setData 替代品，只修改 data 中你希望修改的部分 ✈️。作为组件与 UI 方案，当前适合优先评估。",
+      "recommendation": "wx-updata 可以作为新项目优先评估方案，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/SHERlocked93/wx-updata"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-deepkolosthree-platformize",
+      "title": "three-platformize",
+      "summary": "一个让 THREE 平台化的项目，已适配微信、淘宝、头条小程序。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "three-platformize 需要结合团队栈、维护状态和替代方案谨慎评估，适合 组件。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "组件"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/deepkolos/three-platformize"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-liyiorgweixin-popular",
+      "title": "weixin-popular",
+      "summary": "微信SDK JAVA (公众平台、开放平台、 商户平台、 服务商平台)。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "weixin-popular 需要结合团队栈、维护状态和替代方案谨慎评估，适合 后端SDK组件、SDK。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "后端SDK组件",
+        "SDK"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/liyiorg/weixin-popular.git"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-binarywangwxjava",
+      "title": "WxJava",
+      "summary": "微信开发 Java SDK ，支持包括微信支付，开放平台，小程序，企业微信，视频号，公众号等的后端开发。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "WxJava 需要结合团队栈、维护状态和替代方案谨慎评估，适合 后端SDK组件、SDK。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "后端SDK组件",
+        "SDK"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/binarywang/WxJava.git"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-rebeccahanjwweapp-wechat-zhihu",
+      "title": "RebeccaHanjw/weapp-wechat-zhihu ★800+",
+      "summary": "仿知乎。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "RebeccaHanjw/weapp-wechat-zhihu 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、可以直接运行成功。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "可以直接运行成功"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/RebeccaHanjw/weapp-wechat-zhihu"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-imageslrweapp-library",
+      "title": "imageslr/weapp-library ★500+",
+      "summary": "在线借书平台（30+页面/组件化/Mock Server/云开发）。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "imageslr/weapp-library 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、云开发、组件、可以直接运行成功。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "Demo",
+        "云开发",
+        "组件",
+        "可以直接运行成功"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/imageslr/weapp-library"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-imageslrtaro-library",
+      "title": "imageslr/taro-library ★150+",
+      "summary": "Taro + Redux + 本地 Mock Server 小程序示例项目。作为框架方案，当前适合优先评估。",
+      "recommendation": "imageslr/taro-library 可以作为新项目优先评估方案，适合 Demo、Taro、可以直接运行成功。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。",
+        "可对比替代方案：uni-app、MPX、原生小程序。"
+      ],
+      "useCases": [
+        "Demo",
+        "Taro",
+        "可以直接运行成功"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/imageslr/taro-library"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-wyq2214368remove-water-mark-mp",
+      "title": "wyq2214368/remove-water-mark-mp",
+      "summary": "🔥短视频去水印小程序（含[服务端](https://github.com/wyq2214368/remove-water-mark-server)）。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "wyq2214368/remove-water-mark-mp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、可以直接运行成功。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "可以直接运行成功"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wyq2214368/remove-water-mark-mp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-deepkolosthree-platformize-demo-wechat",
+      "title": "deepkolos/three-platformize-demo-wechat",
+      "summary": "微信小程序 THREE 包含16个loader测试demo。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "deepkolos/three-platformize-demo-wechat 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、可以直接运行成功。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "可以直接运行成功"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/deepkolos/three-platformize-demo-wechat"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-deepkoloswxmp-tensorflow",
+      "title": "deepkolos/wxmp-tensorflow",
+      "summary": "微信小程序下运行最新TensorFlowJS的解决方案。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "deepkolos/wxmp-tensorflow 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、可以直接运行成功。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "可以直接运行成功"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/deepkolos/wxmp-tensorflow"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-realyaowxminiprogram-focus-clock",
+      "title": "realyao/Focus-clock ★100+",
+      "summary": "✅时间管理小程序：专注时钟（集成时间管理、目标计划、Todo待办、白噪声。易部署 适合新手学习入门）。作为示例项目，当前适合试用验证。",
+      "recommendation": "realyao/Focus-clock 适合在明确场景中试用验证，适合 Demo、可以直接运行成功。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：low。"
+      ],
+      "useCases": [
+        "Demo",
+        "可以直接运行成功"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/realyao/WXminiprogram-Focus-clock"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-mark420524photo",
+      "title": "mark420524/photo",
+      "summary": "证件照小程序。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "mark420524/photo 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、可以直接运行成功。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "可以直接运行成功"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/mark420524/photo"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-jinganixguess",
+      "title": "jinganix/guess",
+      "summary": "猜我是谁小程序，包含前后端代码。作为云服务方案，当前需要结合项目约束评估。",
+      "recommendation": "jinganix/guess 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、可以直接运行成功。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "可以直接运行成功"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/jinganix/guess"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-wyqilinaigallery",
+      "title": "WYQilin/aigallery",
+      "summary": "🔥「奇绘图册」AI绘画、摄影作品管理小程序（[含服务端](https://github.com/WYQilin/aigallery-server)，支持一键部署）。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "WYQilin/aigallery 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、可以直接运行成功。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "可以直接运行成功"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/WYQilin/aigallery"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-eastworldwechat-app-mall",
+      "title": "EastWorld/wechat-app-mall ★3000+",
+      "summary": "微信小程序商城。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "EastWorld/wechat-app-mall 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、电商、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "电商",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/EastWorld/wechat-app-mall"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-tumobinideshop-mini-program",
+      "title": "tumobi/nideshop-mini-program ★2000+",
+      "summary": "基于 Node.js + MySQL 开发的开源微信小程序商城。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "tumobi/nideshop-mini-program 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、电商、IDE、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "电商",
+        "IDE",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/tumobi/nideshop-mini-program"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-huangjiankegitter",
+      "title": "huangjianke/Gitter ★700+",
+      "summary": "Gitter for GitHub - 可能是目前颜值最高的GitHub小程序客户端。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "huangjianke/Gitter 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/huangjianke/Gitter"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-lypeerwechat-weapp-gank",
+      "title": "lypeer/wechat-weapp-gank ★600+)",
+      "summary": "Gank 客户端。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "lypeer/wechat-weapp-gank 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/lypeer/wechat-weapp-gank"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-wangmingjobweapp-weipiao",
+      "title": "wangmingjob/weapp-weipiao ★300+",
+      "summary": "微票。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "wangmingjob/weapp-weipiao 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wangmingjob/weapp-weipiao"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-charleywwechat-weapp-redux",
+      "title": "charleyw/wechat-weapp-redux ★300+",
+      "summary": "Redux 绑定库。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "charleyw/wechat-weapp-redux 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/charleyw/wechat-weapp-redux"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-jectychenwechat-v2ex",
+      "title": "jectychen/wechat-v2ex ★300+)",
+      "summary": "V2EX。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "jectychen/wechat-v2ex 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/jectychen/wechat-v2ex"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-18380435477weapp",
+      "title": "18380435477/WeApp ★300+",
+      "summary": "仿微信。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "18380435477/WeApp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/18380435477/WeApp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-zceweapp-boilerplate",
+      "title": "zce/weapp-boilerplate ★300+",
+      "summary": "微信小程序快速开发骨架。作为示例项目，当前适合试用验证。",
+      "recommendation": "zce/weapp-boilerplate 适合在明确场景中试用验证，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：low。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zce/weapp-boilerplate"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-bayetechwechat-mall-applet",
+      "title": "bayetech/wechat_mall_applet ★300+",
+      "summary": "电商平台。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "bayetech/wechat_mall_applet 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、电商、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "电商",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bayetech/wechat_mall_applet"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-lanshan-studiowecqupt",
+      "title": "lanshan-studio/wecqupt ★300+",
+      "summary": "We 重邮。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "lanshan-studio/wecqupt 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/lanshan-studio/wecqupt"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-myronliu347wechat-app-zhihudaily",
+      "title": "myronliu347/wechat-app-zhihudaily ★200+",
+      "summary": "知乎日报。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "myronliu347/wechat-app-zhihudaily 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/myronliu347/wechat-app-zhihudaily"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-harveyqingbeardiary",
+      "title": "harveyqing/BearDiary ★200+",
+      "summary": "小熊の日记。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "harveyqing/BearDiary 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/harveyqing/BearDiary"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-leancloudleantodo-weapp",
+      "title": "leancloud/leantodo-weapp ★200+",
+      "summary": "集成 LeanCloud 实现的 Todo list。作为云服务方案，当前需要结合项目约束评估。",
+      "recommendation": "leancloud/leantodo-weapp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/leancloud/leantodo-weapp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-superkieranweapp-artand",
+      "title": "SuperKieran/weapp-artand ★200+",
+      "summary": "Artand。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "SuperKieran/weapp-artand 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/SuperKieran/weapp-artand"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-dongweimingweapp-zhihulive",
+      "title": "dongweiming/weapp-zhihulive ★200+",
+      "summary": "知乎 Live。作为SDK 资源，当前需要结合项目约束评估。",
+      "recommendation": "dongweiming/weapp-zhihulive 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/dongweiming/weapp-zhihulive"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-eyasliuwechat-app-music",
+      "title": "eyasliu/wechat-app-music ★200+",
+      "summary": "音乐播放器。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "eyasliu/wechat-app-music 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/eyasliu/wechat-app-music"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-ahonnweapp-one",
+      "title": "ahonn/weapp-one ★200+",
+      "summary": "仿 ONE。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "ahonn/weapp-one 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ahonn/weapp-one"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-giscaferwechat-weapp-mapdemo",
+      "title": "giscafer/wechat-weapp-mapdemo ★200+",
+      "summary": "地图导航、marker标注 （不再维护）。作为SDK 资源，当前需要结合项目约束评估。",
+      "recommendation": "giscafer/wechat-weapp-mapdemo 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/giscafer/wechat-weapp-mapdemo"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-yaoshanliangweapp-ssha",
+      "title": "yaoshanliang/weapp-ssha ★200+",
+      "summary": "企业宣传小程序。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "yaoshanliang/weapp-ssha 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/yaoshanliang/weapp-ssha"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-hilongjwweapp-gold",
+      "title": "hilongjw/weapp-gold ★100+",
+      "summary": "掘金主页信息流。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "hilongjw/weapp-gold 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/hilongjw/weapp-gold"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-zceweapp-douban",
+      "title": "zce/weapp-douban ★100+",
+      "summary": "豆瓣电影。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "zce/weapp-douban 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zce/weapp-douban"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-hingsirweapp-douban-film",
+      "title": "hingsir/weapp-douban-film ★100+",
+      "summary": "豆瓣电影。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "hingsir/weapp-douban-film 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/hingsir/weapp-douban-film"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-kunkun12weapp",
+      "title": "kunkun12/weapp",
+      "summary": "小程序 hello world 尝鲜。作为示例项目，当前适合试用验证。",
+      "recommendation": "kunkun12/weapp 适合在明确场景中试用验证，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：low。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/kunkun12/weapp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-nateewxapp-2048",
+      "title": "natee/wxapp-2048 ★100+",
+      "summary": "2048 小游戏。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "natee/wxapp-2048 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、游戏、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "游戏",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/natee/wxapp-2048"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-septembermapleswechat-weapp-demo",
+      "title": "SeptemberMaples/wechat-weapp-demo ★100+",
+      "summary": "购物车。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "SeptemberMaples/wechat-weapp-demo 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/SeptemberMaples/wechat-weapp-demo"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-hijiangtaoweapp-newsapp",
+      "title": "hijiangtao/weapp-newsapp",
+      "summary": "公众号热门文章信息流。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "hijiangtao/weapp-newsapp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/hijiangtao/weapp-newsapp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-charleywwechat-weapp-redux-todos",
+      "title": "charleyw/wechat-weapp-redux-todos ★100+",
+      "summary": "集成 Redux 实现的Todo list。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "charleyw/wechat-weapp-redux-todos 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/charleyw/wechat-weapp-redux-todos"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-kraaastimer",
+      "title": "kraaas/timer ★100+",
+      "summary": "番茄时钟。作为SDK 资源，当前需要结合项目约束评估。",
+      "recommendation": "kraaas/timer 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/kraaas/timer"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-ericzyhwechat-chat",
+      "title": "ericzyh/wechat-chat ★100+",
+      "summary": "聊天室。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "ericzyh/wechat-chat 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ericzyh/wechat-chat"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-belinchungwxapp-hiapp",
+      "title": "BelinChung/wxapp-hiapp ★100+",
+      "summary": "HiApp。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "BelinChung/wxapp-hiapp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/BelinChung/wxapp-hiapp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-hardogwechat-app-flexlayout",
+      "title": "hardog/wechat-app-flexlayout ★100+",
+      "summary": "flexlayout。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "hardog/wechat-app-flexlayout 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/hardog/wechat-app-flexlayout"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-dunizbwxapp-scalc",
+      "title": "dunizb/wxapp-sCalc ★100+",
+      "summary": "简易计算器。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "dunizb/wxapp-sCalc 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/dunizb/wxapp-sCalc"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-litt1e-pweapp-girls",
+      "title": "litt1e-p/weapp-girls ★100+",
+      "summary": "豆瓣美女/妹子图。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "litt1e-p/weapp-girls 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/litt1e-p/weapp-girls"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-liumulin614beautifulgirl",
+      "title": "liumulin614/BeautifulGirl",
+      "summary": "美女模特。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "liumulin614/BeautifulGirl 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/liumulin614/BeautifulGirl"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-romooweapp-demo-breadtrip",
+      "title": "romoo/weapp-demo-breadtrip ★100+",
+      "summary": "面包旅行。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "romoo/weapp-demo-breadtrip 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/romoo/weapp-demo-breadtrip"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-zhuweiyoufetop100",
+      "title": "zhuweiyou/fetop100 ★100+",
+      "summary": "前端TOP100。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "zhuweiyou/fetop100 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zhuweiyou/fetop100"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-vacewechatapp-news-reader",
+      "title": "vace/wechatapp-news-reader ★100+",
+      "summary": "新闻阅读器。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "vace/wechatapp-news-reader 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/vace/wechatapp-news-reader"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-yaoshanliangweapp-jump",
+      "title": "yaoshanliang/weapp-jump ★100+",
+      "summary": "跳一跳。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "yaoshanliang/weapp-jump 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/yaoshanliang/weapp-jump"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-yaoshanliangweapp-monument-valley",
+      "title": "yaoshanliang/weapp-monument-valley ★100+",
+      "summary": "纪念碑谷。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "yaoshanliang/weapp-monument-valley 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/yaoshanliang/weapp-monument-valley"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-yyjeffreyjuly-client",
+      "title": "YYJeffrey/july_client ★100+",
+      "summary": "七月（一款社交小程序，集内容发布、动态分享、点赞评论、互动聊天等功能）。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "YYJeffrey/july_client 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/YYJeffrey/july_client"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-symouswechatapp-baisisister",
+      "title": "Symous/WechatApp-BaisiSister",
+      "summary": "百思不得姐。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "Symous/WechatApp-BaisiSister 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Symous/WechatApp-BaisiSister"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-githinkcngiteer",
+      "title": "githinkcn/Giteer",
+      "summary": "Giteer For 码云，基于Taro + Taro UI + Dva的小程序。。作为框架方案，当前适合优先评估。",
+      "recommendation": "githinkcn/Giteer 可以作为新项目优先评估方案，适合 Demo、Taro、UI、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。",
+        "可对比替代方案：uni-app、MPX、原生小程序。"
+      ],
+      "useCases": [
+        "Demo",
+        "Taro",
+        "UI",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/githinkcn/Giteer"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-monkindeywx-github",
+      "title": "monkindey/wx-github",
+      "summary": "GitHub 简历。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "monkindey/wx-github 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/monkindey/wx-github"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-fluency03weapp-500px",
+      "title": "fluency03/weapp-500px",
+      "summary": "国外摄影社区 500px。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "fluency03/weapp-500px 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/fluency03/weapp-500px"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-luumanweapp-film",
+      "title": "weapp-film",
+      "summary": "淘票票。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "weapp-film 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/luuman/weapp-film"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-xujinyangcodercalendar-weapp",
+      "title": "xujinyang/CoderCalendar-WeApp",
+      "summary": "程序员老黄历。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "xujinyang/CoderCalendar-WeApp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/xujinyang/CoderCalendar-WeApp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-zhengxiaowaiweapp-github",
+      "title": "zhengxiaowai/weapp-github",
+      "summary": "github。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "zhengxiaowai/weapp-github 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zhengxiaowai/weapp-github"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-seahubpigraising",
+      "title": "Seahub/PigRaising",
+      "summary": "PigRaising。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "Seahub/PigRaising 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/SeaHub/PigRaising"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-brucevanfdmwechatmeizhi",
+      "title": "brucevanfdm/WeChatMeiZhi",
+      "summary": "妹子图。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "brucevanfdm/WeChatMeiZhi 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/brucevanfdm/WeChatMeiZhi"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-uniquexiaobaiwechat-app-githubfeed",
+      "title": "uniquexiaobai/wechat-app-githubfeed",
+      "summary": "GitHubFeed。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "uniquexiaobai/wechat-app-githubfeed 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/uniquexiaobai/wechat-app-githubfeed"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-zceweapp-todos",
+      "title": "zce/weapp-todos",
+      "summary": "TODOS 任务清单。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "zce/weapp-todos 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zce/weapp-todos"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-bruintongwechat-webapp-douban-movie",
+      "title": "bruintong/wechat-webapp-douban-movie",
+      "summary": "豆瓣电影。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "bruintong/wechat-webapp-douban-movie 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、UI、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "Demo",
+        "UI",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bruintong/wechat-webapp-douban-movie"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-bruintongwechat-webapp-douban-location",
+      "title": "bruintong/wechat-webapp-douban-location",
+      "summary": "豆瓣同城。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "bruintong/wechat-webapp-douban-location 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、UI、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "Demo",
+        "UI",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bruintong/wechat-webapp-douban-location"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-arkilisweapp-jandan",
+      "title": "arkilis/weapp-jandan",
+      "summary": "煎蛋。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "arkilis/weapp-jandan 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/arkilis/weapp-jandan"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-bodekjanwechat-weather",
+      "title": "bodekjan/wechat-weather",
+      "summary": "微信天气。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "bodekjan/wechat-weather 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bodekjan/wechat-weather"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-jassciachristmashat",
+      "title": "jasscia/ChristmasHat",
+      "summary": "我要圣诞帽。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "jasscia/ChristmasHat 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/jasscia/ChristmasHat"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-nanwangjklsliding-puzzle",
+      "title": "nanwangjkl/sliding_puzzle",
+      "summary": "滑块拼图。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "nanwangjkl/sliding_puzzle 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/nanwangjkl/sliding_puzzle"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-kaiwuweui-scalajs",
+      "title": "kaiwu/weui-scalajs",
+      "summary": "使用Scala.js开发。作为组件与 UI 方案，当前适合优先评估。",
+      "recommendation": "kaiwu/weui-scalajs 可以作为新项目优先评估方案，适合 Demo、UI、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "Demo",
+        "UI",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/kaiwu/weui-scalajs"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-tinajstina-hackernews",
+      "title": "tinajs/tina-hackernews",
+      "summary": "Hacker News 热点。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "tinajs/tina-hackernews 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/tinajs/tina-hackernews"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-mohuishouscuplus-wechat",
+      "title": "mohuishou/scuplus-wechat",
+      "summary": "We 川大。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "mohuishou/scuplus-wechat 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、UI、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "Demo",
+        "UI",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/mohuishou/scuplus-wechat"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-hankzhuowx-v2ex",
+      "title": "hankzhuo/wx-v2ex",
+      "summary": "v2ex。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "hankzhuo/wx-v2ex 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/hankzhuo/wx-v2ex"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-hongye567weapp-mark",
+      "title": "Hongye567/weapp-mark",
+      "summary": "仿 Mark 影单的微信小程序。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "Hongye567/weapp-mark 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Hongye567/weapp-mark"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-jae-jaeweapp-github-trending",
+      "title": "jae-jae/weapp-github-trending",
+      "summary": "Github今日榜单。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "jae-jae/weapp-github-trending 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/jae-jae/weapp-github-trending"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-steedosmini-vip",
+      "title": "steedos/mini-vip",
+      "summary": "华炎微站、微商城。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "steedos/mini-vip 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、电商、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "电商",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/steedos/mini-vip"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-alex1504wx-guita-tab",
+      "title": "alex1504/wx-guita_tab",
+      "summary": "口袋吉他。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "alex1504/wx-guita_tab 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、UI、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "Demo",
+        "UI",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/alex1504/wx-guita_tab"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-lonnngetym",
+      "title": "lonnng/etym",
+      "summary": "芒果词源助手。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "lonnng/etym 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/lonnng/etym"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-wuhou123wxxcx",
+      "title": "wuhou123/wxxcx",
+      "summary": "武侯的猫，基于wepy构建,整合了n多查询工具（快递，天气，记账，搞笑视频等）。作为框架方案，当前不建议新项目直接采用。",
+      "recommendation": "wuhou123/wxxcx 不建议新项目直接采用，主要用于老项目维护、迁移评估或历史参考。",
+      "riskNotes": [
+        "当前维护状态：deprecated。",
+        "当前风险等级：high。",
+        "高风险资源需要优先确认是否停维、是否有迁移路径，以及是否存在更活跃替代方案。",
+        "可对比替代方案：Taro、uni-app、原生小程序。"
+      ],
+      "useCases": [
+        "Demo",
+        "WePY",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [
+        "新项目技术选型",
+        "长期维护成本敏感的团队",
+        "新项目从零开始选型。",
+        "缺少迁移预案或长期维护预算的生产项目。",
+        "要求持续升级和长期维护的核心业务。"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wuhou123/wxxcx"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-upupminghitmers",
+      "title": "upupming/HITMers",
+      "summary": "博物馆小助手（统计值班表、签到、值班日历及备忘录、国际化、Streamable.com 视频上传等）。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "upupming/HITMers 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/upupming/HITMers"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-ldoubleweouc",
+      "title": "LDouble/WeOUC",
+      "summary": "WeOUC(教务小程序)。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "LDouble/WeOUC 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/LDouble/WeOUC"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-airmoleshellbox",
+      "title": "Airmole/ShellBox",
+      "summary": "贝壳小盒子（校园教务信息查询类工具，获2019高校小程序开发大赛华北区二等奖）。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "Airmole/ShellBox 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Airmole/ShellBox"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-aquanlerouwehalo",
+      "title": "aquanlerou/WeHalo ★200+",
+      "summary": "爱敲代码的猫（WeHalo 简约风 的微信小程序版博客✨）。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "aquanlerou/WeHalo 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/aquanlerou/WeHalo"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-warpprismsubwayroutinemp",
+      "title": "WarpPrism/SubwayRoutineMP",
+      "summary": "【东京首尔曼谷新加坡巴黎地铁线路图🚄】。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "WarpPrism/SubwayRoutineMP 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/WarpPrism/SubwayRoutineMP"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-goku-gagatoday",
+      "title": "GoKu-gaga/today",
+      "summary": "口袋工具（一个小工具的集合）。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "GoKu-gaga/today 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/GoKu-gaga/today"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-cy920820weapp-motor-movies",
+      "title": "cy920820/weapp-motor-movies",
+      "summary": "马达电影助手（一个院线电影小助手）。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "cy920820/weapp-motor-movies 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/cy920820/weapp-motor-movies"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-gwokhovchronus",
+      "title": "Gwokhov/chronus",
+      "summary": "Chronus 目标日记（一款能帮助你管理生活目标的云开发微信小程序）。作为云服务方案，当前需要结合项目约束评估。",
+      "recommendation": "Gwokhov/chronus 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、云开发、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "云开发",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Gwokhov/chronus"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-imliubowechat-mqtt-esp8266-baiduiot",
+      "title": "imliubo/Wechat_MQTT_ESP8266_BaiduIoT",
+      "summary": "微信智能小管家 (使用微信小程序控制你的硬件设备)。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "imliubo/Wechat_MQTT_ESP8266_BaiduIoT 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、UI、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "Demo",
+        "UI",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/imliubo/Wechat_MQTT_ESP8266_BaiduIoT"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-yuzexiaiw3cplus",
+      "title": "yuzexia/iw3cplus",
+      "summary": "前端社区[www.w3cplus.com](https://www.w3cplus.com)的微信小程序。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "yuzexia/iw3cplus 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/yuzexia/iw3cplus"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-raoeshow-videos",
+      "title": "RAOE/show-videos",
+      "summary": "秀视频（微信小程序短视频社交软件，视频上传，音视频合成，评论，点赞，转发，分享等）。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "RAOE/show-videos 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、IDE、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "IDE",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/RAOE/show-videos"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-newfutureminiprogram-template",
+      "title": "NewFuture/miniprogram-template",
+      "summary": "原生API纯TypeScript开发小程序(VSCode as IDE)与完整开发流程。作为文档资源，当前适合试用验证。",
+      "recommendation": "NewFuture/miniprogram-template 适合在明确场景中试用验证，适合 Demo、TypeScript、API、IDE。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：low。"
+      ],
+      "useCases": [
+        "Demo",
+        "TypeScript",
+        "API",
+        "IDE"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/NewFuture/miniprogram-template"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-zhupengmp-githubtrending",
+      "title": "ZhuPeng/mp-githubtrending",
+      "summary": "以 Feed 流形式查看 GitHub Trending 仓库集合的工具。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "ZhuPeng/mp-githubtrending 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ZhuPeng/mp-githubtrending"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-yociduoscrum-planning-poker",
+      "title": "yociduo/scrum-planning-poker",
+      "summary": "Scrum敏捷估算,基于wepy构建。作为框架方案，当前不建议新项目直接采用。",
+      "recommendation": "yociduo/scrum-planning-poker 不建议新项目直接采用，主要用于老项目维护、迁移评估或历史参考。",
+      "riskNotes": [
+        "当前维护状态：deprecated。",
+        "当前风险等级：high。",
+        "高风险资源需要优先确认是否停维、是否有迁移路径，以及是否存在更活跃替代方案。",
+        "可对比替代方案：Taro、uni-app、原生小程序。"
+      ],
+      "useCases": [
+        "Demo",
+        "WePY",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [
+        "新项目技术选型",
+        "长期维护成本敏感的团队",
+        "新项目从零开始选型。",
+        "缺少迁移预案或长期维护预算的生产项目。",
+        "要求持续升级和长期维护的核心业务。"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/yociduo/scrum-planning-poker"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-kilakila-heartfuliba-front",
+      "title": "kilakila-heart/fuliba-front",
+      "summary": "信息流福利吧小程序。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "kilakila-heart/fuliba-front 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/kilakila-heart/fuliba-front"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-lsqytaro-music",
+      "title": "lsqy/taro-music",
+      "summary": "🎉基于taro + taro-ui + redux + typescript 开发的网易云音乐小程序。作为框架方案，当前适合优先评估。",
+      "recommendation": "lsqy/taro-music 可以作为新项目优先评估方案，适合 Demo、Taro、TypeScript、UI。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。",
+        "可对比替代方案：uni-app、MPX、原生小程序。"
+      ],
+      "useCases": [
+        "Demo",
+        "Taro",
+        "TypeScript",
+        "UI"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/lsqy/taro-music"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-notobeyhimalayan-lite",
+      "title": "仿喜马拉雅lite",
+      "summary": "微信小程序原生开发的仿喜马拉雅小程序（极度适合新手入门）。作为示例项目，当前适合试用验证。",
+      "recommendation": "仿喜马拉雅lite 适合在明确场景中试用验证，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：low。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Notobey/Himalayan-lite"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-branlianggame-stop-app",
+      "title": "branliang/game-stop-app",
+      "summary": "PSN降价了（一个可以订阅PS4游戏价格的工具）。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "branliang/game-stop-app 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、游戏、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "游戏",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/BranLiang/game-stop-app"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-wk989898wxchat-mail",
+      "title": "wk989898/wxchat-mail",
+      "summary": "仿Gmail邮箱的微信小程序。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "wk989898/wxchat-mail 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wk989898/wxchat-mail"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-ansonznlbookshelf",
+      "title": "AnsonZnl/bookshelf",
+      "summary": "🎉基于云开发的书架小程序（附教程）🎉。作为文档资源，当前适合试用验证。",
+      "recommendation": "AnsonZnl/bookshelf 适合在明确场景中试用验证，适合 Demo、云开发、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：low。"
+      ],
+      "useCases": [
+        "Demo",
+        "云开发",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/AnsonZnl/bookshelf"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-arleyguoleiwx-words-pk",
+      "title": "arleyGuoLei/wx-words-pk ★100+",
+      "summary": "🔥2020 云开发实现单词对战小程序（随机匹配、人机对战、好友对战），专业UI。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "arleyGuoLei/wx-words-pk 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、云开发、UI、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "Demo",
+        "云开发",
+        "UI",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/arleyGuoLei/wx-words-pk"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-arleyguoleiwechat-1password",
+      "title": "arleyGuoLei/wechat-1password",
+      "summary": "🐂🍺有本密码，云开发实现的AES加密密码本，支持指纹、人脸，UI简约大方。作为组件与 UI 方案，当前需要结合项目约束评估。",
+      "recommendation": "arleyGuoLei/wechat-1password 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、云开发、UI、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。",
+        "可对比替代方案：TDesign WeChat、Vant Weapp、WeUI。"
+      ],
+      "useCases": [
+        "Demo",
+        "云开发",
+        "UI",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/arleyGuoLei/wechat-1password"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-terrysosuper9",
+      "title": "terryso/super9",
+      "summary": "🔥抖音一键去水印小程序: Taro + 微信云开发。作为框架方案，当前适合优先评估。",
+      "recommendation": "terryso/super9 可以作为新项目优先评估方案，适合 Demo、Taro、云开发、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：active。",
+        "当前风险等级：low。",
+        "可对比替代方案：uni-app、MPX、原生小程序。"
+      ],
+      "useCases": [
+        "Demo",
+        "Taro",
+        "云开发",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/terryso/super9"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-redhat123456upphysicalexercise",
+      "title": "redhat123456/upPhysicalExercise",
+      "summary": "🚀up体能训练小程序(健身训练、观看视频、制定计划于一身的综合小程序)。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "redhat123456/upPhysicalExercise 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/redhat123456/upPhysicalExercise"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-redhat123456tanger-query",
+      "title": "redhat123456/Tanger_query",
+      "summary": "🌈查询小程序(查询各种各样的信息的小程序)。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "redhat123456/Tanger_query 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/redhat123456/Tanger_query"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-mark420524question",
+      "title": "mark420524/question",
+      "summary": "学习答题小程序，诗词歌赋小工具-早晚答小程序。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "mark420524/question 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/mark420524/question"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-chadwuoli-ji-weapp",
+      "title": "Chadwuo/li-ji-weapp",
+      "summary": "🔥记录和管理人情来往，给你方便快捷的人情记账体验！专业又懂你的人情记账软件，共享记账，全家人共享账本。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "Chadwuo/li-ji-weapp 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Chadwuo/li-ji-weapp"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-mark420524guess",
+      "title": "mark420524/guess",
+      "summary": "看图猜成语微信小程序。作为示例项目，当前需要结合项目约束评估。",
+      "recommendation": "mark420524/guess 需要结合团队栈、维护状态和替代方案谨慎评估，适合 Demo、数据接口有问题。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "Demo",
+        "数据接口有问题"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/mark420524/guess"
+        }
+      ]
+    }
+  ]
+}

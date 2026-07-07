@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@tarojs/taro": "^4.0.0"
+  },
+  "devDependencies": {
+    "@tarojs/cli": "^4.0.0"
+  },
+  "scripts": {
+    "build": "taro build --type weapp",
+    "dev": "taro build --type weapp --watch"
+  }
+}

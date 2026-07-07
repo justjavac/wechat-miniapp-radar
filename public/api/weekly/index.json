@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-07-06T13:28:34.281Z",
+  "reports": [
+    {
+      "id": "2026-07-06",
+      "title": "小程序生态周报 2026-07-06",
+      "generatedAt": "2026-07-06T13:28:33.917Z",
+      "stats": {
+        "total": 236,
+        "adopt": 18,
+        "trial": 8,
+        "assess": 200,
+        "hold": 10,
+        "highRisk": 10,
+        "categories": 7
+      }
+    }
+  ]
+}

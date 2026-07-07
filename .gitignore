@@ -1,0 +1,16 @@
+node_modules/
+.next/
+.tmp/
+.playwright-cli/
+out/
+.vercel/
+
+*.log
+tsconfig.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.env
+.env.local
+.env*.local

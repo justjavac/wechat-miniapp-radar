@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 98%;
+  --foreground: 0 0% 4%;
+  --muted: 0 0% 95%;
+  --muted-foreground: 0 0% 40%;
+  --border: 0 0% 90%;
+  --surface: 0 0% 100%;
+  --primary: 0 0% 4%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 212 100% 45%;
+  --accent-foreground: 0 0% 100%;
+  --warning: 38 92% 50%;
+  --danger: 0 84% 54%;
+  --font-sans: "Segoe UI", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Cascadia Mono", "SFMono-Regular", Consolas, "Liberation Mono", ui-monospace, monospace;
+}
+
+.dark {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 93%;
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 64%;
+  --border: 0 0% 20%;
+  --surface: 0 0% 7%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 0 0% 4%;
+  --accent: 212 100% 55%;
+  --accent-foreground: 0 0% 100%;
+  --warning: 38 92% 58%;
+  --danger: 0 84% 63%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100dvh;
+  margin: 0;
+  background:
+    linear-gradient(90deg, hsl(var(--border) / 0.34) 1px, transparent 1px),
+    linear-gradient(0deg, hsl(var(--border) / 0.34) 1px, transparent 1px),
+    hsl(var(--background));
+  background-size: 48px 48px;
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.dark body {
+  background:
+    linear-gradient(90deg, hsl(var(--border) / 0.34) 1px, transparent 1px),
+    linear-gradient(0deg, hsl(var(--border) / 0.34) 1px, transparent 1px),
+    hsl(var(--background));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.radar-grid {
+  background:
+    linear-gradient(90deg, hsl(var(--border) / 0.55) 1px, transparent 1px),
+    linear-gradient(0deg, hsl(var(--border) / 0.55) 1px, transparent 1px),
+    hsl(var(--surface));
+  background-size: 28px 28px;
+}
+
+.dark .radar-grid {
+  background:
+    linear-gradient(90deg, hsl(var(--border) / 0.55) 1px, transparent 1px),
+    linear-gradient(0deg, hsl(var(--border) / 0.55) 1px, transparent 1px),
+    hsl(var(--surface));
+  background-size: 28px 28px;
+}
+
+.hero-field {
+  background:
+    radial-gradient(circle at 76% 22%, hsl(var(--accent) / 0.08), transparent 32%),
+    linear-gradient(180deg, hsl(var(--surface)) 0%, hsl(var(--background)) 100%);
+}
+
+.hero-radar {
+  position: relative;
+  display: grid;
+  min-height: 390px;
+  grid-template-rows: auto minmax(260px, 1fr);
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--surface));
+}
+
+.hero-radar-summary {
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid hsl(var(--border));
+  background: hsl(var(--surface) / 0.92);
+  padding: 1rem;
+}
+
+.hero-radar-stage {
+  position: relative;
+  min-height: 260px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, hsl(var(--border) / 0.6) 1px, transparent 1px),
+    linear-gradient(0deg, hsl(var(--border) / 0.5) 1px, transparent 1px),
+    hsl(var(--surface));
+  background-size: 32px 32px;
+}
+
+.hero-radar-stage::before,
+.hero-radar-stage::after {
+  content: "";
+  position: absolute;
+  inset: 11%;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--foreground) / 0.18);
+}
+
+.hero-radar-stage::after {
+  inset: 27%;
+}
+
+.hero-sweep {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 72%;
+  width: 72%;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: conic-gradient(from 0deg, transparent 0deg, hsl(var(--accent) / 0.08) 34deg, hsl(var(--foreground) / 0.28) 48deg, transparent 62deg);
+  animation: radar-sweep 8s ease-in-out infinite;
+}
+
+.hero-sweep::after {
+  content: "";
+  position: absolute;
+  inset: 48% 49% 0 49%;
+  background: hsl(var(--foreground));
+  opacity: 0.34;
+  transform-origin: top;
+}
+
+.hero-node {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  height: 4.5rem;
+  width: 4.5rem;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--foreground) / 0.24);
+  background: hsl(var(--surface) / 0.88);
+  color: hsl(var(--foreground));
+  box-shadow: 0 0 0 8px hsl(var(--foreground) / 0.04);
+}
+
+.signal-chip {
+  position: absolute;
+  display: inline-flex;
+  min-height: 2.25rem;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--surface) / 0.9);
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 0 10px 24px hsl(var(--foreground) / 0.06);
+}
+
+.signal-chip::before {
+  content: "";
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 999px;
+  background: hsl(var(--foreground));
+  box-shadow: 0 0 0 4px hsl(var(--foreground) / 0.1);
+}
+
+.signal-chip[data-tone="warn"]::before {
+  background: hsl(var(--warning));
+  box-shadow: 0 0 0 4px hsl(var(--warning) / 0.18);
+}
+
+.signal-chip[data-tone="danger"]::before {
+  background: hsl(var(--danger));
+  box-shadow: 0 0 0 4px hsl(var(--danger) / 0.16);
+}
+
+.signal-chip-one {
+  right: 9%;
+  top: 14%;
+  animation: signal-float 4.8s ease-in-out infinite;
+}
+
+.signal-chip-two {
+  left: 8%;
+  top: 43%;
+  animation: signal-float 5.4s ease-in-out 400ms infinite;
+}
+
+.signal-chip-three {
+  bottom: 13%;
+  right: 13%;
+  animation: signal-float 5.1s ease-in-out 800ms infinite;
+}
+
+.hero-metric {
+  border-left: 1px solid hsl(var(--border));
+  padding-left: 1rem;
+}
+
+@keyframes radar-sweep {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes signal-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus-ring:focus-visible {
+  outline-color: hsl(var(--accent));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hero-sweep,
+  .signal-chip {
+    animation: none !important;
+  }
+}

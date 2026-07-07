@@ -1,0 +1,4262 @@
+{
+  "generatedAt": "2026-07-07T00:15:17.092Z",
+  "stats": {
+    "total": 236,
+    "adopt": 18,
+    "trial": 8,
+    "assess": 200,
+    "hold": 10,
+    "highRisk": 10,
+    "categories": 7
+  },
+  "scores": [
+    {
+      "id": "github-com-tencentwepy",
+      "title": "WePY：组件化的小程序开发框架",
+      "status": "hold",
+      "maintainStatus": "deprecated",
+      "riskLevel": "high",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/Tencent/wepy"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Tencent/wepy"
+        }
+      ]
+    },
+    {
+      "id": "github-com-aben1188awesome-wepy",
+      "title": "WePY 开发资源汇总",
+      "status": "hold",
+      "maintainStatus": "deprecated",
+      "riskLevel": "high",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/aben1188/awesome-wepy"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/aben1188/awesome-wepy"
+        }
+      ]
+    },
+    {
+      "id": "developers-weixin-qq-com-miniprogramdesignindex-html",
+      "title": "小程序设计指南",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "docs",
+      "reasons": [
+        "官方文档: https://developers.weixin.qq.com/miniprogram/design/index.html"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "docs",
+          "label": "官方文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/design/index.html"
+        }
+      ]
+    },
+    {
+      "id": "developers-weixin-qq-com-miniprogramdevframework",
+      "title": "小程序开发教程",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "docs",
+      "reasons": [
+        "官方文档: https://developers.weixin.qq.com/miniprogram/dev/framework/"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "docs",
+          "label": "官方文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/dev/framework/"
+        }
+      ]
+    },
+    {
+      "id": "developers-weixin-qq-com-miniprogramdevframeworkmina-html",
+      "title": "小程序框架",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "docs",
+      "reasons": [
+        "官方文档: https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "docs",
+          "label": "官方文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html"
+        }
+      ]
+    },
+    {
+      "id": "developers-weixin-qq-com-miniprogramdevcomponent",
+      "title": "小程序组件",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "docs",
+      "reasons": [
+        "官方文档: https://developers.weixin.qq.com/miniprogram/dev/component/"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "docs",
+          "label": "官方文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/dev/component/"
+        }
+      ]
+    },
+    {
+      "id": "developers-weixin-qq-com-miniprogramdevapi",
+      "title": "小程序 API",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "docs",
+      "reasons": [
+        "官方文档: https://developers.weixin.qq.com/miniprogram/dev/api/"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "docs",
+          "label": "官方文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/dev/api/"
+        }
+      ]
+    },
+    {
+      "id": "developers-weixin-qq-com-miniprogramdevdevtoolsdevtools-html",
+      "title": "小程序开发者工具",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "docs",
+      "reasons": [
+        "官方文档: https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "docs",
+          "label": "官方文档",
+          "url": "https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html"
+        }
+      ]
+    },
+    {
+      "id": "github-com-dcloudiouni-app",
+      "title": "uni-app ★36.1k+",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/dcloudio/uni-app"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/dcloudio/uni-app"
+        }
+      ]
+    },
+    {
+      "id": "github-com-nervjstaro",
+      "title": "Taro ★30.6k+",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/NervJS/taro"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/NervJS/taro"
+        }
+      ]
+    },
+    {
+      "id": "github-com-tencentwepy-2",
+      "title": "WePY ★21.7k+",
+      "status": "hold",
+      "maintainStatus": "deprecated",
+      "riskLevel": "high",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/Tencent/wepy"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Tencent/wepy"
+        }
+      ]
+    },
+    {
+      "id": "github-com-meituan-dianpingmpvue",
+      "title": "mpvue ★20.4k+",
+      "status": "hold",
+      "maintainStatus": "deprecated",
+      "riskLevel": "high",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/Meituan-Dianping/mpvue"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Meituan-Dianping/mpvue"
+        }
+      ]
+    },
+    {
+      "id": "github-com-didichameleon",
+      "title": "chameleon ★8.6k+",
+      "status": "assess",
+      "maintainStatus": "stale",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/didi/chameleon"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/didi/chameleon"
+        }
+      ]
+    },
+    {
+      "id": "github-com-wechat-miniprogramkbone",
+      "title": "kbone ★4.2k+",
+      "status": "assess",
+      "maintainStatus": "stale",
+      "riskLevel": "medium",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/wechat-miniprogram/kbone"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wechat-miniprogram/kbone"
+        }
+      ]
+    },
+    {
+      "id": "github-com-remaxjsremax",
+      "title": "Remax ★4.2k+",
+      "status": "assess",
+      "maintainStatus": "stale",
+      "riskLevel": "medium",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/remaxjs/remax"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/remaxjs/remax"
+        }
+      ]
+    },
+    {
+      "id": "github-com-chemzqmwept",
+      "title": "wept ★2.3k",
+      "status": "assess",
+      "maintainStatus": "stale",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/chemzqm/wept"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/chemzqm/wept"
+        }
+      ]
+    },
+    {
+      "id": "github-com-cytlewechat-web-devtools",
+      "title": "wechat_web_devtools ★2.3k+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/cytle/wechat_web_devtools"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/cytle/wechat_web_devtools"
+        }
+      ]
+    },
+    {
+      "id": "github-com-tencentyunwafer",
+      "title": "wafer ★2.1k",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/tencentyun/wafer"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/tencentyun/wafer"
+        }
+      ]
+    },
+    {
+      "id": "github-com-didimpx",
+      "title": "MPX ★2.1k+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/didi/mpx"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/didi/mpx"
+        }
+      ]
+    },
+    {
+      "id": "github-com-maichonglabrador",
+      "title": "Labrador ★1.7k",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/maichong/labrador"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/maichong/labrador"
+        }
+      ]
+    },
+    {
+      "id": "github-com-lirilirilicia",
+      "title": "licia ★1.7k",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/liriliri/licia"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/liriliri/licia"
+        }
+      ]
+    },
+    {
+      "id": "github-com-kaola-fedmegalo",
+      "title": "megalo ★1.6k",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/kaola-fed/megalo"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/kaola-fed/megalo"
+        }
+      ]
+    },
+    {
+      "id": "github-com-tencentcloudbase-framework",
+      "title": "CloudBase Framework ★1.1k",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "cloud",
+      "reasons": [
+        "GitHub: https://github.com/Tencent/cloudbase-framework"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Tencent/cloudbase-framework"
+        }
+      ]
+    },
+    {
+      "id": "github-com-tinajstina",
+      "title": "tina ★1k+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/tinajs/tina"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/tinajs/tina"
+        }
+      ]
+    },
+    {
+      "id": "github-com-qiu8310minapp",
+      "title": "minapp ★800+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/qiu8310/minapp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/qiu8310/minapp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-ecomfeokam",
+      "title": "Okam ★300+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/ecomfe/okam"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ecomfe/okam"
+        }
+      ]
+    },
+    {
+      "id": "github-com-xpmjsxpmjs",
+      "title": "xpmjs ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "sdk",
+      "reasons": [
+        "GitHub: https://github.com/xpmjs/xpmjs"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/xpmjs/xpmjs"
+        }
+      ]
+    },
+    {
+      "id": "github-com-jeff2maweapp-workflow",
+      "title": "WeApp-Workflow ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/Jeff2Ma/WeApp-Workflow"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Jeff2Ma/WeApp-Workflow"
+        }
+      ]
+    },
+    {
+      "id": "github-com-sonofmagicweapp-tailwindcss-webpack-plugin",
+      "title": "weapp-tailwindcss-webpack-plugin ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/sonofmagic/weapp-tailwindcss-webpack-plugin"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/sonofmagic/weapp-tailwindcss-webpack-plugin"
+        }
+      ]
+    },
+    {
+      "id": "github-com-mdsb100gulp-wxa-copy-npm",
+      "title": "gulp-wxa-copy-npm",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "sdk",
+      "reasons": [
+        "GitHub: https://github.com/mdsb100/gulp-wxa-copy-npm"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/mdsb100/gulp-wxa-copy-npm"
+        }
+      ]
+    },
+    {
+      "id": "github-com-haojyweact",
+      "title": "weact",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/haojy/weact"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/haojy/weact"
+        }
+      ]
+    },
+    {
+      "id": "github-com-cytlesocket-io-mp-client",
+      "title": "socket.io-mp-client",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/cytle/socket.io-mp-client"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/cytle/socket.io-mp-client"
+        }
+      ]
+    },
+    {
+      "id": "github-com-genuifxpostcss-pxtorpx-pro",
+      "title": "postcss-pxtorpx-pro",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/Genuifx/postcss-pxtorpx-pro"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Genuifx/postcss-pxtorpx-pro"
+        }
+      ]
+    },
+    {
+      "id": "github-com-allanguyspx2rpx",
+      "title": "px2rpx",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/allanguys/px2rpx"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/allanguys/px2rpx"
+        }
+      ]
+    },
+    {
+      "id": "github-com-seanlongwxml-parser",
+      "title": "wxml-parser",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/seanlong/wxml-parser"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/seanlong/wxml-parser"
+        }
+      ]
+    },
+    {
+      "id": "github-com-wxmlfile",
+      "title": "@wxml/parser, @wxml/traverse, @wxml/generator",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/wxmlfile"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wxmlfile"
+        }
+      ]
+    },
+    {
+      "id": "github-com-tolerance-goweappx",
+      "title": "weappx",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/tolerance-go/weappx"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/tolerance-go/weappx"
+        }
+      ]
+    },
+    {
+      "id": "github-com-tolerance-goweapp-start",
+      "title": "weapp-start",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/tolerance-go/weapp-start"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/tolerance-go/weapp-start"
+        }
+      ]
+    },
+    {
+      "id": "github-com-authingwxapp-graphql",
+      "title": "wxapp-graphql",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/Authing/wxapp-graphql"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Authing/wxapp-graphql"
+        }
+      ]
+    },
+    {
+      "id": "github-com-ksky521gulp-wxapp-boilerplate",
+      "title": "gulp-wxapp-boilerplate",
+      "status": "trial",
+      "maintainStatus": "unknown",
+      "riskLevel": "low",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/ksky521/gulp-wxapp-boilerplate"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ksky521/gulp-wxapp-boilerplate"
+        }
+      ]
+    },
+    {
+      "id": "github-com-cnyballkwenaox",
+      "title": "wenaox",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/cnyballk/wenaox"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/cnyballk/wenaox"
+        }
+      ]
+    },
+    {
+      "id": "github-com-authingauthing-wxapp-sdk",
+      "title": "authing-wxapp-sdk",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "sdk",
+      "reasons": [
+        "GitHub: https://github.com/Authing/authing-wxapp-sdk"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Authing/authing-wxapp-sdk"
+        }
+      ]
+    },
+    {
+      "id": "github-com-coolriceweapp-eslint-boilerplate",
+      "title": "weapp-eslint-boilerplate",
+      "status": "trial",
+      "maintainStatus": "unknown",
+      "riskLevel": "low",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/CoolRice/weapp-eslint-boilerplate"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/CoolRice/weapp-eslint-boilerplate"
+        }
+      ]
+    },
+    {
+      "id": "iexception-github-io-anka-docbookindex-html",
+      "title": "Anka",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "官网: https://iexception.github.io/anka-doc/book/index.html"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "website",
+          "label": "官网",
+          "url": "https://iexception.github.io/anka-doc/book/index.html"
+        }
+      ]
+    },
+    {
+      "id": "github-com-bakerjqweappbunxin",
+      "title": "WeAppBunXin",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/BakerJQ/WeAppBunXin"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/BakerJQ/WeAppBunXin"
+        }
+      ]
+    },
+    {
+      "id": "github-com-newfutureminiprogram-build",
+      "title": "miniprogram-build",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/NewFuture/miniprogram-build"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/NewFuture/miniprogram-build"
+        }
+      ]
+    },
+    {
+      "id": "github-com-sunnie1992weapp-gulp",
+      "title": "weapp-gulp",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/sunnie1992/weapp-gulp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/sunnie1992/weapp-gulp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-bigmeowcheers-mp",
+      "title": "cheers-mp",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/bigmeow/cheers-mp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bigmeow/cheers-mp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-cicecwe-mobx",
+      "title": "we-mobx",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/cicec/we-mobx"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/cicec/we-mobx"
+        }
+      ]
+    },
+    {
+      "id": "github-com-weimobgroupweconsole",
+      "title": "weconsole",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/weimobGroup/WeConsole"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/weimobGroup/WeConsole"
+        }
+      ]
+    },
+    {
+      "id": "github-com-msojocswechat-web-devtools-linux",
+      "title": "wechat-web-devtools-linux",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/msojocs/wechat-web-devtools-linux"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/msojocs/wechat-web-devtools-linux"
+        }
+      ]
+    },
+    {
+      "id": "github-com-chemzqmwxapp-vim",
+      "title": "wxapp.vim",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "sdk",
+      "reasons": [
+        "GitHub: https://github.com/chemzqm/wxapp.vim"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/chemzqm/wxapp.vim"
+        }
+      ]
+    },
+    {
+      "id": "github-com-abbottonweapp-snippet-for-sublime-text-2-3",
+      "title": "weapp-snippet-for-sublime-text-2-3",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "sdk",
+      "reasons": [
+        "GitHub: https://github.com/Abbotton/weapp-snippet-for-sublime-text-2-3"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Abbotton/weapp-snippet-for-sublime-text-2-3"
+        }
+      ]
+    },
+    {
+      "id": "github-com-lypeermatchmaker",
+      "title": "Matchmaker",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/lypeer/Matchmaker"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/lypeer/Matchmaker"
+        }
+      ]
+    },
+    {
+      "id": "github-com-qbrightwechatcode-complete",
+      "title": "wechatCode-complete",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/qbright/wechatCode-complete"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/qbright/wechatCode-complete"
+        }
+      ]
+    },
+    {
+      "id": "github-com-floydagithubwxapp",
+      "title": "wxapp",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "sdk",
+      "reasons": [
+        "GitHub: https://github.com/FloydaGithub/wxapp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/FloydaGithub/wxapp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-qiu8310minappblobmasterpackagesminapp-vscodereadme-md",
+      "title": "minapp",
+      "status": "hold",
+      "maintainStatus": "deprecated",
+      "riskLevel": "high",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/qiu8310/minapp/blob/master/packages/minapp-vscode/README.md"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/qiu8310/minapp/blob/master/packages/minapp-vscode/README.md"
+        }
+      ]
+    },
+    {
+      "id": "segmentfault-com-a1190000007132719",
+      "title": "vscode 插件(代码提示)",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "官网: https://segmentfault.com/a/1190000007132719"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "website",
+          "label": "官网",
+          "url": "https://segmentfault.com/a/1190000007132719"
+        }
+      ]
+    },
+    {
+      "id": "github-com-ritwickdeyvscode-live-sass-compiler",
+      "title": "vscode-live-sass-compiler",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/ritwickdey/vscode-live-sass-compiler"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ritwickdey/vscode-live-sass-compiler"
+        }
+      ]
+    },
+    {
+      "id": "wepy-iniself-com",
+      "title": "WePY Plugin For IntelliJ Platform",
+      "status": "hold",
+      "maintainStatus": "deprecated",
+      "riskLevel": "high",
+      "type": "docs",
+      "reasons": [
+        "官网: http://wepy.iniself.com"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "website",
+          "label": "官网",
+          "url": "http://wepy.iniself.com"
+        }
+      ]
+    },
+    {
+      "id": "github-com-cnyballkwxml-vscode",
+      "title": "wxml",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/cnyballk/wxml-vscode"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/cnyballk/wxml-vscode"
+        }
+      ]
+    },
+    {
+      "id": "github-com-wux-weappwux-weapp-snippets",
+      "title": "wux-weapp-snippets",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/wux-weapp/wux-weapp-snippets"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wux-weapp/wux-weapp-snippets"
+        }
+      ]
+    },
+    {
+      "id": "github-com-wux-weappwux-weapp-atom-snippets",
+      "title": "wux-weapp-atom-snippets",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/wux-weapp/wux-weapp-atom-snippets"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wux-weapp/wux-weapp-atom-snippets"
+        }
+      ]
+    },
+    {
+      "id": "github-com-wux-weappwux-weapp-sublime-snippets",
+      "title": "wux-weapp-sublime-snippets",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/wux-weapp/wux-weapp-sublime-snippets"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wux-weapp/wux-weapp-sublime-snippets"
+        }
+      ]
+    },
+    {
+      "id": "github-com-tencentweui-wxss",
+      "title": "weui-wxss ★12.4K+",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/Tencent/weui-wxss"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Tencent/weui-wxss"
+        }
+      ]
+    },
+    {
+      "id": "github-com-youzanvant-weapp",
+      "title": "vant-weapp ★12.3k+",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/youzan/vant-weapp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/youzan/vant-weapp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-icindywxparse",
+      "title": "wxParse ★7.2K+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/icindy/wxParse"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/icindy/wxParse"
+        }
+      ]
+    },
+    {
+      "id": "github-com-jin-yufengmp-html",
+      "title": "mp-html ★1.4K+",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/jin-yufeng/mp-html"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/jin-yufeng/mp-html"
+        }
+      ]
+    },
+    {
+      "id": "github-com-talkingdataiview-weapp",
+      "title": "iview-weapp ★5.5k+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/TalkingData/iview-weapp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/TalkingData/iview-weapp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-wux-weappwux-weapp",
+      "title": "wux-weapp ★4.2k+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/wux-weapp/wux-weapp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wux-weapp/wux-weapp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-xiaolin3303wx-charts",
+      "title": "wx-charts ★4.1k+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/xiaolin3303/wx-charts"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/xiaolin3303/wx-charts"
+        }
+      ]
+    },
+    {
+      "id": "github-com-talelinlin-ui",
+      "title": "Lin UI ★2k+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/TaleLin/lin-ui"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/TaleLin/lin-ui"
+        }
+      ]
+    },
+    {
+      "id": "github-com-tencenttdesign-miniprogram",
+      "title": "tdesign-miniprogram ★1.3k+",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/Tencent/tdesign-miniprogram"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Tencent/tdesign-miniprogram"
+        }
+      ]
+    },
+    {
+      "id": "github-com-toobugwemark",
+      "title": "wemark ★1.100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/TooBug/wemark"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/TooBug/wemark"
+        }
+      ]
+    },
+    {
+      "id": "github-com-1977474741image-cropper",
+      "title": "image-cropper ★900+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/1977474741/image-cropper"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/1977474741/image-cropper"
+        }
+      ]
+    },
+    {
+      "id": "github-com-o2teamwxapp-img-loader",
+      "title": "wxapp-img-loader ★400+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/o2team/wxapp-img-loader"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/o2team/wxapp-img-loader"
+        }
+      ]
+    },
+    {
+      "id": "github-com-we-pluginwe-cropper",
+      "title": "we-cropper ★400+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/we-plugin/we-cropper"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/we-plugin/we-cropper"
+        }
+      ]
+    },
+    {
+      "id": "github-com-jasonduwxa-plugin-canvas",
+      "title": "wxa-plugin-canvas ★300+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/jasondu/wxa-plugin-canvas"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/jasondu/wxa-plugin-canvas"
+        }
+      ]
+    },
+    {
+      "id": "github-com-guyoungwezrender",
+      "title": "WeZRender ★300+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/guyoung/WeZRender"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/guyoung/WeZRender"
+        }
+      ]
+    },
+    {
+      "id": "github-com-treadpitwx-calendar",
+      "title": "wx_calendar ★300+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/treadpit/wx_calendar"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/treadpit/wx_calendar"
+        }
+      ]
+    },
+    {
+      "id": "github-com-youzouzouwxapp",
+      "title": "wxapp ★300+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/youzouzou/wxapp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/youzouzou/wxapp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-liujianswa-ui",
+      "title": "Wa-UI ★200+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/liujians/Wa-UI"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/liujians/Wa-UI"
+        }
+      ]
+    },
+    {
+      "id": "github-com-icindywxsearch",
+      "title": "wxSearch ★200+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/icindy/wxSearch"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/icindy/wxSearch"
+        }
+      ]
+    },
+    {
+      "id": "github-com-zhongjie-chenwx-scrollable-tab-view",
+      "title": "wx-scrollable-tab-view ★200+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/zhongjie-chen/wx-scrollable-tab-view"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zhongjie-chen/wx-scrollable-tab-view"
+        }
+      ]
+    },
+    {
+      "id": "github-com-kiinlamwetoast",
+      "title": "wetoast ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/kiinlam/wetoast"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/kiinlam/wetoast"
+        }
+      ]
+    },
+    {
+      "id": "github-com-zhongjie-chenwx-alphabetical-listview",
+      "title": "wx-alphabetical-listview ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/zhongjie-chen/wx-alphabetical-listview"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zhongjie-chen/wx-alphabetical-listview"
+        }
+      ]
+    },
+    {
+      "id": "github-com-zhongjie-chenwx-drawer",
+      "title": "wx-drawer ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/zhongjie-chen/wx-drawer"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zhongjie-chen/wx-drawer"
+        }
+      ]
+    },
+    {
+      "id": "github-com-hawx1993wxapp-charts",
+      "title": "wxapp-charts ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/hawx1993/wxapp-charts"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/hawx1993/wxapp-charts"
+        }
+      ]
+    },
+    {
+      "id": "github-com-xiabingwuchartjs-wechat-mini-app",
+      "title": "chartjs-wechat-mini-app ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/xiabingwu/chartjs-wechat-mini-app"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/xiabingwu/chartjs-wechat-mini-app"
+        }
+      ]
+    },
+    {
+      "id": "github-com-joezheng2015wx-promise-request",
+      "title": "wx-promise-request ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/JoeZheng2015/wx-promise-request"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/JoeZheng2015/wx-promise-request"
+        }
+      ]
+    },
+    {
+      "id": "github-com-we-pluginwe-swiper",
+      "title": "we-swiper ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/we-plugin/we-swiper"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/we-plugin/we-swiper"
+        }
+      ]
+    },
+    {
+      "id": "github-com-bobiscoolwxdraw",
+      "title": "wxDraw ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/bobiscool/wxDraw"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bobiscool/wxDraw"
+        }
+      ]
+    },
+    {
+      "id": "github-com-chenjinxinlovecityselect",
+      "title": "citySelect ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/chenjinxinlove/citySelect"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/chenjinxinlove/citySelect"
+        }
+      ]
+    },
+    {
+      "id": "github-com-charleslo1weapp-cookie",
+      "title": "weapp-cookie ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/charleslo1/weapp-cookie"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/charleslo1/weapp-cookie"
+        }
+      ]
+    },
+    {
+      "id": "github-com-lidong1665weixinproject",
+      "title": "WeiXinProject",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/lidong1665/WeiXinProject"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/lidong1665/WeiXinProject"
+        }
+      ]
+    },
+    {
+      "id": "github-com-calvinhongwepy-com-charts",
+      "title": "wepy-com-charts",
+      "status": "hold",
+      "maintainStatus": "deprecated",
+      "riskLevel": "high",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/CalvinHong/wepy-com-charts"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/CalvinHong/wepy-com-charts"
+        }
+      ]
+    },
+    {
+      "id": "github-com-demi520wxapp-lock",
+      "title": "wxapp-lock",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/demi520/wxapp-lock"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/demi520/wxapp-lock"
+        }
+      ]
+    },
+    {
+      "id": "github-com-geminatemini-gesture-lock",
+      "title": "mini-gesture-lock",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/geminate/mini-gesture-lock"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/geminate/mini-gesture-lock"
+        }
+      ]
+    },
+    {
+      "id": "github-com-weapp-socketioweapp-socket-io",
+      "title": "weapp.socket.io ★500+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/weapp-socketio/weapp.socket.io"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/weapp-socketio/weapp.socket.io"
+        }
+      ]
+    },
+    {
+      "id": "github-com-leancloudweapp-polyfill",
+      "title": "weapp-polyfill",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "docs",
+      "reasons": [
+        "GitHub: https://github.com/leancloud/weapp-polyfill"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/leancloud/weapp-polyfill"
+        }
+      ]
+    },
+    {
+      "id": "github-com-youngjuningwx-promise-pro",
+      "title": "wx-promise-pro ★666+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/youngjuning/wx-promise-pro"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/youngjuning/wx-promise-pro"
+        }
+      ]
+    },
+    {
+      "id": "github-com-youngjuningwxmd5",
+      "title": "wxMD5",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/youngjuning/wxMD5"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/youngjuning/wxMD5"
+        }
+      ]
+    },
+    {
+      "id": "github-com-youngjuningwxbase64",
+      "title": "wxBase64",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/youngjuning/wxBase64"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/youngjuning/wxBase64"
+        }
+      ]
+    },
+    {
+      "id": "github-com-ianhoxing-weapp-component",
+      "title": "xing-weapp-component",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/ianho/xing-weapp-component"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ianho/xing-weapp-component"
+        }
+      ]
+    },
+    {
+      "id": "github-com-zzjbeatyouwx-statuslayout",
+      "title": "wx-statuslayout",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/ZzjBeatYou/wx-statuslayout"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ZzjBeatYou/wx-statuslayout"
+        }
+      ]
+    },
+    {
+      "id": "github-com-bigmeowminapp-api-promise",
+      "title": "minapp-api-promise",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "docs",
+      "reasons": [
+        "GitHub: https://github.com/bigmeow/minapp-api-promise"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bigmeow/minapp-api-promise"
+        }
+      ]
+    },
+    {
+      "id": "github-com-bigmeowminapp-slider-left",
+      "title": "minapp-slider-left",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/bigmeow/minapp-slider-left"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bigmeow/minapp-slider-left"
+        }
+      ]
+    },
+    {
+      "id": "github-com-kuckboy1994mp-canvas-drawer",
+      "title": "mp_canvas_drawer",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/kuckboy1994/mp_canvas_drawer"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/kuckboy1994/mp_canvas_drawer"
+        }
+      ]
+    },
+    {
+      "id": "github-com-ianhoxing-weapp-editor",
+      "title": "xing-weapp-editor",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/ianho/xing-weapp-editor"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ianho/xing-weapp-editor"
+        }
+      ]
+    },
+    {
+      "id": "github-com-warjycue",
+      "title": "cue",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/WARJY/cue"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/WARJY/cue"
+        }
+      ]
+    },
+    {
+      "id": "github-com-phonycodewuss-weapp",
+      "title": "wuss-weapp",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/phonycode/wuss-weapp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/phonycode/wuss-weapp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-pithyoneminiprogram-datepicker",
+      "title": "miniprogram-datepicker",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/pithyone/miniprogram-datepicker"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/pithyone/miniprogram-datepicker"
+        }
+      ]
+    },
+    {
+      "id": "github-com-vv13wx-api-promisify",
+      "title": "wx-api-promisify",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "docs",
+      "reasons": [
+        "GitHub: https://github.com/vv13/wx-api-promisify"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/vv13/wx-api-promisify"
+        }
+      ]
+    },
+    {
+      "id": "github-com-iexceptionanka-brush",
+      "title": "anka-brush",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/iException/anka-brush"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/iException/anka-brush"
+        }
+      ]
+    },
+    {
+      "id": "github-com-iexceptionanka-tracker",
+      "title": "anka-tracker",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/iException/anka-tracker"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/iException/anka-tracker"
+        }
+      ]
+    },
+    {
+      "id": "github-com-hzy0913mpvue-calendar",
+      "title": "mpvue-calendar",
+      "status": "hold",
+      "maintainStatus": "deprecated",
+      "riskLevel": "high",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/Hzy0913/mpvue-calendar"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Hzy0913/mpvue-calendar"
+        }
+      ]
+    },
+    {
+      "id": "github-com-qizf7mp-swipe-card",
+      "title": "mp-swipe-card",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/qizf7/mp-swipe-card"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/qizf7/mp-swipe-card"
+        }
+      ]
+    },
+    {
+      "id": "github-com-afishhhhhweapp-request",
+      "title": "weapp.request",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "docs",
+      "reasons": [
+        "GitHub: https://github.com/afishhhhh/weapp.request"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/afishhhhh/weapp.request"
+        }
+      ]
+    },
+    {
+      "id": "github-com-newfutureminiprogram-network",
+      "title": "miniprogram-network",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "docs",
+      "reasons": [
+        "GitHub: https://github.com/NewFuture/miniprogram-network"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/NewFuture/miniprogram-network"
+        }
+      ]
+    },
+    {
+      "id": "github-com-chanceyuwe-validator",
+      "title": "we-validator",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/ChanceYu/we-validator"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ChanceYu/we-validator"
+        }
+      ]
+    },
+    {
+      "id": "github-com-zhongxuqiwx-pulltorefresh-view",
+      "title": "wx-pulltorefresh-view",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/zhongxuqi/wx-pulltorefresh-view"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zhongxuqi/wx-pulltorefresh-view"
+        }
+      ]
+    },
+    {
+      "id": "github-com-sunniejssol-weapp",
+      "title": "sol-weapp ★300+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/sunniejs/sol-weapp/"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/sunniejs/sol-weapp/"
+        }
+      ]
+    },
+    {
+      "id": "github-com-xjh22222228weapp-input-frame",
+      "title": "weapp-input-frame",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/xjh22222228/weapp-input-frame"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/xjh22222228/weapp-input-frame"
+        }
+      ]
+    },
+    {
+      "id": "github-com-dlhandsomewe-debug",
+      "title": "we-debug",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/dlhandsome/we-debug"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/dlhandsome/we-debug"
+        }
+      ]
+    },
+    {
+      "id": "github-com-tomfriwelweapp-qrcode",
+      "title": "weapp-qrcode",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/tomfriwel/weapp-qrcode"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/tomfriwel/weapp-qrcode"
+        }
+      ]
+    },
+    {
+      "id": "github-com-bigmeowcheers-mp-router",
+      "title": "cheers-mp-router",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/bigmeow/cheers-mp-router"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bigmeow/cheers-mp-router"
+        }
+      ]
+    },
+    {
+      "id": "github-com-sherlocked93wx-updata",
+      "title": "wx-updata",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/SHERlocked93/wx-updata"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/SHERlocked93/wx-updata"
+        }
+      ]
+    },
+    {
+      "id": "github-com-deepkolosthree-platformize",
+      "title": "three-platformize",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/deepkolos/three-platformize"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/deepkolos/three-platformize"
+        }
+      ]
+    },
+    {
+      "id": "github-com-liyiorgweixin-popular",
+      "title": "weixin-popular",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/liyiorg/weixin-popular.git"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/liyiorg/weixin-popular.git"
+        }
+      ]
+    },
+    {
+      "id": "github-com-binarywangwxjava",
+      "title": "WxJava",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/binarywang/WxJava.git"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/binarywang/WxJava.git"
+        }
+      ]
+    },
+    {
+      "id": "github-com-rebeccahanjwweapp-wechat-zhihu",
+      "title": "RebeccaHanjw/weapp-wechat-zhihu ★800+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/RebeccaHanjw/weapp-wechat-zhihu"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/RebeccaHanjw/weapp-wechat-zhihu"
+        }
+      ]
+    },
+    {
+      "id": "github-com-imageslrweapp-library",
+      "title": "imageslr/weapp-library ★500+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/imageslr/weapp-library"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/imageslr/weapp-library"
+        }
+      ]
+    },
+    {
+      "id": "github-com-imageslrtaro-library",
+      "title": "imageslr/taro-library ★150+",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/imageslr/taro-library"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/imageslr/taro-library"
+        }
+      ]
+    },
+    {
+      "id": "github-com-wyq2214368remove-water-mark-mp",
+      "title": "wyq2214368/remove-water-mark-mp",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/wyq2214368/remove-water-mark-mp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wyq2214368/remove-water-mark-mp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-deepkolosthree-platformize-demo-wechat",
+      "title": "deepkolos/three-platformize-demo-wechat",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/deepkolos/three-platformize-demo-wechat"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/deepkolos/three-platformize-demo-wechat"
+        }
+      ]
+    },
+    {
+      "id": "github-com-deepkoloswxmp-tensorflow",
+      "title": "deepkolos/wxmp-tensorflow",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/deepkolos/wxmp-tensorflow"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/deepkolos/wxmp-tensorflow"
+        }
+      ]
+    },
+    {
+      "id": "github-com-realyaowxminiprogram-focus-clock",
+      "title": "realyao/Focus-clock ★100+",
+      "status": "trial",
+      "maintainStatus": "unknown",
+      "riskLevel": "low",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/realyao/WXminiprogram-Focus-clock"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/realyao/WXminiprogram-Focus-clock"
+        }
+      ]
+    },
+    {
+      "id": "github-com-mark420524photo",
+      "title": "mark420524/photo",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/mark420524/photo"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/mark420524/photo"
+        }
+      ]
+    },
+    {
+      "id": "github-com-jinganixguess",
+      "title": "jinganix/guess",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "cloud",
+      "reasons": [
+        "GitHub: https://github.com/jinganix/guess"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/jinganix/guess"
+        }
+      ]
+    },
+    {
+      "id": "github-com-wyqilinaigallery",
+      "title": "WYQilin/aigallery",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/WYQilin/aigallery"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/WYQilin/aigallery"
+        }
+      ]
+    },
+    {
+      "id": "github-com-eastworldwechat-app-mall",
+      "title": "EastWorld/wechat-app-mall ★3000+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/EastWorld/wechat-app-mall"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/EastWorld/wechat-app-mall"
+        }
+      ]
+    },
+    {
+      "id": "github-com-tumobinideshop-mini-program",
+      "title": "tumobi/nideshop-mini-program ★2000+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/tumobi/nideshop-mini-program"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/tumobi/nideshop-mini-program"
+        }
+      ]
+    },
+    {
+      "id": "github-com-huangjiankegitter",
+      "title": "huangjianke/Gitter ★700+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/huangjianke/Gitter"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/huangjianke/Gitter"
+        }
+      ]
+    },
+    {
+      "id": "github-com-lypeerwechat-weapp-gank",
+      "title": "lypeer/wechat-weapp-gank ★600+)",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/lypeer/wechat-weapp-gank"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/lypeer/wechat-weapp-gank"
+        }
+      ]
+    },
+    {
+      "id": "github-com-wangmingjobweapp-weipiao",
+      "title": "wangmingjob/weapp-weipiao ★300+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/wangmingjob/weapp-weipiao"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wangmingjob/weapp-weipiao"
+        }
+      ]
+    },
+    {
+      "id": "github-com-charleywwechat-weapp-redux",
+      "title": "charleyw/wechat-weapp-redux ★300+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/charleyw/wechat-weapp-redux"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/charleyw/wechat-weapp-redux"
+        }
+      ]
+    },
+    {
+      "id": "github-com-jectychenwechat-v2ex",
+      "title": "jectychen/wechat-v2ex ★300+)",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/jectychen/wechat-v2ex"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/jectychen/wechat-v2ex"
+        }
+      ]
+    },
+    {
+      "id": "github-com-18380435477weapp",
+      "title": "18380435477/WeApp ★300+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/18380435477/WeApp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/18380435477/WeApp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-zceweapp-boilerplate",
+      "title": "zce/weapp-boilerplate ★300+",
+      "status": "trial",
+      "maintainStatus": "unknown",
+      "riskLevel": "low",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/zce/weapp-boilerplate"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zce/weapp-boilerplate"
+        }
+      ]
+    },
+    {
+      "id": "github-com-bayetechwechat-mall-applet",
+      "title": "bayetech/wechat_mall_applet ★300+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/bayetech/wechat_mall_applet"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bayetech/wechat_mall_applet"
+        }
+      ]
+    },
+    {
+      "id": "github-com-lanshan-studiowecqupt",
+      "title": "lanshan-studio/wecqupt ★300+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/lanshan-studio/wecqupt"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/lanshan-studio/wecqupt"
+        }
+      ]
+    },
+    {
+      "id": "github-com-myronliu347wechat-app-zhihudaily",
+      "title": "myronliu347/wechat-app-zhihudaily ★200+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/myronliu347/wechat-app-zhihudaily"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/myronliu347/wechat-app-zhihudaily"
+        }
+      ]
+    },
+    {
+      "id": "github-com-harveyqingbeardiary",
+      "title": "harveyqing/BearDiary ★200+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/harveyqing/BearDiary"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/harveyqing/BearDiary"
+        }
+      ]
+    },
+    {
+      "id": "github-com-leancloudleantodo-weapp",
+      "title": "leancloud/leantodo-weapp ★200+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "cloud",
+      "reasons": [
+        "GitHub: https://github.com/leancloud/leantodo-weapp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/leancloud/leantodo-weapp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-superkieranweapp-artand",
+      "title": "SuperKieran/weapp-artand ★200+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/SuperKieran/weapp-artand"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/SuperKieran/weapp-artand"
+        }
+      ]
+    },
+    {
+      "id": "github-com-dongweimingweapp-zhihulive",
+      "title": "dongweiming/weapp-zhihulive ★200+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "sdk",
+      "reasons": [
+        "GitHub: https://github.com/dongweiming/weapp-zhihulive"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/dongweiming/weapp-zhihulive"
+        }
+      ]
+    },
+    {
+      "id": "github-com-eyasliuwechat-app-music",
+      "title": "eyasliu/wechat-app-music ★200+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/eyasliu/wechat-app-music"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/eyasliu/wechat-app-music"
+        }
+      ]
+    },
+    {
+      "id": "github-com-ahonnweapp-one",
+      "title": "ahonn/weapp-one ★200+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/ahonn/weapp-one"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ahonn/weapp-one"
+        }
+      ]
+    },
+    {
+      "id": "github-com-giscaferwechat-weapp-mapdemo",
+      "title": "giscafer/wechat-weapp-mapdemo ★200+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "sdk",
+      "reasons": [
+        "GitHub: https://github.com/giscafer/wechat-weapp-mapdemo"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/giscafer/wechat-weapp-mapdemo"
+        }
+      ]
+    },
+    {
+      "id": "github-com-yaoshanliangweapp-ssha",
+      "title": "yaoshanliang/weapp-ssha ★200+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/yaoshanliang/weapp-ssha"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/yaoshanliang/weapp-ssha"
+        }
+      ]
+    },
+    {
+      "id": "github-com-hilongjwweapp-gold",
+      "title": "hilongjw/weapp-gold ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/hilongjw/weapp-gold"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/hilongjw/weapp-gold"
+        }
+      ]
+    },
+    {
+      "id": "github-com-zceweapp-douban",
+      "title": "zce/weapp-douban ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/zce/weapp-douban"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zce/weapp-douban"
+        }
+      ]
+    },
+    {
+      "id": "github-com-hingsirweapp-douban-film",
+      "title": "hingsir/weapp-douban-film ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/hingsir/weapp-douban-film"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/hingsir/weapp-douban-film"
+        }
+      ]
+    },
+    {
+      "id": "github-com-kunkun12weapp",
+      "title": "kunkun12/weapp",
+      "status": "trial",
+      "maintainStatus": "unknown",
+      "riskLevel": "low",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/kunkun12/weapp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/kunkun12/weapp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-nateewxapp-2048",
+      "title": "natee/wxapp-2048 ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/natee/wxapp-2048"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/natee/wxapp-2048"
+        }
+      ]
+    },
+    {
+      "id": "github-com-septembermapleswechat-weapp-demo",
+      "title": "SeptemberMaples/wechat-weapp-demo ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/SeptemberMaples/wechat-weapp-demo"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/SeptemberMaples/wechat-weapp-demo"
+        }
+      ]
+    },
+    {
+      "id": "github-com-hijiangtaoweapp-newsapp",
+      "title": "hijiangtao/weapp-newsapp",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/hijiangtao/weapp-newsapp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/hijiangtao/weapp-newsapp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-charleywwechat-weapp-redux-todos",
+      "title": "charleyw/wechat-weapp-redux-todos ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/charleyw/wechat-weapp-redux-todos"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/charleyw/wechat-weapp-redux-todos"
+        }
+      ]
+    },
+    {
+      "id": "github-com-kraaastimer",
+      "title": "kraaas/timer ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "sdk",
+      "reasons": [
+        "GitHub: https://github.com/kraaas/timer"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/kraaas/timer"
+        }
+      ]
+    },
+    {
+      "id": "github-com-ericzyhwechat-chat",
+      "title": "ericzyh/wechat-chat ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/ericzyh/wechat-chat"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ericzyh/wechat-chat"
+        }
+      ]
+    },
+    {
+      "id": "github-com-belinchungwxapp-hiapp",
+      "title": "BelinChung/wxapp-hiapp ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/BelinChung/wxapp-hiapp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/BelinChung/wxapp-hiapp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-hardogwechat-app-flexlayout",
+      "title": "hardog/wechat-app-flexlayout ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/hardog/wechat-app-flexlayout"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/hardog/wechat-app-flexlayout"
+        }
+      ]
+    },
+    {
+      "id": "github-com-dunizbwxapp-scalc",
+      "title": "dunizb/wxapp-sCalc ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/dunizb/wxapp-sCalc"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/dunizb/wxapp-sCalc"
+        }
+      ]
+    },
+    {
+      "id": "github-com-litt1e-pweapp-girls",
+      "title": "litt1e-p/weapp-girls ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/litt1e-p/weapp-girls"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/litt1e-p/weapp-girls"
+        }
+      ]
+    },
+    {
+      "id": "github-com-liumulin614beautifulgirl",
+      "title": "liumulin614/BeautifulGirl",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/liumulin614/BeautifulGirl"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/liumulin614/BeautifulGirl"
+        }
+      ]
+    },
+    {
+      "id": "github-com-romooweapp-demo-breadtrip",
+      "title": "romoo/weapp-demo-breadtrip ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/romoo/weapp-demo-breadtrip"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/romoo/weapp-demo-breadtrip"
+        }
+      ]
+    },
+    {
+      "id": "github-com-zhuweiyoufetop100",
+      "title": "zhuweiyou/fetop100 ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/zhuweiyou/fetop100"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zhuweiyou/fetop100"
+        }
+      ]
+    },
+    {
+      "id": "github-com-vacewechatapp-news-reader",
+      "title": "vace/wechatapp-news-reader ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/vace/wechatapp-news-reader"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/vace/wechatapp-news-reader"
+        }
+      ]
+    },
+    {
+      "id": "github-com-yaoshanliangweapp-jump",
+      "title": "yaoshanliang/weapp-jump ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/yaoshanliang/weapp-jump"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/yaoshanliang/weapp-jump"
+        }
+      ]
+    },
+    {
+      "id": "github-com-yaoshanliangweapp-monument-valley",
+      "title": "yaoshanliang/weapp-monument-valley ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/yaoshanliang/weapp-monument-valley"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/yaoshanliang/weapp-monument-valley"
+        }
+      ]
+    },
+    {
+      "id": "github-com-yyjeffreyjuly-client",
+      "title": "YYJeffrey/july_client ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/YYJeffrey/july_client"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/YYJeffrey/july_client"
+        }
+      ]
+    },
+    {
+      "id": "github-com-symouswechatapp-baisisister",
+      "title": "Symous/WechatApp-BaisiSister",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/Symous/WechatApp-BaisiSister"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Symous/WechatApp-BaisiSister"
+        }
+      ]
+    },
+    {
+      "id": "github-com-githinkcngiteer",
+      "title": "githinkcn/Giteer",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/githinkcn/Giteer"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/githinkcn/Giteer"
+        }
+      ]
+    },
+    {
+      "id": "github-com-monkindeywx-github",
+      "title": "monkindey/wx-github",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/monkindey/wx-github"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/monkindey/wx-github"
+        }
+      ]
+    },
+    {
+      "id": "github-com-fluency03weapp-500px",
+      "title": "fluency03/weapp-500px",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/fluency03/weapp-500px"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/fluency03/weapp-500px"
+        }
+      ]
+    },
+    {
+      "id": "github-com-luumanweapp-film",
+      "title": "weapp-film",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/luuman/weapp-film"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/luuman/weapp-film"
+        }
+      ]
+    },
+    {
+      "id": "github-com-xujinyangcodercalendar-weapp",
+      "title": "xujinyang/CoderCalendar-WeApp",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/xujinyang/CoderCalendar-WeApp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/xujinyang/CoderCalendar-WeApp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-zhengxiaowaiweapp-github",
+      "title": "zhengxiaowai/weapp-github",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/zhengxiaowai/weapp-github"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zhengxiaowai/weapp-github"
+        }
+      ]
+    },
+    {
+      "id": "github-com-seahubpigraising",
+      "title": "Seahub/PigRaising",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/SeaHub/PigRaising"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/SeaHub/PigRaising"
+        }
+      ]
+    },
+    {
+      "id": "github-com-brucevanfdmwechatmeizhi",
+      "title": "brucevanfdm/WeChatMeiZhi",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/brucevanfdm/WeChatMeiZhi"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/brucevanfdm/WeChatMeiZhi"
+        }
+      ]
+    },
+    {
+      "id": "github-com-uniquexiaobaiwechat-app-githubfeed",
+      "title": "uniquexiaobai/wechat-app-githubfeed",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/uniquexiaobai/wechat-app-githubfeed"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/uniquexiaobai/wechat-app-githubfeed"
+        }
+      ]
+    },
+    {
+      "id": "github-com-zceweapp-todos",
+      "title": "zce/weapp-todos",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/zce/weapp-todos"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/zce/weapp-todos"
+        }
+      ]
+    },
+    {
+      "id": "github-com-bruintongwechat-webapp-douban-movie",
+      "title": "bruintong/wechat-webapp-douban-movie",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/bruintong/wechat-webapp-douban-movie"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bruintong/wechat-webapp-douban-movie"
+        }
+      ]
+    },
+    {
+      "id": "github-com-bruintongwechat-webapp-douban-location",
+      "title": "bruintong/wechat-webapp-douban-location",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/bruintong/wechat-webapp-douban-location"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bruintong/wechat-webapp-douban-location"
+        }
+      ]
+    },
+    {
+      "id": "github-com-arkilisweapp-jandan",
+      "title": "arkilis/weapp-jandan",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/arkilis/weapp-jandan"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/arkilis/weapp-jandan"
+        }
+      ]
+    },
+    {
+      "id": "github-com-bodekjanwechat-weather",
+      "title": "bodekjan/wechat-weather",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/bodekjan/wechat-weather"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/bodekjan/wechat-weather"
+        }
+      ]
+    },
+    {
+      "id": "github-com-jassciachristmashat",
+      "title": "jasscia/ChristmasHat",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/jasscia/ChristmasHat"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/jasscia/ChristmasHat"
+        }
+      ]
+    },
+    {
+      "id": "github-com-nanwangjklsliding-puzzle",
+      "title": "nanwangjkl/sliding_puzzle",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/nanwangjkl/sliding_puzzle"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/nanwangjkl/sliding_puzzle"
+        }
+      ]
+    },
+    {
+      "id": "github-com-kaiwuweui-scalajs",
+      "title": "kaiwu/weui-scalajs",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/kaiwu/weui-scalajs"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/kaiwu/weui-scalajs"
+        }
+      ]
+    },
+    {
+      "id": "github-com-tinajstina-hackernews",
+      "title": "tinajs/tina-hackernews",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/tinajs/tina-hackernews"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/tinajs/tina-hackernews"
+        }
+      ]
+    },
+    {
+      "id": "github-com-mohuishouscuplus-wechat",
+      "title": "mohuishou/scuplus-wechat",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/mohuishou/scuplus-wechat"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/mohuishou/scuplus-wechat"
+        }
+      ]
+    },
+    {
+      "id": "github-com-hankzhuowx-v2ex",
+      "title": "hankzhuo/wx-v2ex",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/hankzhuo/wx-v2ex"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/hankzhuo/wx-v2ex"
+        }
+      ]
+    },
+    {
+      "id": "github-com-hongye567weapp-mark",
+      "title": "Hongye567/weapp-mark",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/Hongye567/weapp-mark"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Hongye567/weapp-mark"
+        }
+      ]
+    },
+    {
+      "id": "github-com-jae-jaeweapp-github-trending",
+      "title": "jae-jae/weapp-github-trending",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/jae-jae/weapp-github-trending"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/jae-jae/weapp-github-trending"
+        }
+      ]
+    },
+    {
+      "id": "github-com-steedosmini-vip",
+      "title": "steedos/mini-vip",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/steedos/mini-vip"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/steedos/mini-vip"
+        }
+      ]
+    },
+    {
+      "id": "github-com-alex1504wx-guita-tab",
+      "title": "alex1504/wx-guita_tab",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/alex1504/wx-guita_tab"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/alex1504/wx-guita_tab"
+        }
+      ]
+    },
+    {
+      "id": "github-com-lonnngetym",
+      "title": "lonnng/etym",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/lonnng/etym"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/lonnng/etym"
+        }
+      ]
+    },
+    {
+      "id": "github-com-wuhou123wxxcx",
+      "title": "wuhou123/wxxcx",
+      "status": "hold",
+      "maintainStatus": "deprecated",
+      "riskLevel": "high",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/wuhou123/wxxcx"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wuhou123/wxxcx"
+        }
+      ]
+    },
+    {
+      "id": "github-com-upupminghitmers",
+      "title": "upupming/HITMers",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/upupming/HITMers"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/upupming/HITMers"
+        }
+      ]
+    },
+    {
+      "id": "github-com-ldoubleweouc",
+      "title": "LDouble/WeOUC",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/LDouble/WeOUC"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/LDouble/WeOUC"
+        }
+      ]
+    },
+    {
+      "id": "github-com-airmoleshellbox",
+      "title": "Airmole/ShellBox",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/Airmole/ShellBox"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Airmole/ShellBox"
+        }
+      ]
+    },
+    {
+      "id": "github-com-aquanlerouwehalo",
+      "title": "aquanlerou/WeHalo ★200+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/aquanlerou/WeHalo"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/aquanlerou/WeHalo"
+        }
+      ]
+    },
+    {
+      "id": "github-com-warpprismsubwayroutinemp",
+      "title": "WarpPrism/SubwayRoutineMP",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/WarpPrism/SubwayRoutineMP"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/WarpPrism/SubwayRoutineMP"
+        }
+      ]
+    },
+    {
+      "id": "github-com-goku-gagatoday",
+      "title": "GoKu-gaga/today",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/GoKu-gaga/today"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/GoKu-gaga/today"
+        }
+      ]
+    },
+    {
+      "id": "github-com-cy920820weapp-motor-movies",
+      "title": "cy920820/weapp-motor-movies",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/cy920820/weapp-motor-movies"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/cy920820/weapp-motor-movies"
+        }
+      ]
+    },
+    {
+      "id": "github-com-gwokhovchronus",
+      "title": "Gwokhov/chronus",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "cloud",
+      "reasons": [
+        "GitHub: https://github.com/Gwokhov/chronus"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Gwokhov/chronus"
+        }
+      ]
+    },
+    {
+      "id": "github-com-imliubowechat-mqtt-esp8266-baiduiot",
+      "title": "imliubo/Wechat_MQTT_ESP8266_BaiduIoT",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/imliubo/Wechat_MQTT_ESP8266_BaiduIoT"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/imliubo/Wechat_MQTT_ESP8266_BaiduIoT"
+        }
+      ]
+    },
+    {
+      "id": "github-com-yuzexiaiw3cplus",
+      "title": "yuzexia/iw3cplus",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/yuzexia/iw3cplus"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/yuzexia/iw3cplus"
+        }
+      ]
+    },
+    {
+      "id": "github-com-raoeshow-videos",
+      "title": "RAOE/show-videos",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/RAOE/show-videos"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/RAOE/show-videos"
+        }
+      ]
+    },
+    {
+      "id": "github-com-newfutureminiprogram-template",
+      "title": "NewFuture/miniprogram-template",
+      "status": "trial",
+      "maintainStatus": "unknown",
+      "riskLevel": "low",
+      "type": "docs",
+      "reasons": [
+        "GitHub: https://github.com/NewFuture/miniprogram-template"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/NewFuture/miniprogram-template"
+        }
+      ]
+    },
+    {
+      "id": "github-com-zhupengmp-githubtrending",
+      "title": "ZhuPeng/mp-githubtrending",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/ZhuPeng/mp-githubtrending"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/ZhuPeng/mp-githubtrending"
+        }
+      ]
+    },
+    {
+      "id": "github-com-yociduoscrum-planning-poker",
+      "title": "yociduo/scrum-planning-poker",
+      "status": "hold",
+      "maintainStatus": "deprecated",
+      "riskLevel": "high",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/yociduo/scrum-planning-poker"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/yociduo/scrum-planning-poker"
+        }
+      ]
+    },
+    {
+      "id": "github-com-kilakila-heartfuliba-front",
+      "title": "kilakila-heart/fuliba-front",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/kilakila-heart/fuliba-front"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/kilakila-heart/fuliba-front"
+        }
+      ]
+    },
+    {
+      "id": "github-com-lsqytaro-music",
+      "title": "lsqy/taro-music",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/lsqy/taro-music"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/lsqy/taro-music"
+        }
+      ]
+    },
+    {
+      "id": "github-com-notobeyhimalayan-lite",
+      "title": "仿喜马拉雅lite",
+      "status": "trial",
+      "maintainStatus": "unknown",
+      "riskLevel": "low",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/Notobey/Himalayan-lite"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Notobey/Himalayan-lite"
+        }
+      ]
+    },
+    {
+      "id": "github-com-branlianggame-stop-app",
+      "title": "branliang/game-stop-app",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/BranLiang/game-stop-app"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/BranLiang/game-stop-app"
+        }
+      ]
+    },
+    {
+      "id": "github-com-wk989898wxchat-mail",
+      "title": "wk989898/wxchat-mail",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/wk989898/wxchat-mail"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/wk989898/wxchat-mail"
+        }
+      ]
+    },
+    {
+      "id": "github-com-ansonznlbookshelf",
+      "title": "AnsonZnl/bookshelf",
+      "status": "trial",
+      "maintainStatus": "unknown",
+      "riskLevel": "low",
+      "type": "docs",
+      "reasons": [
+        "GitHub: https://github.com/AnsonZnl/bookshelf"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/AnsonZnl/bookshelf"
+        }
+      ]
+    },
+    {
+      "id": "github-com-arleyguoleiwx-words-pk",
+      "title": "arleyGuoLei/wx-words-pk ★100+",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/arleyGuoLei/wx-words-pk"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/arleyGuoLei/wx-words-pk"
+        }
+      ]
+    },
+    {
+      "id": "github-com-arleyguoleiwechat-1password",
+      "title": "arleyGuoLei/wechat-1password",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "ui",
+      "reasons": [
+        "GitHub: https://github.com/arleyGuoLei/wechat-1password"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/arleyGuoLei/wechat-1password"
+        }
+      ]
+    },
+    {
+      "id": "github-com-terrysosuper9",
+      "title": "terryso/super9",
+      "status": "adopt",
+      "maintainStatus": "active",
+      "riskLevel": "low",
+      "type": "framework",
+      "reasons": [
+        "GitHub: https://github.com/terryso/super9"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/terryso/super9"
+        }
+      ]
+    },
+    {
+      "id": "github-com-redhat123456upphysicalexercise",
+      "title": "redhat123456/upPhysicalExercise",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/redhat123456/upPhysicalExercise"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/redhat123456/upPhysicalExercise"
+        }
+      ]
+    },
+    {
+      "id": "github-com-redhat123456tanger-query",
+      "title": "redhat123456/Tanger_query",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/redhat123456/Tanger_query"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/redhat123456/Tanger_query"
+        }
+      ]
+    },
+    {
+      "id": "github-com-mark420524question",
+      "title": "mark420524/question",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/mark420524/question"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/mark420524/question"
+        }
+      ]
+    },
+    {
+      "id": "github-com-chadwuoli-ji-weapp",
+      "title": "Chadwuo/li-ji-weapp",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/Chadwuo/li-ji-weapp"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/Chadwuo/li-ji-weapp"
+        }
+      ]
+    },
+    {
+      "id": "github-com-mark420524guess",
+      "title": "mark420524/guess",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "example",
+      "reasons": [
+        "GitHub: https://github.com/mark420524/guess"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/mark420524/guess"
+        }
+      ]
+    }
+  ]
+}

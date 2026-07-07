@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@mpxjs/core": "^2.0.0"
+  },
+  "devDependencies": {
+    "@mpxjs/webpack-plugin": "^2.0.0"
+  },
+  "scripts": {
+    "build": "mpx build",
+    "dev": "mpx build --watch"
+  }
+}

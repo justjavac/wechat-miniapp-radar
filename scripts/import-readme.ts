@@ -92,7 +92,7 @@ function uniqueId(resource: Pick<Resource, "title" | "url">, usedIds: Set<string
 
 const readme = await readFile("README.md", "utf8");
 const catalog: Catalog = {
-  name: "awesome-wechat-weapp",
+  name: "wechat-miniapp-radar",
   title: "微信小程序开发资源汇总",
   description:
     "本文收集了微信小程序开发过程中会使用到的资料、问题以及第三方组件库。本文不是一篇关于如何学习微信小程序的入门指南，也非参考手册，只是一些资料的整理。",

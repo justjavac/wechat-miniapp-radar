@@ -1,7 +1,7 @@
 {
-  "name": "awesome-wechat-weapp",
-  "title": "微信小程序开发资源汇总",
-  "description": "本文收集了微信小程序开发过程中会使用到的资料、问题以及第三方组件库。本文不是一篇关于如何学习微信小程序的入门指南，也非参考手册，只是一些资料的整理。",
+  "name": "miniprogram-radar",
+  "title": "小程序雷达",
+  "description": "AI 驱动的小程序生态选型与风险评估工具，把微信小程序开发资源转化为可筛选、可评估、可对比的技术雷达。",
   "generatedFrom": "data/resources.yaml",
   "resources": [
     {

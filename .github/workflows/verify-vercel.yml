@@ -1,0 +1,127 @@
+name: Verify Vercel Production
+
+on:
+  workflow_dispatch:
+    inputs:
+      production_url:
+        description: Vercel Production URL to verify
+        required: true
+        type: string
+      expect_vercel_deploy:
+        description: Expect Vercel project link, token, canonical URL, and Cron config
+        required: false
+        default: false
+        type: boolean
+      expect_mvp:
+        description: Fail when MVP external requirements are missing
+        required: false
+        default: false
+        type: boolean
+      expect_database:
+        description: Expect DATABASE_URL and database connection
+        required: false
+        default: false
+        type: boolean
+      expect_github:
+        description: Expect GitHub integration
+        required: false
+        default: false
+        type: boolean
+      expect_blob:
+        description: Expect Blob integration
+        required: false
+        default: false
+        type: boolean
+      expect_upstash_redis:
+        description: Expect Upstash Redis integration
+        required: false
+        default: false
+        type: boolean
+      expect_site_url:
+        description: Expect SITE_URL or NEXT_PUBLIC_SITE_URL integration
+        required: false
+        default: false
+        type: boolean
+      expect_openai:
+        description: Expect real OpenAI integration
+        required: false
+        default: false
+        type: boolean
+  deployment_status:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-vercel-production-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+      contains(fromJSON('["Production","production"]'), github.event.deployment.environment))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Verify production deployment
+        shell: bash
+        env:
+          INPUT_PRODUCTION_URL: ${{ inputs.production_url }}
+          DEPLOYMENT_STATUS_URL: ${{ github.event.deployment_status.target_url }}
+          INPUT_EXPECT_VERCEL_DEPLOY: ${{ inputs.expect_vercel_deploy }}
+          INPUT_EXPECT_MVP: ${{ inputs.expect_mvp }}
+          INPUT_EXPECT_DATABASE: ${{ inputs.expect_database }}
+          INPUT_EXPECT_GITHUB: ${{ inputs.expect_github }}
+          INPUT_EXPECT_BLOB: ${{ inputs.expect_blob }}
+          INPUT_EXPECT_UPSTASH_REDIS: ${{ inputs.expect_upstash_redis }}
+          INPUT_EXPECT_SITE_URL: ${{ inputs.expect_site_url }}
+          INPUT_EXPECT_OPENAI: ${{ inputs.expect_openai }}
+          VAR_EXPECT_VERCEL_DEPLOY: ${{ vars.EXPECT_VERCEL_DEPLOY }}
+          VAR_EXPECT_MVP: ${{ vars.EXPECT_MVP }}
+          VAR_EXPECT_DATABASE: ${{ vars.EXPECT_DATABASE }}
+          VAR_EXPECT_GITHUB: ${{ vars.EXPECT_GITHUB }}
+          VAR_EXPECT_BLOB: ${{ vars.EXPECT_BLOB }}
+          VAR_EXPECT_UPSTASH_REDIS: ${{ vars.EXPECT_UPSTASH_REDIS }}
+          VAR_EXPECT_SITE_URL: ${{ vars.EXPECT_SITE_URL }}
+          VAR_EXPECT_OPENAI: ${{ vars.EXPECT_OPENAI }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+          VERIFY_CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          VERIFY_ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.RADAR_GITHUB_TOKEN || github.token }}
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+        run: |
+          set -euo pipefail
+
+          BASE_URL="${INPUT_PRODUCTION_URL:-$DEPLOYMENT_STATUS_URL}"
+          if [ -z "$BASE_URL" ]; then
+            echo "No production URL was provided by workflow input or deployment_status.target_url."
+            exit 1
+          fi
+
+          if [ "$INPUT_EXPECT_VERCEL_DEPLOY" = "true" ] || [ "$VAR_EXPECT_VERCEL_DEPLOY" = "1" ]; then export EXPECT_VERCEL_DEPLOY=1; fi
+          if [ "$INPUT_EXPECT_MVP" = "true" ] || [ "$VAR_EXPECT_MVP" = "1" ]; then export EXPECT_MVP=1; fi
+          if [ "$INPUT_EXPECT_DATABASE" = "true" ] || [ "$VAR_EXPECT_DATABASE" = "1" ]; then export EXPECT_DATABASE=1; fi
+          if [ "$INPUT_EXPECT_GITHUB" = "true" ] || [ "$VAR_EXPECT_GITHUB" = "1" ]; then export EXPECT_GITHUB=1; fi
+          if [ "$INPUT_EXPECT_BLOB" = "true" ] || [ "$VAR_EXPECT_BLOB" = "1" ]; then export EXPECT_BLOB=1; fi
+          if [ "$INPUT_EXPECT_UPSTASH_REDIS" = "true" ] || [ "$VAR_EXPECT_UPSTASH_REDIS" = "1" ]; then export EXPECT_UPSTASH_REDIS=1; fi
+          if [ "$INPUT_EXPECT_SITE_URL" = "true" ] || [ "$VAR_EXPECT_SITE_URL" = "1" ]; then export EXPECT_SITE_URL=1; fi
+          if [ "$INPUT_EXPECT_OPENAI" = "true" ] || [ "$VAR_EXPECT_OPENAI" = "1" ]; then export EXPECT_OPENAI=1; fi
+
+          npm run vercel:preflight -- "$BASE_URL"
+          npm run mvp:check -- "$BASE_URL"
+          npm run integrations:verify
+          npm run deployment:verify -- "$BASE_URL"

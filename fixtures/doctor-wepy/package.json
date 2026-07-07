@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "wepy": "^2.0.0"
+  },
+  "scripts": {
+    "build": "wepy build"
+  }
+}

@@ -38,7 +38,7 @@ async function request(url: string, method: "HEAD" | "GET", signal: AbortSignal)
     redirect: "follow",
     signal,
     headers: {
-      "user-agent": "awesome-wechat-weapp-link-check/1.0"
+      "user-agent": "wechat-miniapp-radar-link-check/1.0"
     }
   });
 }

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@dcloudio/uni-app": "^3.0.0"
+  },
+  "scripts": {
+    "build": "uni build -p mp-weixin",
+    "dev": "uni -p mp-weixin"
+  }
+}

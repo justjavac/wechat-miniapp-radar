@@ -1,11 +1,6 @@
-name: Deploy site
+name: Deploy legacy static site
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "public/**"
-      - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
 permissions:

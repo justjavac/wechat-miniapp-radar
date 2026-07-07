@@ -55,6 +55,29 @@ jobs:
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
           exit "$status"
+      - name: Run full local checks
+        run: npm run check
+      - name: Check Vercel readiness
+        run: npm run deploy:check
+      - name: Build Next.js app
+        run: npm run build
+      - name: Smoke test production server
+        shell: bash
+        run: |
+          npm run start -- -H 127.0.0.1 -p 3000 > next.log 2>&1 &
+          server_pid=$!
+          trap 'kill $server_pid' EXIT
+
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:3000/api/health > /dev/null; then
+              npm run smoke
+              exit 0
+            fi
+            sleep 1
+          done
+
+          cat next.log
+          exit 1
       - name: Comment on failed contribution
         if: github.event_name == 'pull_request' && (steps.validate.outputs.status != '0' || steps.generated.outputs.status != '0')
         uses: actions/github-script@v7
