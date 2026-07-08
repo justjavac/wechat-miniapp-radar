@@ -42,6 +42,22 @@ export interface WeeklyListItem {
   stats: ResourceStats;
 }
 
+interface PersistedWeeklyReportRow {
+  id: string;
+  title: string;
+  content: string;
+  snapshot: unknown;
+  generatedAt: Date;
+}
+
+interface PersistedWeeklySnapshot {
+  stats?: ResourceStats;
+  highlights?: string[];
+  risks?: string[];
+  needsAssessment?: string[];
+  signalDigest?: WeeklySignalDigest;
+}
+
 function dateId(date = new Date()) {
   return date.toISOString().slice(0, 10);
 }
@@ -269,12 +285,102 @@ export async function uploadWeeklyReport(report: WeeklyReport) {
   return uploadTextArtifact(`weekly/${report.id}.md`, report.markdown, "text/markdown; charset=utf-8");
 }
 
-export async function readLatestWeeklyReport() {
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null;
+}
+
+function isResourceStats(value: unknown): value is ResourceStats {
+  if (!isRecord(value)) return false;
+  return ["total", "adopt", "trial", "assess", "hold", "highRisk", "categories"].every((key) => typeof value[key] === "number");
+}
+
+function isWeeklySignalDigest(value: unknown): value is WeeklySignalDigest {
+  return (
+    isRecord(value) &&
+    (value.source === "score-snapshot" || value.source === "resource-snapshot") &&
+    typeof value.generatedAt === "string" &&
+    Array.isArray(value.signals)
+  );
+}
+
+function stringArray(value: unknown) {
+  return Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : [];
+}
+
+function parsePersistedWeeklySnapshot(value: unknown): PersistedWeeklySnapshot {
+  if (!isRecord(value)) return {};
+
+  return {
+    stats: isResourceStats(value.stats) ? value.stats : undefined,
+    highlights: stringArray(value.highlights),
+    risks: stringArray(value.risks),
+    needsAssessment: stringArray(value.needsAssessment),
+    signalDigest: isWeeklySignalDigest(value.signalDigest) ? value.signalDigest : undefined
+  };
+}
+
+function resourcesByIds(resources: RadarResource[], ids: string[]) {
+  const byId = new Map(resources.map((resource) => [resource.id, resource]));
+  return ids.map((id) => byId.get(id)).filter((resource): resource is RadarResource => Boolean(resource));
+}
+
+export function hydrateWeeklyReportFromSnapshot(row: PersistedWeeklyReportRow, resources: RadarResource[]): WeeklyReport {
+  const snapshot = parsePersistedWeeklySnapshot(row.snapshot);
+  const generatedAt = row.generatedAt.toISOString();
+
+  return {
+    id: row.id,
+    title: row.title,
+    generatedAt,
+    stats: snapshot.stats ?? getStats(resources),
+    highlights: resourcesByIds(resources, snapshot.highlights ?? []),
+    risks: resourcesByIds(resources, snapshot.risks ?? []),
+    needsAssessment: resourcesByIds(resources, snapshot.needsAssessment ?? []),
+    signalDigest: snapshot.signalDigest ?? {
+      source: "resource-snapshot",
+      generatedAt,
+      signals: []
+    },
+    markdown: row.content
+  };
+}
+
+async function readLatestDatabaseWeeklyReport(): Promise<WeeklyReport | null> {
+  if (!process.env.DATABASE_URL) return null;
+
+  try {
+    const db = createDb();
+    const rows = await db
+      .select({
+        id: weeklyReports.id,
+        title: weeklyReports.title,
+        content: weeklyReports.content,
+        snapshot: weeklyReports.snapshot,
+        generatedAt: weeklyReports.generatedAt
+      })
+      .from(weeklyReports)
+      .orderBy(desc(weeklyReports.generatedAt))
+      .limit(1);
+
+    const row = rows[0];
+    if (!row) return null;
+
+    return hydrateWeeklyReportFromSnapshot(row, await getResources());
+  } catch {
+    return null;
+  }
+}
+
+async function readLatestWeeklyFile() {
   try {
     return JSON.parse(await readFile("public/api/weekly/latest.json", "utf8")) as WeeklyReport;
   } catch {
     return null;
   }
+}
+
+export async function readLatestWeeklyReport() {
+  return (await readLatestDatabaseWeeklyReport()) ?? (await readLatestWeeklyFile());
 }
 
 function toWeeklyListItem(report: WeeklyReport): WeeklyListItem {

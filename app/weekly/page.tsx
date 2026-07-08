@@ -11,6 +11,8 @@ export const metadata = {
   title: "Weekly | 小程序雷达"
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function WeeklyPage() {
   const snapshot = (await readLatestWeeklyReport()) ?? (await createWeeklyReport());
   const [scoreSnapshot, weeklyHistory] = await Promise.all([getScoreSnapshot(), getWeeklyHistory(12)]);

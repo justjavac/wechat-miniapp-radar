@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { createWeeklyReport, getWeeklyHistory, readLatestWeeklyReport } from "@/lib/weekly";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(request: Request) {
   const url = new URL(request.url);
   if (url.searchParams.get("list") === "1") {
