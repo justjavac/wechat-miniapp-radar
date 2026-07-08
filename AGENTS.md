@@ -102,7 +102,7 @@ npx miniprogram-radar doctor ./my-weapp
 ## Git 与发布流程
 
 - 不直接推送到 `main`。
+- 按逻辑分步提交：文档、代码、清理、测试规则等不同类型变更尽量拆成独立 commit。
 - 功能和修复使用独立分支，创建 PR 后通过 Vercel Preview 验证。
 - Preview 和 GitHub checks 通过后再合并。
 - 合并后等待 Vercel Production 部署完成，并确认 `Verify Vercel Production` workflow 通过。
-
