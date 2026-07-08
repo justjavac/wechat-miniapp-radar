@@ -1,3 +1,5 @@
+export const ADMIN_SESSION_COOKIE = "miniprogram_radar_admin";
+
 export function isAdminConfigured() {
   return Boolean(process.env.ADMIN_TOKEN);
 }
@@ -21,7 +23,13 @@ export function getAdminTokenFromRequest(request: Request) {
   const headerToken = request.headers.get("x-admin-token");
   if (headerToken) return headerToken;
 
-  return new URL(request.url).searchParams.get("token");
+  const cookieToken = request.headers
+    .get("cookie")
+    ?.split(";")
+    .map((item) => item.trim())
+    .find((item) => item.startsWith(`${ADMIN_SESSION_COOKIE}=`))
+    ?.slice(ADMIN_SESSION_COOKIE.length + 1);
+  return cookieToken ? decodeURIComponent(cookieToken) : null;
 }
 
 export function isAdminRequestAuthorized(request: Request) {

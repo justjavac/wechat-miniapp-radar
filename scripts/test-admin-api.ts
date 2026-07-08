@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
+import { POST as adminSessionPOST } from "@/app/api/admin/session/route";
 import { GET as readinessGET } from "@/app/api/admin/readiness/route";
 import { buildResourceMaintenanceLog, PATCH } from "@/app/api/admin/resources/[id]/route";
+import { ADMIN_SESSION_COOKIE } from "@/lib/admin-auth";
 
 const originalEnv = {
   ADMIN_TOKEN: process.env.ADMIN_TOKEN,
@@ -37,6 +39,27 @@ try {
   setEnv("NODE_ENV", "production");
   setEnv("ADMIN_TOKEN", "admin-secret");
   setEnv("DATABASE_URL", undefined);
+
+  const adminSession = await adminSessionPOST(
+    new Request("https://example.com/api/admin/session", {
+      method: "POST",
+      body: new URLSearchParams({ token: "admin-secret" })
+    })
+  );
+  assert.equal(adminSession.status, 303, "admin session route should redirect after successful login");
+  const adminSessionCookie = adminSession.headers.get("set-cookie") ?? "";
+  assert.match(adminSessionCookie, new RegExp(`${ADMIN_SESSION_COOKIE}=admin-secret`));
+  assert.match(adminSessionCookie, /HttpOnly/);
+  assert.match(adminSessionCookie, /SameSite=Lax/i);
+
+  const invalidAdminSession = await adminSessionPOST(
+    new Request("https://example.com/api/admin/session", {
+      method: "POST",
+      body: new URLSearchParams({ token: "wrong" })
+    })
+  );
+  assert.equal(invalidAdminSession.status, 303, "admin session route should redirect after failed login");
+  assert.match(invalidAdminSession.headers.get("location") ?? "", /auth=failed/);
 
   const unauthorizedReadiness = await readinessGET(new Request("https://example.com/api/admin/readiness"));
   assert.equal(unauthorizedReadiness.status, 401, "admin readiness route should reject missing token in production");
@@ -83,6 +106,24 @@ try {
   assert.equal(validWithoutDatabase.status, 503, "admin route should require database for valid maintenance writes");
   assert.match((await validWithoutDatabase.json()).error, /DATABASE_URL/);
 
+  const validWithCookieWithoutDatabase = await PATCH(
+    new Request("https://example.com/api/admin/resources/github-com-nervjstaro", {
+      method: "PATCH",
+      headers: {
+        "content-type": "application/json",
+        cookie: `${ADMIN_SESSION_COOKIE}=admin-secret`
+      },
+      body: JSON.stringify({
+        status: "trial",
+        maintainStatus: "active",
+        riskLevel: "low",
+        summary: "Validated summary"
+      })
+    }),
+    context()
+  );
+  assert.equal(validWithCookieWithoutDatabase.status, 503, "admin route should accept a valid HttpOnly session cookie");
+
   const maintenanceLog = buildResourceMaintenanceLog({
     resourceId: "github-com-nervjstaro",
     resourceTitle: "Taro",
@@ -111,8 +152,19 @@ try {
     JSON.stringify(
       {
         checkedAt: new Date().toISOString(),
-        cases: 7,
-        assertions: ["readiness unauthorized", "readiness summary", "unauthorized", "invalid status", "empty patch", "database required", "maintenance operation log payload"]
+        cases: 10,
+        assertions: [
+          "session cookie",
+          "failed session redirect",
+          "readiness unauthorized",
+          "readiness summary",
+          "unauthorized",
+          "invalid status",
+          "empty patch",
+          "database required",
+          "cookie authorization",
+          "maintenance operation log payload"
+        ]
       },
       null,
       2

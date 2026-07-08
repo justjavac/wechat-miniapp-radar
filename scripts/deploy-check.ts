@@ -79,6 +79,7 @@ checks.push(checkFile("scripts/production-bootstrap.ts", "production-bootstrap-s
 checks.push(checkFile("app/api/ai-summaries/route.ts", "api:/api/ai-summaries"));
 checks.push(checkFile("app/api/export/resources/route.ts", "api:/api/export/resources"));
 checks.push(checkFile("app/api/admin/readiness/route.ts", "api:/api/admin/readiness"));
+checks.push(checkFile("app/api/admin/session/route.ts", "api:/api/admin/session"));
 checks.push(checkFile("public/api/resources.json"));
 checks.push(checkFile("public/api/radar-scores.json"));
 checks.push(checkFile("public/api/ai-summaries.json"));

@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { GET } from "@/app/api/export/resources/route";
+import { ADMIN_SESSION_COOKIE } from "@/lib/admin-auth";
 
 interface ExportJsonResponse {
   uploadRequested?: boolean;
@@ -74,6 +75,13 @@ try {
   assert.equal(snapshotPayload.uploadRequested, true, "JSON export should echo snapshot intent");
   assert.equal(snapshotPayload.blobUrl, null, "JSON export should skip Blob upload without BLOB_READ_WRITE_TOKEN");
   assert.ok(snapshotPayload.total > 0, "JSON snapshot export should still include resources");
+
+  const cookieSnapshotResponse = await request("/api/export/resources?format=json&type=framework&upload=1", {
+    headers: {
+      cookie: `${ADMIN_SESSION_COOKIE}=admin-secret`
+    }
+  });
+  assert.equal(cookieSnapshotResponse.status, 200, "JSON Blob snapshot should accept the admin session cookie");
 } finally {
   setEnv("ADMIN_TOKEN", originalEnv.ADMIN_TOKEN);
   setEnv("BLOB_READ_WRITE_TOKEN", originalEnv.BLOB_READ_WRITE_TOKEN);
@@ -118,12 +126,13 @@ console.log(
   JSON.stringify(
     {
       checkedAt: new Date().toISOString(),
-      cases: 7,
+      cases: 9,
       assertions: [
         "filtered JSON export",
         "useCase export filter",
         "JSON Blob snapshot authorization",
         "JSON Blob snapshot fallback",
+        "JSON Blob snapshot cookie authorization",
         "filtered CSV export",
         "CSV Blob snapshot authorization",
         "CSV Blob snapshot fallback",

@@ -62,12 +62,11 @@ export function ResourceMaintenanceForm({ resources }: { resources: EditableReso
     setLoading(true);
     setMessage(null);
 
-    const token = searchParams.get("token");
     const response = await fetch(`/api/admin/resources/${selected.id}`, {
+      credentials: "same-origin",
       method: "PATCH",
       headers: {
-        "content-type": "application/json",
-        ...(token ? { "x-admin-token": token } : {})
+        "content-type": "application/json"
       },
       body: JSON.stringify({
         status,

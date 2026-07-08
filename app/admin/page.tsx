@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { cookies } from "next/headers";
 import { Activity, AlertTriangle, CheckCircle2, Database, FileClock, KeyRound, ListChecks, Lock, Radio, ScrollText, ShieldCheck, UploadCloud, Wrench } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { ResourceMaintenanceForm, type EditableResource } from "@/app/admin/resource-maintenance-form";
-import { isAdminConfigured, isAdminTokenValid } from "@/lib/admin-auth";
+import { ADMIN_SESSION_COOKIE, isAdminConfigured, isAdminTokenValid } from "@/lib/admin-auth";
 import { getHealthCheck } from "@/lib/health";
 import { getRecentOperationLogs } from "@/lib/operation-log";
 import { buildProductionReadiness, summarizeProductionReadiness, type ProductionReadinessStatus } from "@/lib/production-readiness";
@@ -15,7 +16,7 @@ export const dynamic = "force-dynamic";
 
 type AdminPageProps = {
   searchParams?: Promise<{
-    token?: string | string[];
+    auth?: string | string[];
   }>;
 };
 
@@ -57,23 +58,21 @@ function ReadinessBadge({ status }: { status: ProductionReadinessStatus }) {
   return <Badge variant={variants[status]}>{labels[status]}</Badge>;
 }
 
-function maintenanceHref(token: string | undefined, resourceId: string) {
+function maintenanceHref(resourceId: string) {
   const params = new URLSearchParams();
-  if (token) params.set("token", token);
   params.set("resource", resourceId);
   return `/admin?${params.toString()}#resource-maintenance`;
 }
 
-function exportSnapshotHref(token: string | undefined) {
+function exportSnapshotHref() {
   const params = new URLSearchParams({
     format: "json",
     upload: "1"
   });
-  if (token) params.set("token", token);
   return `/api/export/resources?${params.toString()}`;
 }
 
-function UnauthorizedAdmin() {
+function UnauthorizedAdmin({ authFailed }: { authFailed: boolean }) {
   return (
     <div className="mx-auto max-w-2xl space-y-5 py-12">
       <div className="flex h-12 w-12 items-center justify-center rounded-md bg-muted text-muted-foreground">
@@ -84,8 +83,9 @@ function UnauthorizedAdmin() {
         <p className="mt-3 text-sm leading-6 text-muted-foreground">
           生产环境需要配置 `ADMIN_TOKEN` 并通过受保护入口访问。当前页面不会暴露运维数据。
         </p>
+        {authFailed ? <p className="mt-3 rounded-md bg-danger/10 px-3 py-2 text-sm font-semibold text-danger">Admin token 无效。</p> : null}
       </div>
-      <form className="flex flex-col gap-3 rounded-lg border border-border bg-surface p-4 sm:flex-row" method="get">
+      <form action="/api/admin/session" className="flex flex-col gap-3 rounded-lg border border-border bg-surface p-4 sm:flex-row" method="post">
         <label className="sr-only" htmlFor="admin-token">
           Admin token
         </label>
@@ -106,10 +106,12 @@ function UnauthorizedAdmin() {
 
 export default async function AdminPage({ searchParams }: AdminPageProps) {
   const params = await searchParams;
-  const token = firstValue(params?.token);
+  const authFailed = firstValue(params?.auth) === "failed";
+  const cookieStore = await cookies();
+  const token = cookieStore.get(ADMIN_SESSION_COOKIE)?.value;
 
   if (!isAdminTokenValid(token)) {
-    return <UnauthorizedAdmin />;
+    return <UnauthorizedAdmin authFailed={authFailed} />;
   }
 
   const [health, resources, operationLogs, scoreSnapshot] = await Promise.all([
@@ -168,7 +170,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
-          <a className={buttonVariants({ variant: "secondary", size: "sm" })} href={exportSnapshotHref(token)}>
+          <a className={buttonVariants({ variant: "secondary", size: "sm" })} href={exportSnapshotHref()}>
             <UploadCloud aria-hidden="true" className="h-4 w-4" />
             资源快照
           </a>
@@ -411,7 +413,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                   <span className="min-w-0 text-xs leading-5 text-muted-foreground">
                     {score.reasons.length > 0 ? score.reasons.slice(0, 2).join("；") : "暂无评分理由"}
                   </span>
-                  <Link className={buttonVariants({ variant: "secondary", size: "sm" })} href={maintenanceHref(token, score.id)}>
+                  <Link className={buttonVariants({ variant: "secondary", size: "sm" })} href={maintenanceHref(score.id)}>
                     <Wrench aria-hidden="true" className="h-4 w-4" />
                     维护
                   </Link>

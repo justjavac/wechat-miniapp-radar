@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { getAdminTokenFromRequest, isAdminRequestAuthorized, isAdminTokenValid } from "@/lib/admin-auth";
+import { ADMIN_SESSION_COOKIE, getAdminTokenFromRequest, isAdminRequestAuthorized, isAdminTokenValid } from "@/lib/admin-auth";
 import { getClientIp, isCronAuthorized } from "@/lib/api-security";
 import { rateLimit } from "@/lib/rate-limit";
 
@@ -81,7 +81,15 @@ try {
     ),
     true
   );
-  assert.equal(isAdminRequestAuthorized(new Request("https://example.com/admin?token=admin-secret")), true);
+  assert.equal(
+    isAdminRequestAuthorized(
+      new Request("https://example.com/admin", {
+        headers: { cookie: `${ADMIN_SESSION_COOKIE}=admin-secret` }
+      })
+    ),
+    true
+  );
+  assert.equal(isAdminRequestAuthorized(new Request("https://example.com/admin?token=admin-secret")), false);
 
   delete process.env.ADMIN_TOKEN;
   setEnv("NODE_ENV", "production");
