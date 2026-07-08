@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { mapResourceToDbInsert, mapResourcesToAlternativeDbInserts, mapResourceToDbUpdate } from "@/lib/resource-db-mapping";
-import { getResources } from "@/lib/resources";
+import { getResources, isCompleteDatabaseResourceSet } from "@/lib/resources";
 
 const resources = await getResources();
 assert.ok(resources.length > 0, "resources should be available for database import mapping");
@@ -8,6 +8,9 @@ assert.ok(resources.length > 0, "resources should be available for database impo
 const rows = resources.map(mapResourceToDbInsert);
 assert.equal(rows.length, resources.length);
 assert.equal(new Set(rows.map((row) => row.id)).size, rows.length, "database insert ids should be unique");
+assert.equal(isCompleteDatabaseResourceSet(30, resources.length), false, "partial enrichment rows should not replace the YAML catalog");
+assert.equal(isCompleteDatabaseResourceSet(resources.length, resources.length), true, "full database import should replace the YAML catalog");
+assert.equal(isCompleteDatabaseResourceSet(resources.length + 1, resources.length), true, "database can include admin-created resources");
 
 function hasLanguageMetadata(value: unknown): value is { language: unknown[] } {
   return typeof value === "object" && value !== null && Array.isArray((value as { language?: unknown }).language);
@@ -49,7 +52,7 @@ console.log(
       checkedAt: new Date().toISOString(),
       resources: rows.length,
       alternativeLinks: alternativeRows.length,
-      assertions: ["insert mapping", "unique ids", "required fields", "update timestamp", "alternative links"]
+      assertions: ["insert mapping", "unique ids", "required fields", "complete database guard", "update timestamp", "alternative links"]
     },
     null,
     2

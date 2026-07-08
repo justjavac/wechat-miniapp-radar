@@ -241,6 +241,18 @@ async function getYamlResources(): Promise<RadarResource[]> {
   return rows;
 }
 
+async function getYamlResourceCount(): Promise<number> {
+  const catalog = await readCatalog();
+  return catalog.categories.reduce((total, category) => {
+    const sectionResourceCount = (category.sections ?? []).reduce((sectionTotal, section) => sectionTotal + section.resources.length, 0);
+    return total + (category.resources?.length ?? 0) + sectionResourceCount;
+  }, 0);
+}
+
+export function isCompleteDatabaseResourceSet(databaseCount: number, expectedCount: number) {
+  return databaseCount >= expectedCount;
+}
+
 async function getDatabaseResources(): Promise<RadarResource[] | null> {
   if (!process.env.DATABASE_URL) return null;
 
@@ -248,6 +260,12 @@ async function getDatabaseResources(): Promise<RadarResource[] | null> {
     const db = createDb();
     const [rows, alternativeRows] = await Promise.all([db.select().from(databaseResources), db.select().from(resourceAlternatives)]);
     if (rows.length === 0) return null;
+    const expectedResourceCount = await getYamlResourceCount();
+    if (!isCompleteDatabaseResourceSet(rows.length, expectedResourceCount)) {
+      console.warn(`Falling back to YAML resources: database has ${rows.length}/${expectedResourceCount} resources`);
+      return null;
+    }
+
     const alternativesBySource = new Map<string, typeof alternativeRows>();
     for (const row of alternativeRows) {
       const current = alternativesBySource.get(row.sourceResourceId) ?? [];
