@@ -8,6 +8,8 @@ import { getClientIp } from "@/lib/api-security";
 import { rateLimit } from "@/lib/rate-limit";
 import { getResources } from "@/lib/resources";
 
+export const preferredRegion = "hkg1";
+
 export async function POST(request: Request) {
   const clientIp = getClientIp(request);
   const limit = await rateLimit({
