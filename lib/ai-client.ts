@@ -18,7 +18,7 @@ interface ChatCompletionResponse {
   error?: unknown;
 }
 
-const DEFAULT_AI_TIMEOUT_MS = 8_000;
+const DEFAULT_AI_TIMEOUT_MS = 4_000;
 const DEFAULT_AI_MAX_TOKENS = 1400;
 
 function completionUrl(config: AiConfig) {
@@ -35,12 +35,14 @@ function openRouterHeaders(config: AiConfig): Record<string, string> {
   };
 }
 
-async function fetchWithTimeout(url: string, init: RequestInit, timeoutMs: number) {
+async function fetchTextWithTimeout(url: string, init: RequestInit, timeoutMs: number) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
 
   try {
-    return await fetch(url, { ...init, signal: controller.signal });
+    const response = await fetch(url, { ...init, signal: controller.signal });
+    const text = await response.text();
+    return { response, text };
   } finally {
     clearTimeout(timeout);
   }
@@ -73,6 +75,15 @@ function parseJsonObject<T>(text: string): T {
   return parsed as T;
 }
 
+function parseCompletionPayload(text: string) {
+  if (!text.trim()) return null;
+  try {
+    return JSON.parse(text) as ChatCompletionResponse;
+  } catch {
+    return null;
+  }
+}
+
 async function requestChatCompletion<T>({
   config,
   model,
@@ -87,7 +98,7 @@ async function requestChatCompletion<T>({
   const apiKey = process.env.OPENAI_API_KEY?.trim();
   if (!apiKey) throw new Error("OPENAI_API_KEY is not configured.");
 
-  const response = await fetchWithTimeout(
+  const { response, text } = await fetchTextWithTimeout(
     completionUrl(config),
     {
       method: "POST",
@@ -107,7 +118,7 @@ async function requestChatCompletion<T>({
     timeoutMs
   );
 
-  const payload = (await response.json().catch(() => null)) as ChatCompletionResponse | null;
+  const payload = parseCompletionPayload(text);
   if (!response.ok) {
     const providerError = stringifyProviderError(payload?.error);
     throw new Error(providerError ? `AI provider rejected ${model}: ${providerError}` : `AI provider rejected ${model} with HTTP ${response.status}.`);
