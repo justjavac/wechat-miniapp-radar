@@ -40,7 +40,8 @@ const envKeys = [
   "UPSTASH_REDIS_REST_TOKEN",
   "KV_REST_API_URL",
   "KV_REST_API_TOKEN",
-  "OPENAI_API_KEY"
+  "OPENAI_API_KEY",
+  "OPENAI_API_URL"
 ];
 
 function parseOutput(stdout: string): PreflightOutput {

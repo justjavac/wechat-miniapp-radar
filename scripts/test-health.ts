@@ -5,6 +5,7 @@ import { getHealthCheck } from "@/lib/health";
 const envKeys = [
   "DATABASE_URL",
   "OPENAI_API_KEY",
+  "OPENAI_API_URL",
   "GITHUB_TOKEN",
   "CRON_SECRET",
   "ADMIN_TOKEN",
@@ -48,6 +49,12 @@ try {
   assert.ok(baseline.snapshots.weekly.historyCount > 0, "health check should report weekly history count");
   assert.deepEqual(baseline.integrations, {
     openai: false,
+    ai: {
+      configured: false,
+      apiKeyConfigured: false,
+      apiUrl: "https://api.openai.com/v1",
+      provider: "openai"
+    },
     github: false,
     cronSecret: false,
     adminToken: false,
@@ -57,6 +64,7 @@ try {
   });
 
   setEnv("OPENAI_API_KEY", "test-openai-key");
+  setEnv("OPENAI_API_URL", "https://openrouter.ai/api/v1");
   setEnv("GITHUB_TOKEN", "test-github-token");
   setEnv("CRON_SECRET", "test-cron-secret");
   setEnv("ADMIN_TOKEN", "test-admin-token");
@@ -70,6 +78,12 @@ try {
   assert.equal(configured.database.configured, false);
   assert.deepEqual(configured.integrations, {
     openai: true,
+    ai: {
+      configured: true,
+      apiKeyConfigured: true,
+      apiUrl: "https://openrouter.ai/api/v1",
+      provider: "openrouter"
+    },
     github: true,
     cronSecret: true,
     adminToken: true,
@@ -95,6 +109,7 @@ try {
   assert.ok(payload.snapshots.radarScores.count > 0);
   assert.ok(payload.snapshots.weekly.historyCount > 0);
   assert.equal(payload.integrations.openai, true);
+  assert.equal(payload.integrations.ai.provider, "openrouter");
 
   console.log(
     JSON.stringify(

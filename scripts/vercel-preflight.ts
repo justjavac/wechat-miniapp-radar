@@ -2,6 +2,7 @@ import { spawnSync } from "node:child_process";
 import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
+import { getAiConfig, describeAiProvider } from "@/lib/ai-config";
 import { describeUpstashRedisEnvRequirement, hasUpstashRedis } from "@/lib/upstash";
 
 type CheckStatus = "pass" | "warn" | "fail";
@@ -138,19 +139,22 @@ function checkSiteUrl() {
 }
 
 function checkDeploymentEnv() {
+  const ai = getAiConfig();
   const optionalEnv = [
     "DATABASE_URL",
     "CRON_SECRET",
     "ADMIN_TOKEN",
     "GITHUB_TOKEN",
     "BLOB_READ_WRITE_TOKEN",
-    "OPENAI_API_KEY"
+    "OPENAI_API_KEY",
+    "OPENAI_API_URL"
   ];
 
   for (const name of optionalEnv) {
     if (process.env[name]) pass(`env:${name}`, `${name} is configured.`);
     else record(`env:${name}`, "warn", `${name} is not configured.`);
   }
+  if (ai.configured) pass("env:AI_PROVIDER", `${describeAiProvider(ai.provider)} endpoint is selected: ${ai.apiUrl}.`);
 
   if (hasUpstashRedis()) {
     pass("env:UPSTASH_REDIS", "Redis REST integration is configured.");

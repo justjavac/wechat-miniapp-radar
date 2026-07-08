@@ -80,6 +80,12 @@ const server = createServer(async (request, response) => {
       },
       database: { configured: false, connected: false, error: null },
       integrations: {
+        ai: {
+          configured: false,
+          apiKeyConfigured: false,
+          apiUrl: "https://api.openai.com/v1",
+          provider: "openai"
+        },
         openai: false,
         github: false,
         cronSecret: false,

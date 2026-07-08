@@ -262,7 +262,7 @@ const healthJsonPayload = JSON.parse(await readFile(healthJsonOutputFile, "utf8"
   ok?: boolean;
   resources?: { count?: number };
   snapshots?: { aiSummaries?: { count?: number }; radarScores?: { count?: number }; weekly?: { historyCount?: number } };
-  integrations?: { openai?: boolean };
+  integrations?: { openai?: boolean; ai?: { provider?: string } };
 };
 assert.equal(healthJsonPayload.ok, true);
 assert.ok((healthJsonPayload.resources?.count ?? 0) > 0, "health json should include resource count");
@@ -270,6 +270,7 @@ assert.ok((healthJsonPayload.snapshots?.aiSummaries?.count ?? 0) > 0, "health js
 assert.ok((healthJsonPayload.snapshots?.radarScores?.count ?? 0) > 0, "health json should include radar score snapshot count");
 assert.ok((healthJsonPayload.snapshots?.weekly?.historyCount ?? 0) > 0, "health json should include weekly history count");
 assert.equal(healthJsonPayload.integrations?.openai, false);
+assert.equal(healthJsonPayload.integrations?.ai?.provider, "openai");
 
 const importHelp = await execFileAsync(process.execPath, ["bin/miniprogram-radar.mjs", "import", "--help"]);
 assert.match(importHelp.stdout, /miniprogram-radar import/);

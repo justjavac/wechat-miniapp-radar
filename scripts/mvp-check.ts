@@ -1,5 +1,6 @@
 import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
+import { describeAiProvider, getAiConfig } from "@/lib/ai-config";
 import { describeUpstashRedisEnvRequirement, hasUpstashRedis } from "@/lib/upstash";
 
 type CheckStatus = "pass" | "warn" | "fail";
@@ -187,14 +188,19 @@ checkEnv("BLOB_READ_WRITE_TOKEN");
 checkRedisEnv();
 checkEnv("OPERATION_LOG_RETENTION_DAYS", false);
 
-if (process.env.OPENAI_API_KEY) {
-  pass("env:OPENAI_API_KEY", "OPENAI_API_KEY is configured for real AI.");
+const ai = getAiConfig();
+if (ai.configured) {
+  pass("env:OPENAI_API_KEY", `OPENAI_API_KEY is configured for real AI via ${describeAiProvider(ai.provider)}.`);
+  pass("env:OPENAI_API_URL", `AI endpoint is ${ai.apiUrl}.`);
 } else {
   warnOrFail(
     "env:OPENAI_API_KEY",
     "OPENAI_API_KEY is not configured. Real AI remains disabled; rule-based summaries and Advisor stay available.",
     process.env.EXPECT_OPENAI === "1"
   );
+  if (process.env.OPENAI_API_URL) {
+    record("env:OPENAI_API_URL", "warn", "OPENAI_API_URL is configured, but OPENAI_API_KEY is missing.");
+  }
 }
 
 const summary = {

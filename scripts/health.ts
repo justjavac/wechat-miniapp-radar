@@ -1,5 +1,6 @@
 import { writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { describeAiProvider } from "@/lib/ai-config";
 import { getHealthCheck, type HealthCheck } from "@/lib/health";
 
 const args = process.argv.slice(2);
@@ -48,7 +49,7 @@ function renderHealth(health: HealthCheck) {
     "",
     "## 集成",
     "",
-    `- OpenAI：${status(health.integrations.openai)}`,
+    `- AI：${status(health.integrations.ai.configured)}（${describeAiProvider(health.integrations.ai.provider)}，${health.integrations.ai.apiUrl}）`,
     `- GitHub：${status(health.integrations.github)}`,
     `- Cron Secret：${status(health.integrations.cronSecret)}`,
     `- Admin Token：${status(health.integrations.adminToken)}`,

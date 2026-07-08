@@ -40,6 +40,12 @@ function health(overrides: HealthOverrides = {}): HealthCheck {
       error: null
     },
     integrations: {
+      ai: {
+        configured: false,
+        apiKeyConfigured: false,
+        apiUrl: "https://api.openai.com/v1",
+        provider: "openai"
+      },
       openai: false,
       github: false,
       cronSecret: false,
@@ -85,6 +91,12 @@ const configuredItems = buildProductionReadiness(
       error: null
     },
     integrations: {
+      ai: {
+        configured: true,
+        apiKeyConfigured: true,
+        apiUrl: "https://openrouter.ai/api/v1",
+        provider: "openrouter"
+      },
       openai: true,
       github: true,
       cronSecret: true,

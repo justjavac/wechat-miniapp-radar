@@ -33,6 +33,7 @@ const envKeys = [
   "KV_REST_API_URL",
   "KV_REST_API_TOKEN",
   "OPENAI_API_KEY",
+  "OPENAI_API_URL",
   "SITE_URL",
   "NEXT_PUBLIC_SITE_URL",
   "CRON_SECRET",

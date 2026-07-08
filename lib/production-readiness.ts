@@ -1,4 +1,5 @@
 import type { HealthCheck } from "@/lib/health";
+import { describeAiProvider } from "@/lib/ai-config";
 
 export type ProductionReadinessStatus = "ready" | "missing" | "optional";
 
@@ -104,8 +105,10 @@ export function buildProductionReadiness(health: HealthCheck): ProductionReadine
       id: "openai",
       title: "真实 AI",
       status: health.integrations.openai ? "ready" : "optional",
-      detail: health.integrations.openai ? "OPENAI_API_KEY 已配置，真实 AI 可进入严格验收。" : "真实 AI 暂未启用，当前使用规则结果和 prompt contract。",
-      action: "用户确认启用后，只在服务端环境变量中配置 OPENAI_API_KEY。",
+      detail: health.integrations.openai
+        ? `OPENAI_API_KEY 已配置，AI Provider 为 ${describeAiProvider(health.integrations.ai.provider)}。`
+        : "真实 AI 暂未启用，当前使用规则结果和 prompt contract。",
+      action: `用户确认启用后，只在服务端环境变量中配置 OPENAI_API_KEY；如使用 OpenRouter，同时配置 OPENAI_API_URL=${health.integrations.ai.provider === "openrouter" ? health.integrations.ai.apiUrl : "https://openrouter.ai/api/v1"}。`,
       command: "EXPECT_OPENAI=1 npm run mvp:check -- <production-url>"
     })
   ];

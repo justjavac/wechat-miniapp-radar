@@ -120,7 +120,15 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
   ]);
   const stats = getStats(resources);
   const categories = getCategories(resources);
-  const configuredIntegrations = Object.values(health.integrations).filter(Boolean).length + Number(health.database.configured);
+  const configuredIntegrations =
+    Number(health.integrations.openai) +
+    Number(health.integrations.github) +
+    Number(health.integrations.cronSecret) +
+    Number(health.integrations.adminToken) +
+    Number(health.integrations.blob) +
+    Number(health.integrations.upstashRedis) +
+    Number(health.integrations.siteUrl) +
+    Number(health.database.configured);
   const productionReadiness = buildProductionReadiness(health);
   const readinessSummary = summarizeProductionReadiness(productionReadiness);
   const scoreReviewItems =
@@ -210,7 +218,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
           </CardHeader>
           <CardContent>
             <p className="text-3xl font-black">{configuredIntegrations}/8</p>
-            <p className="mt-1 text-xs text-muted-foreground">OpenAI、GitHub、Cron、Admin、Blob、Redis、站点 URL、数据库</p>
+            <p className="mt-1 text-xs text-muted-foreground">AI、GitHub、Cron、Admin、Blob、Redis、站点 URL、数据库</p>
           </CardContent>
         </Card>
       </section>
@@ -246,7 +254,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
           </CardHeader>
           <CardContent className="grid gap-3 text-sm sm:grid-cols-2">
             <div className="flex items-center justify-between gap-3 rounded-md border border-border px-3 py-2">
-              <span>OpenAI</span>
+              <span>AI Provider</span>
               <StatusBadge enabled={health.integrations.openai} />
             </div>
             <div className="flex items-center justify-between gap-3 rounded-md border border-border px-3 py-2">

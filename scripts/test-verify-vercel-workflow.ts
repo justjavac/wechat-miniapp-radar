@@ -105,6 +105,8 @@ for (const envName of [
   "VAR_EXPECT_OPENAI",
   "SITE_URL",
   "NEXT_PUBLIC_SITE_URL",
+  "OPENAI_API_KEY",
+  "OPENAI_API_URL",
   "VERIFY_CRON_SECRET",
   "VERIFY_ADMIN_TOKEN",
   "GITHUB_TOKEN",
@@ -121,6 +123,8 @@ for (const envName of [
 }
 
 assert.equal(env.GITHUB_TOKEN, "${{ secrets.RADAR_GITHUB_TOKEN || github.token }}");
+assert.equal(env.OPENAI_API_KEY, "${{ secrets.OPENAI_API_KEY }}");
+assert.equal(env.OPENAI_API_URL, "${{ vars.OPENAI_API_URL }}");
 assert.equal(env.VERIFY_CRON_SECRET, "${{ secrets.CRON_SECRET }}");
 assert.equal(env.VERIFY_ADMIN_TOKEN, "${{ secrets.ADMIN_TOKEN }}");
 

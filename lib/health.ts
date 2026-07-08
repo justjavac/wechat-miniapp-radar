@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { createDb } from "@/db/client";
 import { resources as databaseResources } from "@/db/schema";
+import { getAiConfig, type AiConfig } from "@/lib/ai-config";
 import { getResources } from "@/lib/resources";
 import { hasUpstashRedis } from "@/lib/upstash";
 
@@ -35,6 +36,7 @@ export interface HealthCheck {
     error: string | null;
   };
   integrations: {
+    ai: AiConfig;
     openai: boolean;
     github: boolean;
     cronSecret: boolean;
@@ -99,6 +101,7 @@ async function getSnapshotHealth(): Promise<HealthCheck["snapshots"]> {
 
 export async function getHealthCheck(): Promise<HealthCheck> {
   const [resources, snapshots] = await Promise.all([getResources(), getSnapshotHealth()]);
+  const ai = getAiConfig();
   const database = {
     configured: Boolean(process.env.DATABASE_URL),
     connected: false,
@@ -124,7 +127,8 @@ export async function getHealthCheck(): Promise<HealthCheck> {
     snapshots,
     database,
     integrations: {
-      openai: Boolean(process.env.OPENAI_API_KEY),
+      ai,
+      openai: ai.configured,
       github: Boolean(process.env.GITHUB_TOKEN),
       cronSecret: Boolean(process.env.CRON_SECRET),
       adminToken: Boolean(process.env.ADMIN_TOKEN),

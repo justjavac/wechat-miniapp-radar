@@ -32,7 +32,8 @@ const envKeys = [
   "UPSTASH_REDIS_REST_TOKEN",
   "KV_REST_API_URL",
   "KV_REST_API_TOKEN",
-  "OPENAI_API_KEY"
+  "OPENAI_API_KEY",
+  "OPENAI_API_URL"
 ];
 
 function parseOutput(stdout: string): MvpCheckOutput {
@@ -110,6 +111,15 @@ assert.ok((strictOutput.summary?.fail ?? 0) > 0, "strict MVP should report failu
 assert.equal(strictOutput.checks?.find((check) => check.name === "env:DATABASE_URL")?.status, "fail");
 assert.equal(strictOutput.checks?.find((check) => check.name === "env:OPENAI_API_KEY")?.status, "fail");
 
+const openRouterConfigured = await runMvpCheck({
+  OPENAI_API_KEY: "test-openrouter-key",
+  OPENAI_API_URL: "https://openrouter.ai/api/v1"
+});
+assert.equal(openRouterConfigured.status, 0, openRouterConfigured.stderr);
+const openRouterConfiguredOutput = parseOutput(openRouterConfigured.stdout);
+assert.equal(openRouterConfiguredOutput.checks?.find((check) => check.name === "env:OPENAI_API_KEY")?.status, "pass");
+assert.equal(openRouterConfiguredOutput.checks?.find((check) => check.name === "env:OPENAI_API_URL")?.status, "pass");
+
 const strictSiteUrl = await runMvpCheck({ EXPECT_SITE_URL: "1" });
 assert.equal(strictSiteUrl.status, 1, "strict site URL expectation should fail without SITE_URL or NEXT_PUBLIC_SITE_URL");
 const strictSiteUrlOutput = parseOutput(strictSiteUrl.stdout);
@@ -144,7 +154,7 @@ console.log(
   JSON.stringify(
     {
       checkedAt: new Date().toISOString(),
-      cases: 6,
+      cases: 7,
       assertions: [
         "baseline external warnings",
         "product module checks",
@@ -152,6 +162,7 @@ console.log(
         "production URL argument",
         "strict MVP external failures",
         "strict OpenAI expectation",
+        "OpenRouter-compatible AI endpoint",
         "strict site URL expectation",
         "strict site URL configured",
         "strict MVP accepts Vercel KV Redis env aliases"

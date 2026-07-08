@@ -1,6 +1,7 @@
 import { spawnSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import { getAiConfig } from "@/lib/ai-config";
 import { describeUpstashRedisEnvRequirement, hasUpstashRedis } from "@/lib/upstash";
 
 type StepStatus = "ready" | "skipped" | "pass" | "fail";
@@ -45,6 +46,7 @@ function readUrl() {
 }
 
 const productionUrl = readUrl();
+const ai = getAiConfig();
 const steps: BootstrapStep[] = [];
 const strictMvpEnvKeys = [
   "DATABASE_URL",
@@ -156,7 +158,7 @@ if (!execute) {
     ...(expectVercelDeploy && !hasVercelProjectLink()
       ? ["Vercel project link is required by expect-vercel-deploy. Run `npx vercel link` or set VERCEL_PROJECT_ID and VERCEL_ORG_ID."]
       : []),
-    ...(expectOpenAi && !hasEnv("OPENAI_API_KEY") ? ["OPENAI_API_KEY is required by expect-openai."] : [])
+    ...(expectOpenAi && !ai.configured ? ["OPENAI_API_KEY is required by expect-openai."] : [])
   ];
 
   console.log(
