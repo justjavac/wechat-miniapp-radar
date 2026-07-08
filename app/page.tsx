@@ -5,6 +5,8 @@ import { StatStrip } from "@/components/stat-strip";
 import { buttonVariants } from "@/components/ui/button";
 import { getCategories, getResources, getStats, getUseCases } from "@/lib/resources";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const resources = await getResources();
   const stats = getStats(resources);

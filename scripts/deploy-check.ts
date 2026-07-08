@@ -116,6 +116,34 @@ checks.push(
   )
 );
 
+const dbBackedPages = [
+  ["db-backed-page:/", "app/page.tsx"],
+  ["db-backed-page:/radar", "app/radar/page.tsx"],
+  ["db-backed-page:/compare", "app/compare/page.tsx"],
+  ["db-backed-page:/weekly", "app/weekly/page.tsx"],
+  ["db-backed-page:/resources/[id]", "app/resources/[id]/page.tsx"]
+] as const;
+for (const [name, file] of dbBackedPages) {
+  const source = await readText(file);
+  checks.push(
+    result(
+      name,
+      source?.includes('export const dynamic = "force-dynamic"') ? "pass" : "fail",
+      source?.includes('export const dynamic = "force-dynamic"') ? `${file} is rendered dynamically.` : `${file} must force dynamic rendering for database-backed content.`
+    )
+  );
+}
+const resourceDetailSource = await readText("app/resources/[id]/page.tsx");
+checks.push(
+  result(
+    "db-backed-page:resource-detail-no-static-params",
+    resourceDetailSource && !resourceDetailSource.includes("generateStaticParams") ? "pass" : "fail",
+    resourceDetailSource && !resourceDetailSource.includes("generateStaticParams")
+      ? "Resource detail routes are resolved from the current catalog at request time."
+      : "Resource detail routes must not use generateStaticParams for database-backed resources."
+  )
+);
+
 const packageJson = await readJson<{ scripts?: Record<string, string>; engines?: Record<string, string> }>("package.json");
 const requiredScripts = [
   "build",

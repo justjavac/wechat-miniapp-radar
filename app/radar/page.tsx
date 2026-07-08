@@ -6,6 +6,8 @@ export const metadata = {
   title: "Radar | 小程序雷达"
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function RadarPage() {
   const resources = await getResources();
   const categories = getCategories(resources);

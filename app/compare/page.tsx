@@ -7,6 +7,8 @@ export const metadata = {
   title: "Compare | 小程序雷达"
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function ComparePage() {
   const resources = await getCompareResources();
   const insights = buildCompareInsights(resources);
