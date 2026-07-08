@@ -10,7 +10,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "import:readme": "tsx scripts/import-readme.ts",
     "integrations:verify": "tsx scripts/verify-integrations.ts",
     "integrations-verify:test": "tsx scripts/test-verify-integrations.ts",
     "generate": "tsx scripts/generate.ts",
@@ -70,8 +69,7 @@
     "typecheck": "tsc --noEmit",
     "validate": "tsx scripts/validate-data.ts",
     "check": "npm run typecheck && npm run validate && npm run generate:check && npm run deploy:check && npm run db:import:test && npm run db-verify:test && npm run integrations-verify:test && npm run enrich:test && npm run resources-api:test && npm run radar-url:test && npm run resource-detail-api:test && npm run export-api:test && npm run compare-api:test && npm run alternatives:test && npm run score-trace:test && npm run tracker:test && npm run operation-log:test && npm run task-lock:test && npm run site-url:test && npm run health:test && npm run production-readiness:test && npm run ai-output:test && npm run security:test && npm run secret-exposure:test && npm run admin-api:test && npm run cron-routes:test && npm run advisor:test && npm run doctor:test && npm run cli:test && npm run weekly:test && npm run deployment-verify:test && npm run mvp-check:test && npm run vercel-preflight:test && npm run verify-vercel-workflow:test && npm run production-bootstrap:test",
-    "check:links": "tsx scripts/check-links.ts",
-    "site": "next dev"
+    "check:links": "tsx scripts/check-links.ts"
   },
   "engines": {
     "node": ">=20"

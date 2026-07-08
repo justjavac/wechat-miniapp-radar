@@ -182,6 +182,30 @@ for (const script of requiredScripts) {
   );
 }
 
+const legacyPaths = ["public/index.html", "scripts/serve.ts", "scripts/import-readme.ts"];
+const remainingLegacyPaths = legacyPaths.filter((file) => existsSync(file));
+checks.push(
+  result(
+    "legacy-web:removed-files",
+    remainingLegacyPaths.length === 0 ? "pass" : "fail",
+    remainingLegacyPaths.length === 0
+      ? "Legacy static site and README importer files are removed."
+      : `Remove legacy files: ${remainingLegacyPaths.join(", ")}.`
+  )
+);
+
+const legacyScripts = ["legacy:site", "import:readme", "site"];
+const remainingLegacyScripts = legacyScripts.filter((script) => Boolean(packageJson?.scripts?.[script]));
+checks.push(
+  result(
+    "legacy-web:removed-scripts",
+    remainingLegacyScripts.length === 0 ? "pass" : "fail",
+    remainingLegacyScripts.length === 0
+      ? "Legacy static site and README importer scripts are removed."
+      : `Remove legacy package scripts: ${remainingLegacyScripts.join(", ")}.`
+  )
+);
+
 checks.push(
   result(
     "node-engine",
