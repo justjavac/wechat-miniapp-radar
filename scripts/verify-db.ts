@@ -26,7 +26,7 @@ if (!process.env.DATABASE_URL) {
 
   try {
     async function countTable(tableName: string) {
-      const [row] = await client.unsafe<{ count: number }[]>(`select count(*)::int as count from ${tableName}`);
+      const [row] = await client<{ count: number }[]>`select count(*)::int as count from ${client(tableName)}`;
       return Number(row?.count ?? 0);
     }
 
