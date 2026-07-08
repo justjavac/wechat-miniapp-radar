@@ -153,6 +153,7 @@ const requiredScripts = [
   "db:migrate",
   "db:import",
   "db:import:test",
+  "db-client:test",
   "db:verify",
   "db-verify:test",
   "enrich",
