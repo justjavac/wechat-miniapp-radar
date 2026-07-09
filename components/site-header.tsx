@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Activity, ClipboardCheck, Code2, GitCompareArrows, Newspaper, Radar, Search, ShieldCheck } from "lucide-react";
+import { Activity, ClipboardCheck, GitCompareArrows, Newspaper, Radar, Search, ShieldCheck } from "lucide-react";
+import { GitHubIcon } from "@/components/github-icon";
 import { QuickSearch } from "@/components/quick-search";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { GITHUB_REPOSITORY_URL } from "@/lib/site-links";
@@ -55,7 +56,7 @@ export function SiteHeader() {
             target="_blank"
             title="GitHub"
           >
-            <Code2 aria-hidden="true" className="h-4 w-4" />
+            <GitHubIcon aria-hidden="true" className="h-4 w-4" />
           </a>
           <div className="shrink-0">
             <ThemeToggle />

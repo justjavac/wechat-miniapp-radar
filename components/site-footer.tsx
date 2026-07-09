@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Activity, Code2, ExternalLink, Rss } from "lucide-react";
+import { Activity, ExternalLink, Rss } from "lucide-react";
+import { GitHubIcon } from "@/components/github-icon";
 import { GITHUB_REPOSITORY_URL } from "@/lib/site-links";
 
 const productLinks = [
@@ -62,7 +63,7 @@ export function SiteFooter() {
               rel="noreferrer"
               target="_blank"
             >
-              <Code2 aria-hidden="true" className="h-3.5 w-3.5" />
+              <GitHubIcon aria-hidden="true" className="h-3.5 w-3.5" />
               GitHub
               <ExternalLink aria-hidden="true" className="h-3 w-3" />
             </a>
