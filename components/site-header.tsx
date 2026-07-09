@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { Activity, ClipboardCheck, GitCompareArrows, Newspaper, Radar, Search, ShieldCheck } from "lucide-react";
+import { Activity, ClipboardCheck, Code2, GitCompareArrows, Newspaper, Radar, Search, ShieldCheck } from "lucide-react";
 import { QuickSearch } from "@/components/quick-search";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { GITHUB_REPOSITORY_URL } from "@/lib/site-links";
 
 const navItems = [
   { href: "/radar", label: "雷达", title: "Radar", icon: Radar },
@@ -46,6 +47,16 @@ export function SiteHeader() {
           <div className="shrink-0">
             <QuickSearch />
           </div>
+          <a
+            aria-label="GitHub"
+            className="focus-ring inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-border bg-surface text-foreground transition-colors hover:bg-muted"
+            href={GITHUB_REPOSITORY_URL}
+            rel="noreferrer"
+            target="_blank"
+            title="GitHub"
+          >
+            <Code2 aria-hidden="true" className="h-4 w-4" />
+          </a>
           <div className="shrink-0">
             <ThemeToggle />
           </div>
