@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import crypto from "crypto";
 import { ADMIN_SESSION_COOKIE, isAdminTokenValid } from "@/lib/admin-auth";
 
 const ADMIN_SESSION_MAX_AGE_SECONDS = 60 * 60 * 8;
@@ -12,7 +13,7 @@ function clearAdminSession(response: NextResponse) {
     httpOnly: true,
     maxAge: 0,
     path: "/",
-    sameSite: "lax",
+    sameSite: "strict",
     secure: process.env.NODE_ENV === "production"
   });
 }
@@ -28,11 +29,12 @@ export async function POST(request: Request) {
   }
 
   const response = adminRedirect(request);
-  response.cookies.set(ADMIN_SESSION_COOKIE, token, {
+  const tokenHash = crypto.createHash("sha256").update(token).digest("hex");
+  response.cookies.set(ADMIN_SESSION_COOKIE, tokenHash, {
     httpOnly: true,
     maxAge: ADMIN_SESSION_MAX_AGE_SECONDS,
     path: "/",
-    sameSite: "lax",
+    sameSite: "strict",
     secure: process.env.NODE_ENV === "production"
   });
   return response;

@@ -1,3 +1,5 @@
+import crypto from "crypto";
+
 export const ADMIN_SESSION_COOKIE = "miniprogram_radar_admin";
 
 export function isAdminConfigured() {
@@ -11,7 +13,8 @@ export function isAdminTokenValid(token: string | null | undefined) {
     return process.env.NODE_ENV !== "production";
   }
 
-  return token === configuredToken;
+  const configuredHash = crypto.createHash("sha256").update(configuredToken).digest("hex");
+  return token === configuredToken || token === configuredHash;
 }
 
 export function getAdminTokenFromRequest(request: Request) {
