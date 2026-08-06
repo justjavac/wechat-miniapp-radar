@@ -94,7 +94,7 @@
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.45.2",
     "lucide-react": "^1.23.0",
-    "next": "^16.2.10",
+    "next": "^16.2.11",
     "postgres": "^3.4.9",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
