@@ -81,7 +81,6 @@
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.5.2",
     "drizzle-kit": "^0.31.10",
-    "postcss": "^8.5.16",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3"
@@ -100,5 +99,8 @@
     "react-dom": "^19.2.7",
     "tailwind-merge": "^3.6.0",
     "yaml": "^2.9.0"
+  },
+  "overrides": {
+    "postcss": "8.5.18"
   }
 }
