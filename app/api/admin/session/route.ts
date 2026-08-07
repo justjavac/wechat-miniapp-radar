@@ -18,6 +18,12 @@ function clearAdminSession(response: NextResponse) {
 }
 
 export async function POST(request: Request) {
+  const origin = request.headers.get("origin");
+  const host = new URL(request.url).origin;
+  if (!origin || origin !== host) {
+    return new NextResponse(null, { status: 403 });
+  }
+
   const form = await request.formData().catch(() => null);
   const token = form?.get("token");
 
