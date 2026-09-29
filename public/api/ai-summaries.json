@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-07T00:08:14.081Z",
+  "generatedAt": "2026-09-29T06:08:00.775Z",
   "mode": "rules",
-  "count": 236,
+  "count": 237,
   "summaries": [
     {
       "resourceId": "github-com-tencentwepy",
@@ -659,23 +659,49 @@
       ]
     },
     {
-      "resourceId": "github-com-sonofmagicweapp-tailwindcss-webpack-plugin",
-      "title": "weapp-tailwindcss-webpack-plugin ★100+",
-      "summary": "在小程序里使用 TailwindCSS 吧。作为工程工具，当前需要结合项目约束评估。",
-      "recommendation": "weapp-tailwindcss-webpack-plugin 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具。",
+      "resourceId": "github-com-weapp-viteweapp-vite",
+      "title": "weapp-vite",
+      "summary": "基于 Vite 的小程序构建工具，保留原生小程序开发方式，支持 TypeScript、Vue SFC 和渐进式接入。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "weapp-vite 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具、Vite、TypeScript、Vue SFC。",
       "riskNotes": [
         "当前维护状态：unknown。",
         "当前风险等级：medium。"
       ],
       "useCases": [
-        "工具"
+        "工具",
+        "Vite",
+        "TypeScript",
+        "Vue SFC"
       ],
       "notRecommendedFor": [],
       "evidenceRefs": [
         {
           "type": "github",
           "label": "GitHub",
-          "url": "https://github.com/sonofmagic/weapp-tailwindcss-webpack-plugin"
+          "url": "https://github.com/weapp-vite/weapp-vite"
+        }
+      ]
+    },
+    {
+      "resourceId": "github-com-sonofmagicweapp-tailwindcss-webpack-plugin",
+      "title": "weapp-tailwindcss",
+      "summary": "将 Tailwind CSS 原子化样式开发体验带入小程序，支持 Vite、Webpack、Rspack 等构建工具。作为工程工具，当前需要结合项目约束评估。",
+      "recommendation": "weapp-tailwindcss 需要结合团队栈、维护状态和替代方案谨慎评估，适合 工具、Tailwind CSS、样式。",
+      "riskNotes": [
+        "当前维护状态：unknown。",
+        "当前风险等级：medium。"
+      ],
+      "useCases": [
+        "工具",
+        "Tailwind CSS",
+        "样式"
+      ],
+      "notRecommendedFor": [],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/sonofmagic/weapp-tailwindcss"
         }
       ]
     },

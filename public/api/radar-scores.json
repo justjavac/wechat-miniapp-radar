@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-07T00:15:17.092Z",
+  "generatedAt": "2026-09-29T06:07:57.859Z",
   "stats": {
-    "total": 236,
+    "total": 237,
     "adopt": 18,
     "trial": 8,
-    "assess": 200,
+    "assess": 201,
     "hold": 10,
     "highRisk": 10,
     "categories": 7
@@ -515,20 +515,38 @@
       ]
     },
     {
-      "id": "github-com-sonofmagicweapp-tailwindcss-webpack-plugin",
-      "title": "weapp-tailwindcss-webpack-plugin ★100+",
+      "id": "github-com-weapp-viteweapp-vite",
+      "title": "weapp-vite",
       "status": "assess",
       "maintainStatus": "unknown",
       "riskLevel": "medium",
       "type": "tooling",
       "reasons": [
-        "GitHub: https://github.com/sonofmagic/weapp-tailwindcss-webpack-plugin"
+        "GitHub: https://github.com/weapp-vite/weapp-vite"
       ],
       "evidenceRefs": [
         {
           "type": "github",
           "label": "GitHub",
-          "url": "https://github.com/sonofmagic/weapp-tailwindcss-webpack-plugin"
+          "url": "https://github.com/weapp-vite/weapp-vite"
+        }
+      ]
+    },
+    {
+      "id": "github-com-sonofmagicweapp-tailwindcss-webpack-plugin",
+      "title": "weapp-tailwindcss",
+      "status": "assess",
+      "maintainStatus": "unknown",
+      "riskLevel": "medium",
+      "type": "tooling",
+      "reasons": [
+        "GitHub: https://github.com/sonofmagic/weapp-tailwindcss"
+      ],
+      "evidenceRefs": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/sonofmagic/weapp-tailwindcss"
         }
       ]
     },
