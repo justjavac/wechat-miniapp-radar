@@ -22,7 +22,12 @@ function isMaintainStatus(value: string): value is MaintainStatus {
   return value === "active" || value === "low" || value === "stale" || value === "deprecated" || value === "unknown";
 }
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  const resources = await getResources();
+  return resources.map((resource) => ({ id: resource.id }));
+}
 
 export default async function ResourceDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;

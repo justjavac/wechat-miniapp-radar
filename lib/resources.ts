@@ -310,8 +310,24 @@ async function getDatabaseResources(): Promise<RadarResource[] | null> {
   }
 }
 
-export async function getResources(): Promise<RadarResource[]> {
+const RESOURCES_CACHE_TTL_MS = 60_000;
+let resourcesCache: { value: Promise<RadarResource[]>; expiresAt: number } | null = null;
+
+async function loadResources(): Promise<RadarResource[]> {
   return (await getDatabaseResources()) ?? (await getYamlResources());
+}
+
+export async function getResources(): Promise<RadarResource[]> {
+  const cacheEnabled = process.env.NODE_ENV === "production";
+  const now = Date.now();
+  if (cacheEnabled && resourcesCache && resourcesCache.expiresAt > now) {
+    return resourcesCache.value;
+  }
+  const value = loadResources();
+  if (cacheEnabled) {
+    resourcesCache = { value, expiresAt: now + RESOURCES_CACHE_TTL_MS };
+  }
+  return value;
 }
 
 export async function getResource(id: string) {
