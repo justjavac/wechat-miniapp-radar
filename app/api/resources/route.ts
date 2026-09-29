@@ -53,7 +53,7 @@ export async function GET(request: Request) {
   const offset = (page - 1) * pageSize;
   const pagedResources = filtered.slice(offset, offset + pageSize);
 
-  return NextResponse.json({
+  const response = NextResponse.json({
     total,
     page,
     pageSize,
@@ -68,4 +68,6 @@ export async function GET(request: Request) {
       hasPreviousPage: page > 1 && total > 0
     }
   });
+  response.headers.set("cache-control", "public, s-maxage=300, stale-while-revalidate=3600");
+  return response;
 }

@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { getResources } from "@/lib/resources";
 import { absoluteUrl } from "@/lib/site-url";
 
+export const revalidate = 3600;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const resources = await getResources();
   const now = new Date();

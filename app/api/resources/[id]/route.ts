@@ -16,5 +16,7 @@ export async function GET(_request: Request, context: { params: Promise<{ id: st
   const [aiSummary, scoreTrace] = await Promise.all([getResourceAiSummary(resource.id), getResourceScoreTrace(resource.id)]);
   const alternativeResources = findAlternativeResources(resources, resource);
   const updateTimeline = buildResourceTimeline({ resource, aiSummary, scoreTrace, alternatives: alternativeResources });
-  return NextResponse.json({ ...resource, aiSummary, scoreTrace, alternativeResources, updateTimeline });
+  const response = NextResponse.json({ ...resource, aiSummary, scoreTrace, alternativeResources, updateTimeline });
+  response.headers.set("cache-control", "public, s-maxage=300, stale-while-revalidate=3600");
+  return response;
 }
