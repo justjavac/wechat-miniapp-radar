@@ -55,6 +55,10 @@ jobs:
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
           exit "$status"
+      - name: Check radar scores snapshot
+        run: npm run score:check
+      - name: Check ai summaries snapshot
+        run: npm run ai:summarize:check
       - name: Run full local checks
         run: npm run check
       - name: Check Vercel readiness

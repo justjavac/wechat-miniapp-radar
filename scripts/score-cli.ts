@@ -1,4 +1,4 @@
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { maintainLabels, riskLabels, statusLabels, typeLabels } from "@/components/resource-labels";
 import { getResources, getStats } from "@/lib/resources";
@@ -7,18 +7,21 @@ const args = process.argv.slice(2);
 const outArg = args.find((arg) => arg.startsWith("--out="));
 const jsonOutput = args.includes("--json") || process.env.npm_config_json === "true";
 const writeSnapshot = args.includes("--write") || process.env.npm_config_write === "true";
+const checkSnapshot = args.includes("--check");
 const limit = Math.max(1, Math.min(100, Number(valueFor("limit") ?? "20") || 20));
 
 if (args.includes("-h") || args.includes("--help")) {
   console.log(`Usage:
   miniprogram-radar score [--json] [--out=score.md]
   miniprogram-radar score --write
+  miniprogram-radar score --check
 
 Options:
   --json   Print structured JSON instead of Markdown.
   --out    Write output to a file.
   --limit  Maximum high-risk and assessment rows shown in Markdown. Default: 20.
-  --write  Update public/api/radar-scores.json.`);
+  --write  Update public/api/radar-scores.json.
+  --check  Verify public/api/radar-scores.json matches the current source (intended for CI without a database).`);
   process.exit(0);
 }
 
@@ -83,6 +86,27 @@ const output = {
     }))
   }))
 } satisfies ScoreOutput;
+
+function snapshotPayload(value: ScoreOutput) {
+  return { stats: value.stats, scores: value.scores };
+}
+
+if (checkSnapshot) {
+  let committed: ScoreOutput;
+  try {
+    committed = JSON.parse(await readFile("public/api/radar-scores.json", "utf8")) as ScoreOutput;
+  } catch {
+    console.error("Radar scores snapshot is missing: public/api/radar-scores.json. Run `npm run score -- --write` to generate it.");
+    process.exit(1);
+  }
+  if (JSON.stringify(snapshotPayload(output)) !== JSON.stringify(snapshotPayload(committed))) {
+    console.error("Radar scores snapshot is out of date: public/api/radar-scores.json. Run `npm run score -- --write` to regenerate it.");
+    process.exit(1);
+  }
+  console.log("Radar scores snapshot is up to date.");
+  process.exit(0);
+}
+
 const renderedOutput = jsonOutput ? `${JSON.stringify(output, null, 2)}\n` : renderMarkdown(output);
 
 if (writeSnapshot) {
