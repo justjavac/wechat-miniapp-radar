@@ -326,6 +326,9 @@ export async function getResources(): Promise<RadarResource[]> {
   const value = loadResources();
   if (cacheEnabled) {
     resourcesCache = { value, expiresAt: now + RESOURCES_CACHE_TTL_MS };
+    value.catch(() => {
+      if (resourcesCache?.value === value) resourcesCache = null;
+    });
   }
   return value;
 }
