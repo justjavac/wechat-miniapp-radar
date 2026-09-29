@@ -24,8 +24,22 @@ if (!process.env.DATABASE_URL) {
   record("env:DATABASE_URL", "pass", "DATABASE_URL is configured.");
   const client = postgres(process.env.DATABASE_URL, { max: 1, prepare: false });
 
+  const ALLOWED_TABLES = new Set([
+    "resources",
+    "resource_alternatives",
+    "resource_signals",
+    "resource_scores",
+    "resource_ai_summaries",
+    "weekly_reports",
+    "advisor_sessions",
+    "operation_logs"
+  ]);
+
   try {
     async function countTable(tableName: string) {
+      if (!ALLOWED_TABLES.has(tableName)) {
+        throw new Error(`Refusing to query unknown table: ${tableName}`);
+      }
       const [row] = await client<{ count: number }[]>`select count(*)::int as count from ${client(tableName)}`;
       return Number(row?.count ?? 0);
     }
