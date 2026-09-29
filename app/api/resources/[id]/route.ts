@@ -4,8 +4,6 @@ import { findAlternativeResources, getResources } from "@/lib/resources";
 import { buildResourceTimeline } from "@/lib/resource-timeline";
 import { getResourceScoreTrace } from "@/lib/score-trace";
 
-export const revalidate = 300;
-
 export async function GET(_request: Request, context: { params: Promise<{ id: string }> }) {
   const { id } = await context.params;
   const resources = await getResources();
@@ -18,7 +16,5 @@ export async function GET(_request: Request, context: { params: Promise<{ id: st
   const [aiSummary, scoreTrace] = await Promise.all([getResourceAiSummary(resource.id), getResourceScoreTrace(resource.id)]);
   const alternativeResources = findAlternativeResources(resources, resource);
   const updateTimeline = buildResourceTimeline({ resource, aiSummary, scoreTrace, alternatives: alternativeResources });
-  const response = NextResponse.json({ ...resource, aiSummary, scoreTrace, alternativeResources, updateTimeline });
-  response.headers.set("cache-control", "public, s-maxage=300, stale-while-revalidate=3600");
-  return response;
+  return NextResponse.json({ ...resource, aiSummary, scoreTrace, alternativeResources, updateTimeline });
 }

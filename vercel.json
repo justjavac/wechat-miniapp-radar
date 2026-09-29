@@ -8,5 +8,16 @@
       "path": "/api/cron/weekly",
       "schedule": "0 3 * * 1"
     }
+  ],
+  "headers": [
+    {
+      "source": "/api/resources(.*)",
+      "headers": [
+        {
+          "key": "cache-control",
+          "value": "public, s-maxage=300, stale-while-revalidate=3600"
+        }
+      ]
+    }
   ]
 }

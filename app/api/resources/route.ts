@@ -35,8 +35,6 @@ function parseType(value: string | undefined): ResourceType | "all" | undefined 
     : undefined;
 }
 
-export const revalidate = 300;
-
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const resources = await getResources();
@@ -55,7 +53,7 @@ export async function GET(request: Request) {
   const offset = (page - 1) * pageSize;
   const pagedResources = filtered.slice(offset, offset + pageSize);
 
-  const response = NextResponse.json({
+  return NextResponse.json({
     total,
     page,
     pageSize,
@@ -70,6 +68,4 @@ export async function GET(request: Request) {
       hasPreviousPage: page > 1 && total > 0
     }
   });
-  response.headers.set("cache-control", "public, s-maxage=300, stale-while-revalidate=3600");
-  return response;
 }
