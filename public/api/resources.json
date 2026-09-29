@@ -564,10 +564,10 @@
       }
     },
     {
-      "id": "github-com-sonofmagicweapp-tailwindcss-webpack-plugin",
-      "title": "weapp-tailwindcss-webpack-plugin ★100+",
-      "url": "https://github.com/sonofmagic/weapp-tailwindcss-webpack-plugin",
-      "description": "在小程序里使用 TailwindCSS 吧",
+      "id": "github-com-weapp-viteweapp-vite",
+      "title": "weapp-vite",
+      "url": "https://github.com/weapp-vite/weapp-vite",
+      "description": "基于 Vite 的小程序构建工具，保留原生小程序开发方式，支持 TypeScript、Vue SFC 和渐进式接入",
       "category": "工具",
       "categoryId": "tools",
       "section": null,
@@ -576,9 +576,33 @@
         "language": [
           "zh-CN"
         ],
-        "difficulty": "unknown",
+        "difficulty": "intermediate",
         "topics": [
-          "工具"
+          "工具",
+          "Vite",
+          "TypeScript",
+          "Vue SFC"
+        ]
+      }
+    },
+    {
+      "id": "github-com-sonofmagicweapp-tailwindcss-webpack-plugin",
+      "title": "weapp-tailwindcss",
+      "url": "https://github.com/sonofmagic/weapp-tailwindcss",
+      "description": "将 Tailwind CSS 原子化样式开发体验带入小程序，支持 Vite、Webpack、Rspack 等构建工具",
+      "category": "工具",
+      "categoryId": "tools",
+      "section": null,
+      "sectionId": null,
+      "metadata": {
+        "language": [
+          "zh-CN"
+        ],
+        "difficulty": "intermediate",
+        "topics": [
+          "工具",
+          "Tailwind CSS",
+          "样式"
         ]
       }
     },
