@@ -103,6 +103,7 @@
     "yaml": "^2.9.0"
   },
   "overrides": {
-    "postcss": "8.5.18"
+    "postcss": "8.5.18",
+    "nanoid": "5.1.16"
   }
 }
