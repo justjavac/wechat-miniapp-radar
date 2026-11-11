@@ -1,0 +1,73 @@
+name: Scheduled radar jobs
+
+on:
+  schedule:
+    # 每天 02:00 Asia/Shanghai（UTC 18:00 前一天）
+    - cron: "0 18 * * *"
+    # 每周一 03:00 Asia/Shanghai（UTC 周日 19:00）
+    - cron: "0 19 * * 0"
+  workflow_dispatch:
+    inputs:
+      job:
+        description: Which job to run
+        required: true
+        default: all
+        type: choice
+        options:
+          - all
+          - enrich
+          - weekly
+
+concurrency:
+  group: scheduled-radar-jobs
+  cancel-in-progress: false
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve job target
+        id: target
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            if [ "${{ github.event.schedule }}" = "0 19 * * 0" ]; then
+              echo "job=weekly" >> "$GITHUB_OUTPUT"
+            else
+              echo "job=enrich" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "job=${{ inputs.job }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Trigger endpoints
+        shell: bash
+        env:
+          SITE_URL: ${{ secrets.SITE_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${SITE_URL:-}" ] || [ -z "${CRON_SECRET:-}" ]; then
+            echo "SITE_URL and CRON_SECRET repository secrets are required." >&2
+            exit 1
+          fi
+
+          job="${{ steps.target.outputs.job }}"
+
+          run_one() {
+            local path="$1"
+            echo "Triggering ${path}"
+            curl -fsS --max-time 180 \
+              -H "Authorization: Bearer ${CRON_SECRET}" \
+              "${SITE_URL%/}${path}" | head -c 2000
+            echo
+          }
+
+          if [ "$job" = "enrich" ] || [ "$job" = "all" ]; then
+            run_one "/api/cron/enrich?limit=30"
+          fi
+
+          if [ "$job" = "weekly" ] || [ "$job" = "all" ]; then
+            run_one "/api/cron/weekly"
+          fi
