@@ -99,6 +99,6 @@
   },
   "overrides": {
     "postcss": "8.5.18",
-    "nanoid": "5.1.16"
+    "nanoid": "3.3.20"
   }
 }

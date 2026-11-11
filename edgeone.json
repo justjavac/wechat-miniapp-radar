@@ -5,8 +5,6 @@
   "outputDirectory": ".next",
   "nodeVersion": "22.11.0",
   "cloudFunctions": {
-    "nodejs": {
-      "maxDuration": 120
-    }
+    "maxDuration": 120
   }
 }
