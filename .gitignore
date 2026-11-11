@@ -3,7 +3,6 @@ node_modules/
 .tmp/
 .playwright-cli/
 out/
-.vercel/
 docs/
 
 *.log
