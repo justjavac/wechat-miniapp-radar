@@ -21,7 +21,7 @@ Options:
   --out      Write output to a file.
   --write    Update public weekly snapshot files.
   --persist  Persist the report to Postgres when DATABASE_URL is configured.
-  --upload   Upload the Markdown report to Vercel Blob when BLOB_READ_WRITE_TOKEN is configured.`);
+  --upload   Upload the Markdown report to EdgeOne Blob when EDGEONE_BLOB_STORE is configured.`);
   process.exit(0);
 }
 
@@ -52,7 +52,7 @@ if (outArg) {
 
 if (!jsonOutput || outArg) {
   if (persist) console.log(persisted ? "Weekly report persisted." : "Weekly report persistence skipped: DATABASE_URL is not configured.");
-  if (upload) console.log(blobUrl ? `Weekly report uploaded to ${blobUrl}` : "Weekly report upload skipped: BLOB_READ_WRITE_TOKEN is not configured.");
+  if (upload) console.log(blobUrl ? `Weekly report uploaded to ${blobUrl}` : "Weekly report upload skipped: EDGEONE_BLOB_STORE is not configured.");
   if (writeFiles) console.log(`Weekly snapshot files written: ${files.join(", ")}`);
 }
 

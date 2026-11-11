@@ -11,14 +11,9 @@ const sensitiveEnvNames = [
   "GITHUB_TOKEN",
   "CRON_SECRET",
   "ADMIN_TOKEN",
-  "BLOB_READ_WRITE_TOKEN",
+  "EDGEONE_BLOB_STORE",
   "UPSTASH_REDIS_REST_URL",
   "UPSTASH_REDIS_REST_TOKEN",
-  "KV_REST_API_TOKEN",
-  "KV_REST_API_READ_ONLY_TOKEN",
-  "KV_URL",
-  "REDIS_URL",
-  "VERCEL_TOKEN"
 ];
 
 const textExtensions = new Set([
@@ -134,7 +129,7 @@ const envDefinitionFiles = (
       "postcss.config.js",
       "scripts",
       "tailwind.config.ts",
-      "vercel.json"
+      "edgeone.json"
     ].map(collectFiles)
   )
 )

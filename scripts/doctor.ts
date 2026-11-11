@@ -31,7 +31,7 @@ if (outArg) {
 }
 
 if (upload && (!jsonOutput || outArg)) {
-  console.log(blobUrl ? `Doctor report uploaded to ${blobUrl}` : "Doctor report upload skipped: BLOB_READ_WRITE_TOKEN is not configured.");
+  console.log(blobUrl ? `Doctor report uploaded to ${blobUrl}` : "Doctor report upload skipped: EDGEONE_BLOB_STORE is not configured.");
 }
 
 if (failOn === "p0") {

@@ -1,6 +1,4 @@
 import { spawnSync } from "node:child_process";
-import { existsSync, readFileSync } from "node:fs";
-import { join } from "node:path";
 import { getAiConfig } from "@/lib/ai-config";
 import { describeUpstashRedisEnvRequirement, hasUpstashRedis } from "@/lib/upstash";
 
@@ -33,10 +31,8 @@ const verifyBlobWrite = hasFlag("verify-blob-write") || process.env.VERIFY_BLOB_
 const expectRedis = hasFlag("expect-redis") || process.env.EXPECT_UPSTASH_REDIS === "1";
 const expectOpenAi = hasFlag("expect-openai") || process.env.EXPECT_OPENAI === "1";
 const expectSiteUrl = hasFlag("expect-site-url") || process.env.EXPECT_SITE_URL === "1";
-const expectVercelDeploy = hasFlag("expect-vercel-deploy") || process.env.EXPECT_VERCEL_DEPLOY === "1";
 const verifyCronSecret = process.env.VERIFY_CRON_SECRET || process.env.CRON_SECRET || "";
 const verifyAdminToken = process.env.VERIFY_ADMIN_TOKEN || process.env.ADMIN_TOKEN || "";
-const vercelLinkDir = process.env.VERCEL_LINK_DIR || ".vercel";
 
 function readUrl() {
   const urlFlagIndex = process.argv.indexOf("--url");
@@ -53,7 +49,7 @@ const strictMvpEnvKeys = [
   "CRON_SECRET",
   "ADMIN_TOKEN",
   "GITHUB_TOKEN",
-  "BLOB_READ_WRITE_TOKEN"
+  "EDGEONE_BLOB_STORE"
 ];
 
 function addStep(name: string, command: string[], skipped: boolean, detail: string) {
@@ -76,27 +72,6 @@ function hasSiteUrlEnv() {
 function hasRedisEnv() {
   return hasUpstashRedis();
 }
-
-function hasVercelProjectLink() {
-  if (hasEnv("VERCEL_PROJECT_ID") && hasEnv("VERCEL_ORG_ID")) return true;
-  if (existsSync(join(vercelLinkDir, "project.json"))) return true;
-
-  try {
-    const repoLink = JSON.parse(readFileSync(join(vercelLinkDir, "repo.json"), "utf8")) as {
-      projects?: Array<{ id?: string; orgId?: string; directory?: string }>;
-    };
-    return Boolean(repoLink.projects?.some((project) => (project.directory === "." || project.directory === undefined) && project.id && project.orgId));
-  } catch {
-    return false;
-  }
-}
-
-addStep(
-  "vercel-preflight",
-  ["npm", "run", "vercel:preflight", "--", productionUrl || "<production-url>"],
-  !productionUrl,
-  productionUrl ? "Check Vercel project link, production URL, canonical URL and Cron config." : "Skipped because no production URL was provided."
-);
 
 addStep(
   "mvp-check",
@@ -148,16 +123,12 @@ if (!execute) {
       : []),
     ...(expectDatabase && !hasEnv("DATABASE_URL") ? ["DATABASE_URL is required by expect-database."] : []),
     ...(expectGitHub && !hasEnv("GITHUB_TOKEN") ? ["GITHUB_TOKEN is required by expect-github."] : []),
-    ...(expectBlob && !hasEnv("BLOB_READ_WRITE_TOKEN") ? ["BLOB_READ_WRITE_TOKEN is required by expect-blob."] : []),
+    ...(expectBlob && !hasEnv("EDGEONE_BLOB_STORE") ? ["EDGEONE_BLOB_STORE is required by expect-blob."] : []),
     ...(expectMvp && !hasRedisEnv() ? [`${describeUpstashRedisEnvRequirement()} is required by expect-mvp.`] : []),
     ...(expectRedis && !hasRedisEnv()
       ? [`${describeUpstashRedisEnvRequirement()} is required by expect-redis.`]
       : []),
     ...(expectSiteUrl && !hasSiteUrlEnv() ? ["SITE_URL or NEXT_PUBLIC_SITE_URL is required by expect-site-url."] : []),
-    ...(expectVercelDeploy && !hasEnv("VERCEL_TOKEN") ? ["VERCEL_TOKEN is required by expect-vercel-deploy."] : []),
-    ...(expectVercelDeploy && !hasVercelProjectLink()
-      ? ["Vercel project link is required by expect-vercel-deploy. Run `npx vercel link` or set VERCEL_PROJECT_ID and VERCEL_ORG_ID."]
-      : []),
     ...(expectOpenAi && !ai.configured ? ["OPENAI_API_KEY is required by expect-openai."] : [])
   ];
 
@@ -176,7 +147,6 @@ if (!execute) {
           upstashRedis: expectRedis,
           openai: expectOpenAi,
           siteUrl: expectSiteUrl,
-          vercelDeploy: expectVercelDeploy,
           cronDryRun: Boolean(verifyCronSecret),
           adminReadiness: Boolean(verifyAdminToken)
         },
@@ -207,7 +177,6 @@ function runStep(step: BootstrapStep) {
     ...(expectRedis ? { EXPECT_UPSTASH_REDIS: "1" } : {}),
     ...(expectOpenAi ? { EXPECT_OPENAI: "1" } : {}),
     ...(expectSiteUrl ? { EXPECT_SITE_URL: "1" } : {}),
-    ...(expectVercelDeploy ? { EXPECT_VERCEL_DEPLOY: "1" } : {}),
     ...(verifyCronSecret ? { VERIFY_CRON_SECRET: verifyCronSecret } : {}),
     ...(verifyAdminToken ? { VERIFY_ADMIN_TOKEN: verifyAdminToken } : {}),
     ...(productionUrl ? { DEPLOYMENT_BASE_URL: productionUrl } : {})
@@ -256,7 +225,6 @@ console.log(
       mode: "execute",
       productionUrl: productionUrl || null,
       strictMvp: expectMvp,
-      strictVercelDeploy: expectVercelDeploy,
       cronDryRun: Boolean(verifyCronSecret),
       adminReadiness: Boolean(verifyAdminToken),
       summary,

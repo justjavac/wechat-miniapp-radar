@@ -73,7 +73,7 @@ function checkRedisEnv() {
 }
 
 function checkProductionUrl() {
-  const value = process.argv[2] ?? process.env.DEPLOYMENT_BASE_URL ?? process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  const value = process.argv[2] ?? process.env.DEPLOYMENT_BASE_URL ?? process.env.SITE_URL;
   if (!value) {
     warnOrFail("external:production-url", "No production URL provided. Pass a URL or set DEPLOYMENT_BASE_URL.", strictMvp);
     return;
@@ -116,7 +116,7 @@ const localFiles = [
   ["local:sitemap-route", "app/sitemap.ts"],
   ["local:robots-route", "app/robots.ts"],
   ["local:edgeone-config", "edgeone.json"],
-  ["local:vercel-production-workflow", ".github/workflows/verify-vercel.yml"],
+  ["local:scheduled-jobs-workflow", ".github/workflows/scheduled-jobs.yml"],
   ["local:database-schema", "db/schema.ts"],
   ["local:cli", "bin/miniprogram-radar.mjs"]
 ] as const;
@@ -139,7 +139,6 @@ const requiredScripts = [
   "weekly",
   "doctor",
   "mvp:check",
-  "vercel:preflight",
   "production:bootstrap",
   "smoke"
 ];
@@ -185,14 +184,14 @@ if (process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL) {
 } else {
   warnOrFail(
     "env:SITE_URL",
-    "SITE_URL or NEXT_PUBLIC_SITE_URL is not configured; sitemap and robots may fall back to the Vercel deployment URL.",
+    "SITE_URL or NEXT_PUBLIC_SITE_URL is not configured; sitemap and robots may fall back to the built-in default site URL.",
     process.env.EXPECT_SITE_URL === "1"
   );
 }
 checkEnv("CRON_SECRET");
 checkEnv("ADMIN_TOKEN");
 checkEnv("GITHUB_TOKEN");
-checkEnv("BLOB_READ_WRITE_TOKEN");
+checkEnv("EDGEONE_BLOB_STORE");
 checkRedisEnv();
 checkEnv("OPERATION_LOG_RETENTION_DAYS", false);
 

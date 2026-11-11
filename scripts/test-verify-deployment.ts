@@ -286,7 +286,7 @@ const server = createServer(async (request, response) => {
         { id: "cron-secret", status: "missing", action: "配置 CRON_SECRET。" },
         { id: "github-token", status: "missing", action: "配置 GITHUB_TOKEN。" },
         { id: "redis", status: "missing", action: "配置 Upstash Redis。" },
-        { id: "blob", status: "missing", action: "配置 Vercel Blob。" },
+        { id: "blob", status: "missing", action: "配置 EdgeOne Blob。" },
         { id: "snapshots", status: "ready", action: "定期刷新快照。" },
         { id: "openai", status: "optional", action: "确认后再配置 OPENAI_API_KEY。" }
       ],

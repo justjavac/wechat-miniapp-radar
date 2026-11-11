@@ -61,7 +61,7 @@ jobs:
         run: npm run ai:summarize:check
       - name: Run full local checks
         run: npm run check
-      - name: Check Vercel readiness
+      - name: Check deployment readiness
         run: npm run deploy:check
       - name: Build Next.js app
         run: npm run build

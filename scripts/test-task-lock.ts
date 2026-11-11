@@ -2,8 +2,6 @@ import assert from "node:assert/strict";
 import { acquireTaskLock } from "@/lib/task-lock";
 
 const originalEnv = {
-  KV_REST_API_TOKEN: process.env.KV_REST_API_TOKEN,
-  KV_REST_API_URL: process.env.KV_REST_API_URL,
   UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
   UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL
 };
@@ -32,8 +30,6 @@ function mockFetch(results: unknown[]) {
 try {
   setEnv("UPSTASH_REDIS_REST_TOKEN", undefined);
   setEnv("UPSTASH_REDIS_REST_URL", undefined);
-  setEnv("KV_REST_API_TOKEN", undefined);
-  setEnv("KV_REST_API_URL", undefined);
   const fallbackLock = await acquireTaskLock("cron.test", 1000);
   assert.equal(fallbackLock.acquired, true, "task lock should fail open without Redis");
   assert.equal(fallbackLock.enabled, false, "task lock should be disabled without Redis");
@@ -41,8 +37,6 @@ try {
 
   setEnv("UPSTASH_REDIS_REST_TOKEN", "test-token");
   setEnv("UPSTASH_REDIS_REST_URL", "https://upstash.example.test");
-  setEnv("KV_REST_API_TOKEN", undefined);
-  setEnv("KV_REST_API_URL", undefined);
   const acquireCalls = mockFetch(["OK", 1]);
   const acquiredLock = await acquireTaskLock("cron.test", 1000);
   assert.equal(acquiredLock.acquired, true, "task lock should acquire when Redis SET NX succeeds");
@@ -67,29 +61,19 @@ try {
 
   setEnv("UPSTASH_REDIS_REST_TOKEN", undefined);
   setEnv("UPSTASH_REDIS_REST_URL", undefined);
-  setEnv("KV_REST_API_TOKEN", "test-kv-token");
-  setEnv("KV_REST_API_URL", "https://vercel-kv.example.test");
-  const vercelKvCalls = mockFetch(["OK", 1]);
-  const vercelKvLock = await acquireTaskLock("cron.test", 1000);
-  assert.equal(vercelKvLock.acquired, true, "task lock should accept Vercel KV REST env names");
-  assert.equal(vercelKvLock.enabled, true, "Vercel KV REST lock should report Redis locking as enabled");
-  await vercelKvLock.release();
-  assert.equal(vercelKvCalls.length, 2, "Vercel KV REST lock should call SET and release with EVAL");
 
   console.log(
     JSON.stringify(
       {
         checkedAt: new Date().toISOString(),
-        cases: 5,
-        assertions: ["no redis fallback", "redis acquire and release", "redis contention", "redis failure fallback", "vercel kv env fallback"]
+        cases: 4,
+        assertions: ["no redis fallback", "redis acquire and release", "redis contention", "redis failure fallback"]
       },
       null,
       2
     )
   );
 } finally {
-  setEnv("KV_REST_API_TOKEN", originalEnv.KV_REST_API_TOKEN);
-  setEnv("KV_REST_API_URL", originalEnv.KV_REST_API_URL);
   setEnv("UPSTASH_REDIS_REST_TOKEN", originalEnv.UPSTASH_REDIS_REST_TOKEN);
   setEnv("UPSTASH_REDIS_REST_URL", originalEnv.UPSTASH_REDIS_REST_URL);
   globalThis.fetch = originalFetch;
