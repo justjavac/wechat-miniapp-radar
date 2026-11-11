@@ -54,7 +54,6 @@ const checks: CheckResult[] = [];
 checks.push(checkFile("edgeone.json"));
 checks.push(checkFile(".env.example"));
 checks.push(checkFile("drizzle.config.ts"));
-checks.push(checkFile(".github/workflows/verify-vercel.yml", "ci:verify-vercel-workflow"));
 checks.push(checkFile("app/sitemap.ts", "seo:sitemap-route"));
 checks.push(checkFile("app/robots.ts", "seo:robots-route"));
 checks.push(checkFile("bin/miniprogram-radar.mjs", "cli:miniprogram-radar"));
@@ -102,8 +101,6 @@ const requiredEnvKeys = [
   "EDGEONE_BLOB_STORE",
   "UPSTASH_REDIS_REST_URL",
   "UPSTASH_REDIS_REST_TOKEN",
-  "KV_REST_API_URL",
-  "KV_REST_API_TOKEN",
   "OPERATION_LOG_RETENTION_DAYS"
 ];
 const envExample = await readText(".env.example");
@@ -194,9 +191,6 @@ const requiredScripts = [
   "mvp:check",
   "mvp-check:test",
   "verify",
-  "vercel:preflight",
-  "vercel-preflight:test",
-  "verify-vercel-workflow:test",
   "production:bootstrap",
   "production-bootstrap:test",
   "smoke"
@@ -253,49 +247,6 @@ checks.push(
     missingWorkflowCommands.length === 0
       ? "Validate workflow runs full checks, readiness, build, and smoke."
       : `Validate workflow is missing: ${missingWorkflowCommands.join(", ")}.`
-  )
-);
-
-const verifyVercelWorkflow = await readText(".github/workflows/verify-vercel.yml");
-const requiredVerifyWorkflowCommands = [
-  "npm run vercel:preflight",
-  "npm run mvp:check",
-  "npm run integrations:verify",
-  "npm run deployment:verify",
-  "github.event.deployment.environment",
-  "VAR_EXPECT_VERCEL_DEPLOY",
-  "VAR_EXPECT_MVP",
-  "VAR_EXPECT_DATABASE",
-  "VAR_EXPECT_GITHUB",
-  "VAR_EXPECT_BLOB",
-  "VAR_EXPECT_UPSTASH_REDIS",
-  "VAR_EXPECT_SITE_URL",
-  "VAR_EXPECT_OPENAI",
-  "SITE_URL",
-  "NEXT_PUBLIC_SITE_URL",
-  "OPENAI_API_KEY",
-  "OPENAI_API_URL",
-  "OPENAI_MODEL",
-  "OPENAI_FALLBACK_MODEL",
-  "RADAR_GITHUB_TOKEN",
-  "GITHUB_TOKEN",
-  "BLOB_READ_WRITE_TOKEN",
-  "UPSTASH_REDIS_REST_URL",
-  "UPSTASH_REDIS_REST_TOKEN",
-  "KV_REST_API_URL",
-  "KV_REST_API_TOKEN",
-  "VERCEL_TOKEN",
-  "VERCEL_PROJECT_ID",
-  "VERCEL_ORG_ID"
-];
-const missingVerifyWorkflowCommands = requiredVerifyWorkflowCommands.filter((command) => !verifyVercelWorkflow?.includes(command));
-checks.push(
-  result(
-    "ci:verify-vercel-commands",
-    missingVerifyWorkflowCommands.length === 0 ? "pass" : "fail",
-    missingVerifyWorkflowCommands.length === 0
-      ? "Vercel verification workflow runs Vercel preflight, MVP, integrations, and production deployment checks."
-      : `Vercel verification workflow is missing: ${missingVerifyWorkflowCommands.join(", ")}.`
   )
 );
 
@@ -572,7 +523,7 @@ checks.push(
     process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL ? "pass" : "warn",
     process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL
       ? "SITE_URL or NEXT_PUBLIC_SITE_URL is configured for canonical sitemap and robots URLs."
-      : "SITE_URL or NEXT_PUBLIC_SITE_URL is not configured; sitemap and robots may fall back to the Vercel deployment URL."
+      : "SITE_URL or NEXT_PUBLIC_SITE_URL is not configured; sitemap and robots may fall back to the built-in default site URL."
   )
 );
 checks.push(checkEnv("CRON_SECRET", false));

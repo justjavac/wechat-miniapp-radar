@@ -1,8 +1,5 @@
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
-import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
-import { tmpdir } from "node:os";
-import { join } from "node:path";
 
 type BootstrapOutput = {
   mode?: string;
@@ -13,7 +10,6 @@ type BootstrapOutput = {
     cronDryRun?: boolean;
     adminReadiness?: boolean;
     siteUrl?: boolean;
-    vercelDeploy?: boolean;
   };
   blockingIssues?: string[];
   steps?: Array<{
@@ -27,11 +23,9 @@ const envKeys = [
   "DEPLOYMENT_BASE_URL",
   "DATABASE_URL",
   "GITHUB_TOKEN",
-  "BLOB_READ_WRITE_TOKEN",
+  "EDGEONE_BLOB_STORE",
   "UPSTASH_REDIS_REST_URL",
   "UPSTASH_REDIS_REST_TOKEN",
-  "KV_REST_API_URL",
-  "KV_REST_API_TOKEN",
   "OPENAI_API_KEY",
   "OPENAI_API_URL",
   "OPENAI_MODEL",
@@ -50,11 +44,6 @@ const envKeys = [
   "EXPECT_UPSTASH_REDIS",
   "EXPECT_OPENAI",
   "EXPECT_SITE_URL",
-  "EXPECT_VERCEL_DEPLOY",
-  "VERCEL_TOKEN",
-  "VERCEL_PROJECT_ID",
-  "VERCEL_ORG_ID",
-  "VERCEL_LINK_DIR",
   "VERIFY_BLOB_WRITE"
 ];
 
@@ -74,7 +63,6 @@ async function runBootstrap(args: string[], extraEnv: Record<string, string | un
       cwd: process.cwd(),
       env: {
         ...env,
-        VERCEL_LINK_DIR: join(process.cwd(), ".vercel-missing-test-link"),
         ...extraEnv
       },
       stdio: ["ignore", "pipe", "pipe"]
@@ -110,7 +98,6 @@ assert.equal(withUrl.status, 0, withUrl.stderr);
 const withUrlOutput = parseOutput(withUrl.stdout);
 assert.equal(withUrlOutput.mode, "plan");
 assert.equal(withUrlOutput.productionUrl, "https://miniprogram-radar.example.com");
-assert.equal(withUrlOutput.steps?.find((step) => step.name === "vercel-preflight")?.status, "ready");
 assert.equal(withUrlOutput.steps?.find((step) => step.name === "mvp-check")?.status, "ready");
 assert.equal(withUrlOutput.steps?.find((step) => step.name === "database-migrate")?.status, "skipped");
 assert.equal(withUrlOutput.steps?.find((step) => step.name === "deployment-verify")?.status, "ready");
@@ -118,7 +105,6 @@ assert.equal(withUrlOutput.steps?.find((step) => step.name === "deployment-verif
 const missingUrl = await runBootstrap([]);
 assert.equal(missingUrl.status, 1, "missing production URL should fail the bootstrap plan");
 const missingUrlOutput = parseOutput(missingUrl.stdout);
-assert.equal(missingUrlOutput.steps?.find((step) => step.name === "vercel-preflight")?.status, "skipped");
 assert.equal(missingUrlOutput.steps?.find((step) => step.name === "mvp-check")?.status, "skipped");
 
 const strictDb = await runBootstrap(["--url", "https://miniprogram-radar.example.com", "--expect-database"]);
@@ -177,9 +163,9 @@ const strictMvpConfigured = await runBootstrap(["https://miniprogram-radar.examp
   CRON_SECRET: "test-cron-secret",
   ADMIN_TOKEN: "test-admin-token",
   GITHUB_TOKEN: "test-github-token",
-  BLOB_READ_WRITE_TOKEN: "test-blob-token",
-  KV_REST_API_URL: "https://example.invalid",
-  KV_REST_API_TOKEN: "test-redis-token"
+  EDGEONE_BLOB_STORE: "test-blob-store",
+  UPSTASH_REDIS_REST_URL: "https://example.invalid",
+  UPSTASH_REDIS_REST_TOKEN: "test-redis-token"
 });
 assert.equal(strictMvpConfigured.status, 0, strictMvpConfigured.stderr);
 const strictMvpConfiguredOutput = parseOutput(strictMvpConfigured.stdout);
@@ -201,72 +187,14 @@ assert.equal(strictSiteUrlConfigured.status, 0, strictSiteUrlConfigured.stderr);
 const strictSiteUrlConfiguredOutput = parseOutput(strictSiteUrlConfigured.stdout);
 assert.deepEqual(strictSiteUrlConfiguredOutput.blockingIssues, [], "strict site URL should pass when SITE_URL is configured");
 
-const strictVercelDeploy = await runBootstrap(["https://miniprogram-radar.example.com", "--expect-vercel-deploy"]);
-assert.equal(strictVercelDeploy.status, 1, "strict Vercel deploy expectation should fail without Vercel token and project link");
-const strictVercelDeployOutput = parseOutput(strictVercelDeploy.stdout);
-assert.equal(strictVercelDeployOutput.expectations?.vercelDeploy, true, "--expect-vercel-deploy should enable strict Vercel deploy mode");
-assert.ok(
-  strictVercelDeployOutput.blockingIssues?.some((issue) => issue.includes("VERCEL_TOKEN")),
-  "strict Vercel deploy should report missing token"
-);
-assert.ok(
-  strictVercelDeployOutput.blockingIssues?.some((issue) => issue.includes("Vercel project link")),
-  "strict Vercel deploy should report missing project link"
-);
-
-const strictVercelDeployConfigured = await runBootstrap(["https://miniprogram-radar.example.com", "expect-vercel-deploy"], {
-  VERCEL_TOKEN: "test-vercel-token",
-  VERCEL_PROJECT_ID: "prj_test",
-  VERCEL_ORG_ID: "team_test",
-  SITE_URL: "https://miniprogram-radar.example.com"
-});
-assert.equal(strictVercelDeployConfigured.status, 0, strictVercelDeployConfigured.stderr);
-const strictVercelDeployConfiguredOutput = parseOutput(strictVercelDeployConfigured.stdout);
-assert.deepEqual(strictVercelDeployConfiguredOutput.blockingIssues, [], "strict Vercel deploy should pass when token and project link are configured");
-
-const repoLinkDir = mkdtempSync(join(tmpdir(), "vercel-bootstrap-link-"));
-try {
-  writeFileSync(
-    join(repoLinkDir, "repo.json"),
-    JSON.stringify({
-      projects: [
-        {
-          id: "prj_test",
-          orgId: "team_test",
-          directory: "."
-        }
-      ]
-    })
-  );
-  const strictVercelDeployRepoLinked = await runBootstrap(["https://miniprogram-radar.example.com", "expect-vercel-deploy"], {
-    VERCEL_TOKEN: "test-vercel-token",
-    VERCEL_LINK_DIR: repoLinkDir,
-    SITE_URL: "https://miniprogram-radar.example.com"
-  });
-  assert.equal(strictVercelDeployRepoLinked.status, 0, strictVercelDeployRepoLinked.stderr);
-  const strictVercelDeployRepoLinkedOutput = parseOutput(strictVercelDeployRepoLinked.stdout);
-  assert.deepEqual(strictVercelDeployRepoLinkedOutput.blockingIssues, [], "strict Vercel deploy should pass with Vercel CLI repo.json link");
-} finally {
-  rmSync(repoLinkDir, { recursive: true, force: true });
-}
-
-const executeStopsAfterPreflightFailure = await runBootstrap(["https://miniprogram-radar.example.com", "execute", "expect-vercel-deploy"]);
-assert.equal(executeStopsAfterPreflightFailure.status, 1, "execute mode should fail when strict Vercel preflight fails");
-const executeStopsAfterPreflightFailureOutput = parseOutput(executeStopsAfterPreflightFailure.stdout);
-assert.equal(executeStopsAfterPreflightFailureOutput.mode, "execute");
-assert.equal(executeStopsAfterPreflightFailureOutput.steps?.find((step) => step.name === "vercel-preflight")?.status, "fail");
-assert.equal(executeStopsAfterPreflightFailureOutput.steps?.find((step) => step.name === "mvp-check")?.status, "skipped");
-assert.equal(executeStopsAfterPreflightFailureOutput.steps?.find((step) => step.name === "deployment-verify")?.status, "skipped");
-
 console.log(
   JSON.stringify(
     {
       checkedAt: new Date().toISOString(),
-      cases: 17,
+      cases: 12,
       assertions: [
         "production bootstrap plan with URL",
         "missing production URL failure",
-        "vercel preflight step",
         "strict database expectation failure",
         "cron secret dry-run detection",
         "admin token readiness detection",
@@ -277,11 +205,7 @@ console.log(
         "strict MVP token flag",
         "strict MVP required env preflight",
         "strict site URL expectation",
-        "strict site URL configured preflight",
-        "strict Vercel deploy expectation",
-        "strict Vercel deploy configured preflight",
-        "strict Vercel deploy repo.json preflight",
-        "execute mode stops after failed preflight"
+        "strict site URL configured preflight"
       ]
     },
     null,

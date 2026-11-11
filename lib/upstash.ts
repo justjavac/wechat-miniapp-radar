@@ -8,11 +8,6 @@ export const UPSTASH_REDIS_ENV_PAIRS = [
     label: "Upstash Redis REST",
     url: "UPSTASH_REDIS_REST_URL",
     token: "UPSTASH_REDIS_REST_TOKEN"
-  },
-  {
-    label: "Vercel KV REST",
-    url: "KV_REST_API_URL",
-    token: "KV_REST_API_TOKEN"
   }
 ] as const;
 

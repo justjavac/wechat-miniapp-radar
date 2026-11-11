@@ -17,7 +17,6 @@ type MvpCheckOutput = {
 
 const envKeys = [
   "DEPLOYMENT_BASE_URL",
-  "VERCEL_PROJECT_PRODUCTION_URL",
   "SITE_URL",
   "NEXT_PUBLIC_SITE_URL",
   "EXPECT_MVP",
@@ -27,11 +26,9 @@ const envKeys = [
   "CRON_SECRET",
   "ADMIN_TOKEN",
   "GITHUB_TOKEN",
-  "BLOB_READ_WRITE_TOKEN",
+  "EDGEONE_BLOB_STORE",
   "UPSTASH_REDIS_REST_URL",
   "UPSTASH_REDIS_REST_TOKEN",
-  "KV_REST_API_URL",
-  "KV_REST_API_TOKEN",
   "OPENAI_API_KEY",
   "OPENAI_API_URL",
   "OPENAI_MODEL",
@@ -93,9 +90,8 @@ assert.equal(baselineOutput.checks?.find((check) => check.name === "local:compar
 assert.equal(baselineOutput.checks?.find((check) => check.name === "local:compare-api")?.status, "pass");
 assert.equal(baselineOutput.checks?.find((check) => check.name === "local:cron-enrich-api")?.status, "pass");
 assert.equal(baselineOutput.checks?.find((check) => check.name === "local:sitemap-route")?.status, "pass");
-assert.equal(baselineOutput.checks?.find((check) => check.name === "local:vercel-production-workflow")?.status, "pass");
+assert.equal(baselineOutput.checks?.find((check) => check.name === "local:scheduled-jobs-workflow")?.status, "pass");
 assert.equal(baselineOutput.checks?.find((check) => check.name === "script:site-url:test")?.status, "pass");
-assert.equal(baselineOutput.checks?.find((check) => check.name === "script:vercel:preflight")?.status, "pass");
 assert.equal(baselineOutput.checks?.find((check) => check.name === "script:production:bootstrap")?.status, "pass");
 assert.equal(baselineOutput.checks?.find((check) => check.name === "external:production-url")?.status, "warn");
 assert.equal(baselineOutput.checks?.find((check) => check.name === "env:SITE_URL")?.status, "warn");
@@ -139,22 +135,22 @@ assert.equal(strictSiteUrlConfigured.status, 0, strictSiteUrlConfigured.stderr);
 const strictSiteUrlConfiguredOutput = parseOutput(strictSiteUrlConfigured.stdout);
 assert.equal(strictSiteUrlConfiguredOutput.checks?.find((check) => check.name === "env:SITE_URL")?.status, "pass");
 
-const strictMvpWithVercelKv = await runMvpCheck(
+const strictMvpWithRedis = await runMvpCheck(
   {
     EXPECT_MVP: "1",
     DATABASE_URL: "postgres://example.invalid/miniprogram_radar",
     CRON_SECRET: "test-cron-secret",
     ADMIN_TOKEN: "test-admin-token",
     GITHUB_TOKEN: "test-github-token",
-    BLOB_READ_WRITE_TOKEN: "test-blob-token",
-    KV_REST_API_URL: "https://example.invalid",
-    KV_REST_API_TOKEN: "test-redis-token"
+    EDGEONE_BLOB_STORE: "test-blob-store",
+    UPSTASH_REDIS_REST_URL: "https://example.invalid",
+    UPSTASH_REDIS_REST_TOKEN: "test-redis-token"
   },
   ["https://miniprogram-radar.example.com"]
 );
-assert.equal(strictMvpWithVercelKv.status, 0, strictMvpWithVercelKv.stderr);
-const strictMvpWithVercelKvOutput = parseOutput(strictMvpWithVercelKv.stdout);
-assert.equal(strictMvpWithVercelKvOutput.checks?.find((check) => check.name === "env:UPSTASH_REDIS")?.status, "pass");
+assert.equal(strictMvpWithRedis.status, 0, strictMvpWithRedis.stderr);
+const strictMvpWithRedisOutput = parseOutput(strictMvpWithRedis.stdout);
+assert.equal(strictMvpWithRedisOutput.checks?.find((check) => check.name === "env:UPSTASH_REDIS")?.status, "pass");
 
 console.log(
   JSON.stringify(
@@ -171,7 +167,7 @@ console.log(
         "OpenRouter-compatible AI endpoint",
         "strict site URL expectation",
         "strict site URL configured",
-        "strict MVP accepts Vercel KV Redis env aliases"
+        "strict MVP accepts Redis env aliases"
       ]
     },
     null,

@@ -26,7 +26,7 @@ Options:
   --limit    Maximum rows to print. Default: 50.
   --format   md, json, or csv. Default: md.
   --out      Write output to a file.
-  --upload   Upload the export snapshot to Vercel Blob when BLOB_READ_WRITE_TOKEN is configured.`);
+  --upload   Upload the export snapshot to EdgeOne Blob when EDGEONE_BLOB_STORE is configured.`);
   process.exit(0);
 }
 
@@ -146,11 +146,11 @@ if (outArg) {
   await writeFile(outFile, renderedOutput, "utf8");
   console.log(`Resources ${format.toUpperCase()} export written to ${outFile}`);
   if (uploadRequested) {
-    console.log(payload.blobUrl ? `Resources Blob snapshot uploaded to ${payload.blobUrl}` : "Resources Blob snapshot skipped because BLOB_READ_WRITE_TOKEN is not configured.");
+    console.log(payload.blobUrl ? `Resources Blob snapshot uploaded to ${payload.blobUrl}` : "Resources Blob snapshot skipped because EDGEONE_BLOB_STORE is not configured.");
   }
 } else {
   if (uploadRequested && format !== "json") {
-    console.error(payload.blobUrl ? `Resources Blob snapshot uploaded to ${payload.blobUrl}` : "Resources Blob snapshot skipped because BLOB_READ_WRITE_TOKEN is not configured.");
+    console.error(payload.blobUrl ? `Resources Blob snapshot uploaded to ${payload.blobUrl}` : "Resources Blob snapshot skipped because EDGEONE_BLOB_STORE is not configured.");
   }
   process.stdout.write(renderedOutput);
 }

@@ -87,8 +87,8 @@ assert.equal(
   "ignored env files should keep a warning reminder"
 );
 
-const originalBlobToken = process.env.BLOB_READ_WRITE_TOKEN;
-delete process.env.BLOB_READ_WRITE_TOKEN;
+const originalBlobToken = process.env.EDGEONE_BLOB_STORE;
+delete process.env.EDGEONE_BLOB_STORE;
 try {
   const apiResponse = await doctorApi(
     new Request("https://example.com/api/doctor", {
@@ -124,12 +124,12 @@ try {
   assert.match(apiPayload.markdown ?? "", /小程序项目体检报告/, "doctor api should return markdown");
   assert.match(apiPayload.markdown ?? "", /## 总结/, "doctor api markdown should include summary");
   assert.equal(apiPayload.uploadRequested, true, "doctor api should echo upload intent");
-  assert.equal(apiPayload.blobUrl, null, "doctor api should skip Blob upload without BLOB_READ_WRITE_TOKEN");
+  assert.equal(apiPayload.blobUrl, null, "doctor api should skip Blob upload without EDGEONE_BLOB_STORE");
 } finally {
   if (originalBlobToken === undefined) {
-    delete process.env.BLOB_READ_WRITE_TOKEN;
+    delete process.env.EDGEONE_BLOB_STORE;
   } else {
-    process.env.BLOB_READ_WRITE_TOKEN = originalBlobToken;
+    process.env.EDGEONE_BLOB_STORE = originalBlobToken;
   }
 }
 

@@ -46,7 +46,7 @@ assert.ok(jsonPayload.resources.every((resource) => resource.id && resource.titl
 
 const originalEnv = {
   ADMIN_TOKEN: process.env.ADMIN_TOKEN,
-  BLOB_READ_WRITE_TOKEN: process.env.BLOB_READ_WRITE_TOKEN,
+  EDGEONE_BLOB_STORE: process.env.EDGEONE_BLOB_STORE,
   NODE_ENV: process.env.NODE_ENV
 };
 
@@ -60,7 +60,7 @@ function setEnv(name: keyof typeof originalEnv, value: string | undefined) {
 
 setEnv("NODE_ENV", "production");
 setEnv("ADMIN_TOKEN", "admin-secret");
-setEnv("BLOB_READ_WRITE_TOKEN", undefined);
+setEnv("EDGEONE_BLOB_STORE", undefined);
 try {
   const unauthorizedSnapshot = await request("/api/export/resources?format=json&type=framework&upload=1");
   assert.equal(unauthorizedSnapshot.status, 401, "JSON Blob snapshot should require admin authorization");
@@ -73,7 +73,7 @@ try {
   assert.equal(snapshotResponse.status, 200);
   const snapshotPayload = (await snapshotResponse.json()) as ExportJsonResponse;
   assert.equal(snapshotPayload.uploadRequested, true, "JSON export should echo snapshot intent");
-  assert.equal(snapshotPayload.blobUrl, null, "JSON export should skip Blob upload without BLOB_READ_WRITE_TOKEN");
+  assert.equal(snapshotPayload.blobUrl, null, "JSON export should skip Blob upload without EDGEONE_BLOB_STORE");
   assert.ok(snapshotPayload.total > 0, "JSON snapshot export should still include resources");
 
   const cookieSnapshotResponse = await request("/api/export/resources?format=json&type=framework&upload=1", {
@@ -84,7 +84,7 @@ try {
   assert.equal(cookieSnapshotResponse.status, 200, "JSON Blob snapshot should accept the admin session cookie");
 } finally {
   setEnv("ADMIN_TOKEN", originalEnv.ADMIN_TOKEN);
-  setEnv("BLOB_READ_WRITE_TOKEN", originalEnv.BLOB_READ_WRITE_TOKEN);
+  setEnv("EDGEONE_BLOB_STORE", originalEnv.EDGEONE_BLOB_STORE);
   setEnv("NODE_ENV", originalEnv.NODE_ENV);
 }
 
@@ -100,7 +100,7 @@ assert.ok(firstRow?.startsWith('"'), "CSV rows should be quoted");
 
 setEnv("NODE_ENV", "production");
 setEnv("ADMIN_TOKEN", "admin-secret");
-setEnv("BLOB_READ_WRITE_TOKEN", undefined);
+setEnv("EDGEONE_BLOB_STORE", undefined);
 try {
   const unauthorizedCsvSnapshot = await request("/api/export/resources?format=csv&q=taro&type=framework&upload=1");
   assert.equal(unauthorizedCsvSnapshot.status, 401, "CSV Blob snapshot should require admin authorization");
@@ -112,10 +112,10 @@ try {
   });
   assert.equal(csvSnapshotResponse.status, 200);
   assert.equal(csvSnapshotResponse.headers.get("x-blob-upload-requested"), "true", "CSV export should echo snapshot intent in headers");
-  assert.equal(csvSnapshotResponse.headers.get("x-blob-url"), null, "CSV export should skip Blob upload without BLOB_READ_WRITE_TOKEN");
+  assert.equal(csvSnapshotResponse.headers.get("x-blob-url"), null, "CSV export should skip Blob upload without EDGEONE_BLOB_STORE");
 } finally {
   setEnv("ADMIN_TOKEN", originalEnv.ADMIN_TOKEN);
-  setEnv("BLOB_READ_WRITE_TOKEN", originalEnv.BLOB_READ_WRITE_TOKEN);
+  setEnv("EDGEONE_BLOB_STORE", originalEnv.EDGEONE_BLOB_STORE);
   setEnv("NODE_ENV", originalEnv.NODE_ENV);
 }
 

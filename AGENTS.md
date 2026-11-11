@@ -55,7 +55,6 @@ npm run doctor:test
 npm run cli:test
 npm run deployment:verify -- https://miniapp.denohub.com
 npm run mvp:check
-npm run vercel:preflight -- https://miniapp.denohub.com
 npm run production:bootstrap -- https://miniapp.denohub.com
 ```
 
@@ -102,7 +101,6 @@ npx miniprogram-radar doctor ./my-weapp
 - 数据库验证：`EXPECT_DATABASE=1 npm run db:verify`
 - GitHub/Blob/Redis 验证：`EXPECT_GITHUB=1 EXPECT_BLOB=1 EXPECT_UPSTASH_REDIS=1 npm run integrations:verify`
 - 生产就绪 API：`GET /api/admin/readiness`，需 `ADMIN_TOKEN`。
-- 部署前置检查：`npm run vercel:preflight -- <production-url>`（脚本名沿用历史命名，实际校验 `edgeone.json` 与定时任务配置）
 - MVP 收口检查：`npm run mvp:check`；严格上线模式：`EXPECT_MVP=1 EXPECT_SITE_URL=1 EXPECT_OPENAI=1 npm run mvp:check -- <production-url>`
 - 生产初始化计划：`npm run production:bootstrap -- <production-url>`；执行迁移、导入和线上验证时追加 `execute`。
 - 生产验证：`VERIFY_CRON_SECRET=<CRON_SECRET> VERIFY_ADMIN_TOKEN=<ADMIN_TOKEN> npm run deployment:verify -- <production-url>`

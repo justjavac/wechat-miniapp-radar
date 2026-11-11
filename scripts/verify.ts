@@ -57,7 +57,7 @@ Options:
 
 function resolveUrl() {
   const urlArg = args.find((arg) => !arg.startsWith("-"));
-  return urlArg ?? process.env.DEPLOYMENT_BASE_URL ?? process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  return urlArg ?? process.env.DEPLOYMENT_BASE_URL;
 }
 
 function parseJsonPayload(stdout: string): ScriptPayload | null {
