@@ -24,7 +24,7 @@ export default async function WeeklyPage() {
           <p className="text-sm font-semibold text-primary">Weekly</p>
           <h1 className="mt-2 text-3xl font-black leading-tight sm:text-4xl">生态周报</h1>
           <p className="mt-3 text-base leading-7 text-muted-foreground">
-            周报基于资源库、评分结果和采集信号生成 Markdown 与 JSON 快照。Vercel Cron 可定期触发生成，并在配置数据库后写入 `weekly_reports`。
+            周报基于资源库、评分结果和采集信号生成 Markdown 与 JSON 快照。定时任务可定期触发生成，并在配置数据库后写入 `weekly_reports`。
           </p>
         </div>
         <Link className={buttonVariants({ variant: "secondary" })} href="/weekly.xml">

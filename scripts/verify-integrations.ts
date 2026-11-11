@@ -1,4 +1,4 @@
-import { del, put } from "@vercel/blob";
+import { getTextArtifact, putTextArtifact } from "@/lib/blob-storage";
 import { describeUpstashRedisEnvRequirement, hasUpstashRedis, upstashCommand } from "@/lib/upstash";
 
 type CheckStatus = "pass" | "warn" | "fail";
@@ -28,24 +28,35 @@ function missing(name: string, envNames: string[]) {
 }
 
 async function verifyBlob() {
-  if (!process.env.BLOB_READ_WRITE_TOKEN) {
-    missing("BLOB", ["BLOB_READ_WRITE_TOKEN"]);
+  const configured = Boolean(process.env.EDGEONE_PROJECT_ID && process.env.EDGEONE_API_TOKEN);
+
+  if (!configured) {
+    missing("BLOB", ["EDGEONE_PROJECT_ID", "EDGEONE_API_TOKEN"]);
     return;
   }
 
   if (process.env.VERIFY_BLOB_WRITE !== "1") {
-    record("integration:blob", "pass", "BLOB_READ_WRITE_TOKEN is configured. Set VERIFY_BLOB_WRITE=1 to run a write/delete probe.");
+    record(
+      "integration:blob",
+      "pass",
+      "EdgeOne Blob credentials are configured. Set VERIFY_BLOB_WRITE=1 to run a write probe."
+    );
     return;
   }
 
   const pathname = `integration-check/${Date.now()}-${Math.random().toString(36).slice(2)}.txt`;
-  const blob = await put(pathname, "miniprogram-radar integration check\n", {
-    access: "public",
-    contentType: "text/plain; charset=utf-8",
-    token: process.env.BLOB_READ_WRITE_TOKEN
-  });
-  await del(blob.url, { token: process.env.BLOB_READ_WRITE_TOKEN });
-  record("integration:blob", "pass", `Blob write/delete probe succeeded for ${pathname}.`);
+  const content = `miniprogram-radar integration check ${new Date().toISOString()}\n`;
+
+  await putTextArtifact(pathname, content, "text/plain; charset=utf-8");
+  const readBack = await getTextArtifact(pathname);
+
+  record(
+    "integration:blob",
+    readBack === content ? "pass" : "fail",
+    readBack === content
+      ? `Blob write/read probe succeeded for ${pathname}.`
+      : `Blob write/read probe returned unexpected content for ${pathname}.`
+  );
 }
 
 async function verifyRedis() {

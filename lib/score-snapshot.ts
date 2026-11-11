@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import radarScoresJson from "@/public/api/radar-scores.json";
 import type { ResourceStats } from "@/lib/resources";
 
 export interface ScoreSnapshot {
@@ -20,10 +20,8 @@ export interface ScoreSnapshot {
   }>;
 }
 
-export async function getScoreSnapshot(): Promise<ScoreSnapshot | null> {
-  try {
-    return JSON.parse(await readFile("public/api/radar-scores.json", "utf8")) as ScoreSnapshot;
-  } catch {
-    return null;
-  }
+const embeddedScoreSnapshot = radarScoresJson as unknown as ScoreSnapshot;
+
+export async function getScoreSnapshot(): Promise<ScoreSnapshot> {
+  return embeddedScoreSnapshot;
 }

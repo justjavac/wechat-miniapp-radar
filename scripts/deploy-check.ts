@@ -51,7 +51,7 @@ function checkRedisEnv(required: boolean) {
 
 const checks: CheckResult[] = [];
 
-checks.push(checkFile("vercel.json"));
+checks.push(checkFile("edgeone.json"));
 checks.push(checkFile(".env.example"));
 checks.push(checkFile("drizzle.config.ts"));
 checks.push(checkFile(".github/workflows/verify-vercel.yml", "ci:verify-vercel-workflow"));
@@ -97,15 +97,14 @@ const requiredEnvKeys = [
   "GITHUB_TOKEN",
   "CRON_SECRET",
   "ADMIN_TOKEN",
-  "BLOB_READ_WRITE_TOKEN",
+  "EDGEONE_PROJECT_ID",
+  "EDGEONE_API_TOKEN",
+  "EDGEONE_BLOB_STORE",
   "UPSTASH_REDIS_REST_URL",
   "UPSTASH_REDIS_REST_TOKEN",
   "KV_REST_API_URL",
   "KV_REST_API_TOKEN",
-  "OPERATION_LOG_RETENTION_DAYS",
-  "VERCEL_TOKEN",
-  "VERCEL_PROJECT_ID",
-  "VERCEL_ORG_ID"
+  "OPERATION_LOG_RETENTION_DAYS"
 ];
 const envExample = await readText(".env.example");
 const missingEnvExampleKeys = requiredEnvKeys.filter((key) => !envExample?.split(/\r?\n/).some((line) => line.startsWith(`${key}=`)));
@@ -467,10 +466,16 @@ checks.push(
   )
 );
 
-const vercel = await readJson<{ crons?: Array<{ path: string; schedule: string }> }>("vercel.json");
+const scheduledWorkflow = (await readText(".github/workflows/scheduled-jobs.yml")) ?? "";
 for (const cronPath of ["/api/cron/enrich", "/api/cron/weekly"]) {
-  const cron = vercel?.crons?.find((item) => item.path === cronPath);
-  checks.push(result(`cron:${cronPath}`, cron ? "pass" : "fail", cron ? `${cronPath} scheduled as ${cron.schedule}.` : `${cronPath} is missing.`));
+  const scheduled = scheduledWorkflow.includes(cronPath);
+  checks.push(
+    result(
+      `cron:${cronPath}`,
+      scheduled ? "pass" : "fail",
+      scheduled ? `${cronPath} is triggered by .github/workflows/scheduled-jobs.yml.` : `${cronPath} is missing from the scheduled workflow.`
+    )
+  );
 }
 
 const schema = await readText("db/schema.ts");
@@ -577,12 +582,9 @@ checks.push(checkEnv("OPENAI_API_KEY", false));
 checks.push(checkEnv("OPENAI_API_URL", false));
 checks.push(checkEnv("OPENAI_MODEL", false));
 checks.push(checkEnv("OPENAI_FALLBACK_MODEL", false));
-checks.push(checkEnv("BLOB_READ_WRITE_TOKEN", false));
+checks.push(checkEnv("EDGEONE_BLOB_STORE", false));
 checks.push(checkRedisEnv(false));
 checks.push(checkEnv("OPERATION_LOG_RETENTION_DAYS", false));
-checks.push(checkEnv("VERCEL_TOKEN", false));
-checks.push(checkEnv("VERCEL_PROJECT_ID", false));
-checks.push(checkEnv("VERCEL_ORG_ID", false));
 
 const summary = {
   pass: checks.filter((check) => check.status === "pass").length,

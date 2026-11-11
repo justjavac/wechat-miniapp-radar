@@ -1,7 +1,6 @@
-import { readFile } from "node:fs/promises";
 import { createDb } from "@/db/client";
 import { resourceAlternatives, resources as databaseResources } from "@/db/schema";
-import { parse } from "yaml";
+import catalogJson from "@/data/resources.json";
 
 export type Difficulty = "beginner" | "intermediate" | "advanced" | "unknown";
 export type ResourceType = "framework" | "ui" | "tooling" | "cloud" | "sdk" | "example" | "docs";
@@ -93,14 +92,10 @@ export interface AlternativeResource {
   url: string;
 }
 
-const DATA_FILE = "data/resources.yaml";
+const embeddedCatalog = catalogJson as unknown as Catalog;
 
-let cachedCatalog: Catalog | null = null;
-
-async function readCatalog(): Promise<Catalog> {
-  if (cachedCatalog) return cachedCatalog;
-  cachedCatalog = parse(await readFile(DATA_FILE, "utf8")) as Catalog;
-  return cachedCatalog;
+function readCatalog(): Catalog {
+  return embeddedCatalog;
 }
 
 function normalizeMetadata(value: unknown): Metadata {

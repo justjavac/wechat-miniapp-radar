@@ -2,6 +2,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { dirname } from "node:path";
 import {
   API_FILE,
+  CATALOG_JSON_FILE,
   DATA_FILE,
   type Catalog,
   type Resource,
@@ -61,8 +62,7 @@ function renderReadme(catalog: Catalog): string {
     "",
     "## 线上地址",
     "",
-    "- 主站：<https://miniapp.jjc.fun>",
-    "- Vercel：<https://wechat-miniapp-radar.vercel.app>",
+    "- 主站：<https://miniapp.denohub.com>",
     "",
     "## 适合谁",
     "",
@@ -130,6 +130,7 @@ async function writeIfChanged(file: string, content: string, check: boolean): Pr
 const check = process.argv.includes("--check");
 const catalog = await readData<Catalog>(DATA_FILE);
 const readmeChanged = await writeIfChanged("README.md", renderReadme(catalog), check);
+const catalogJsonChanged = await writeIfChanged(CATALOG_JSON_FILE, `${JSON.stringify(catalog, null, 2)}\n`, check);
 const api = {
   name: catalog.name,
   title: catalog.title,
@@ -150,4 +151,5 @@ if (check) {
 if (!check) {
   console.log(`Generated README.md${readmeChanged ? "" : " (unchanged)"}`);
   console.log(`Generated ${API_FILE}`);
+  console.log(`Generated ${CATALOG_JSON_FILE}${catalogJsonChanged ? "" : " (unchanged)"}`);
 }

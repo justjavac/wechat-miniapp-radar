@@ -31,14 +31,14 @@ export function buildProductionReadiness(health: HealthCheck): ProductionReadine
       title: "Preview 人工确认",
       status: "optional",
       detail: "PR Preview 需要人工查看页面、交互和移动端表现后再合并到 main。",
-      action: "确认 Preview 无误后，将 PR 标记 ready 并合并到 main，再等待 Vercel Production 部署。"
+      action: "确认 Preview 无误后，将 PR 标记 ready 并合并到 main，再等待生产环境部署完成。"
     }),
     item({
       id: "site-url",
       title: "站点 URL",
       status: health.integrations.siteUrl ? "ready" : "missing",
       detail: health.integrations.siteUrl ? "生产 canonical URL 已配置。" : "缺少 SITE_URL 或 NEXT_PUBLIC_SITE_URL。",
-      action: "在 Vercel Production 环境变量中配置站点根地址。",
+      action: "在生产环境变量中配置站点根地址（SITE_URL 或 NEXT_PUBLIC_SITE_URL）。",
       command: "npm run site-url:test"
     }),
     item({
@@ -82,15 +82,17 @@ export function buildProductionReadiness(health: HealthCheck): ProductionReadine
       title: "Redis 缓存和任务锁",
       status: health.integrations.upstashRedis ? "ready" : "missing",
       detail: health.integrations.upstashRedis ? "Upstash Redis 已配置。" : "缺少 Upstash Redis，Advisor 缓存和 Cron 分布式锁只能降级。",
-      action: "配置 UPSTASH_REDIS_REST_URL/UPSTASH_REDIS_REST_TOKEN，或使用 Vercel Marketplace 自动注入的 KV_REST_API_URL/KV_REST_API_TOKEN。",
+      action: "配置 UPSTASH_REDIS_REST_URL/UPSTASH_REDIS_REST_TOKEN；单实例部署时也可留空，由内存兜底承担限流与缓存。",
       command: "EXPECT_UPSTASH_REDIS=1 npm run integrations:verify"
     }),
     item({
       id: "blob",
       title: "Blob 快照存储",
       status: health.integrations.blob ? "ready" : "missing",
-      detail: health.integrations.blob ? "Vercel Blob 已配置。" : "缺少 BLOB_READ_WRITE_TOKEN，周报、Doctor 和导出快照不会上传。",
-      action: "创建 Vercel Blob Store 并配置 BLOB_READ_WRITE_TOKEN。",
+      detail: health.integrations.blob
+        ? "EdgeOne Blob 已配置。"
+        : "未检测到 EdgeOne Blob 存储命名空间，周报、Doctor 和导出快照将回退到本地文件。",
+      action: "在 EdgeOne 控制台为项目绑定 Blob 存储，或在环境变量中设置 EDGEONE_BLOB_STORE。",
       command: "EXPECT_BLOB=1 VERIFY_BLOB_WRITE=1 npm run integrations:verify"
     }),
     item({

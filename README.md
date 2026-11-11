@@ -4,8 +4,7 @@ AI 驱动的小程序生态选型与风险评估工具，把微信小程序开�
 
 ## 线上地址
 
-- 主站：<https://miniapp.jjc.fun>
-- Vercel：<https://wechat-miniapp-radar.vercel.app>
+- 主站：<https://miniapp.denohub.com>
 
 ## 适合谁
 
