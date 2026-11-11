@@ -88,9 +88,7 @@
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "@vercel/analytics": "^2.0.1",
-    "@vercel/blob": "^2.5.0",
-    "@vercel/speed-insights": "^2.0.0",
+    "@edgeone/pages-blob": "^0.0.19",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.45.2",

@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { eq } from "drizzle-orm";
 import { createDb } from "@/db/client";
 import { resourceScores, resourceSignals, resources as resourcesTable } from "@/db/schema";
+import { putTextArtifact } from "@/lib/blob-storage";
 import type { RadarResource, RadarStatus, RiskLevel, MaintainStatus } from "@/lib/resources";
 import { getResources } from "@/lib/resources";
 
@@ -281,7 +282,34 @@ export function scoreSignal(signal: CollectedSignal, fallback: RadarResource): S
 }
 
 async function persistEnrichment(candidates: RadarResource[], signals: CollectedSignal[], scores: ScoredSignal[]) {
-  if (!process.env.DATABASE_URL) return false;
+  let snapshotSaved = false;
+
+  try {
+    await putTextArtifact(
+      "enrich/latest.json",
+      `${JSON.stringify(
+        {
+          generatedAt: new Date().toISOString(),
+          total: candidates.length,
+          collected: signals.filter((signal) => signal.ok).length,
+          failed: signals.filter((signal) => !signal.ok).length,
+          signals,
+          scores
+        },
+        null,
+        2
+      )}\n`,
+      "application/json; charset=utf-8"
+    );
+    snapshotSaved = true;
+  } catch (error) {
+    console.warn(
+      `Failed to persist enrichment snapshot: ${error instanceof Error ? error.message : String(error)}`
+    );
+  }
+
+  if (!process.env.DATABASE_URL) return snapshotSaved;
+
   const db = createDb();
 
   for (const resource of candidates) {

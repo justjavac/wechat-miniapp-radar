@@ -1,13 +1,7 @@
 import assert from "node:assert/strict";
 import { absoluteUrl, getSiteUrl } from "@/lib/site-url";
 
-const envKeys = [
-  "NEXT_PUBLIC_SITE_URL",
-  "SITE_URL",
-  "DEPLOYMENT_BASE_URL",
-  "VERCEL_PROJECT_PRODUCTION_URL",
-  "VERCEL_URL"
-];
+const envKeys = ["NEXT_PUBLIC_SITE_URL", "SITE_URL", "DEPLOYMENT_BASE_URL"];
 
 const originalEnv = Object.fromEntries(envKeys.map((key) => [key, process.env[key]]));
 
@@ -24,13 +18,7 @@ function restoreEnv() {
 
 try {
   clearSiteUrlEnv();
-  assert.equal(getSiteUrl(), "https://miniprogram-radar.vercel.app");
-
-  process.env.VERCEL_URL = "preview-miniprogram-radar.vercel.app/";
-  assert.equal(getSiteUrl(), "https://preview-miniprogram-radar.vercel.app");
-
-  process.env.VERCEL_PROJECT_PRODUCTION_URL = "miniprogram-radar.example.com/";
-  assert.equal(getSiteUrl(), "https://miniprogram-radar.example.com");
+  assert.equal(getSiteUrl(), "https://miniapp.denohub.com");
 
   process.env.DEPLOYMENT_BASE_URL = "http://127.0.0.1:3100/";
   assert.equal(getSiteUrl(), "http://127.0.0.1:3100");
@@ -47,11 +35,9 @@ try {
     JSON.stringify(
       {
         checkedAt: new Date().toISOString(),
-        cases: 7,
+        cases: 5,
         assertions: [
           "default site url",
-          "vercel url fallback",
-          "production url fallback",
           "deployment url precedence",
           "site url precedence",
           "public site url precedence",

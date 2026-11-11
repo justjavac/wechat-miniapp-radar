@@ -1,11 +1,13 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { desc } from "drizzle-orm";
 import { createDb } from "@/db/client";
 import { weeklyReports } from "@/db/schema";
-import { uploadTextArtifact } from "@/lib/blob-storage";
+import { getTextArtifact, putTextArtifact } from "@/lib/blob-storage";
 import { getResources, getStats, type RadarResource, type ResourceStats } from "@/lib/resources";
 import { getScoreSnapshot, type ScoreSnapshot } from "@/lib/score-snapshot";
+import weeklyIndexJson from "@/public/api/weekly/index.json";
+import weeklyLatestJson from "@/public/api/weekly/latest.json";
 
 export type WeeklySignalKind = "adopt" | "risk" | "assessment";
 
@@ -282,7 +284,8 @@ export async function writeWeeklyFiles(report: WeeklyReport) {
 }
 
 export async function uploadWeeklyReport(report: WeeklyReport) {
-  return uploadTextArtifact(`weekly/${report.id}.md`, report.markdown, "text/markdown; charset=utf-8");
+  await putTextArtifact("weekly/latest.json", `${JSON.stringify(report, null, 2)}\n`, "application/json; charset=utf-8");
+  return putTextArtifact(`weekly/${report.id}.md`, report.markdown, "text/markdown; charset=utf-8");
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -371,16 +374,27 @@ async function readLatestDatabaseWeeklyReport(): Promise<WeeklyReport | null> {
   }
 }
 
-async function readLatestWeeklyFile() {
+async function readLatestWeeklyFile(): Promise<WeeklyReport> {
+  return weeklyLatestJson as unknown as WeeklyReport;
+}
+
+async function readLatestBlobWeeklyReport(): Promise<WeeklyReport | null> {
+  const text = await getTextArtifact("weekly/latest.json");
+  if (!text) return null;
+
   try {
-    return JSON.parse(await readFile("public/api/weekly/latest.json", "utf8")) as WeeklyReport;
+    return JSON.parse(text) as WeeklyReport;
   } catch {
     return null;
   }
 }
 
 export async function readLatestWeeklyReport() {
-  return (await readLatestDatabaseWeeklyReport()) ?? (await readLatestWeeklyFile());
+  return (
+    (await readLatestDatabaseWeeklyReport()) ??
+    (await readLatestBlobWeeklyReport()) ??
+    (await readLatestWeeklyFile())
+  );
 }
 
 function toWeeklyListItem(report: WeeklyReport): WeeklyListItem {
@@ -393,12 +407,8 @@ function toWeeklyListItem(report: WeeklyReport): WeeklyListItem {
 }
 
 async function readWeeklyIndexFile(): Promise<WeeklyListItem[]> {
-  try {
-    const payload = JSON.parse(await readFile("public/api/weekly/index.json", "utf8")) as { reports?: WeeklyListItem[] };
-    return Array.isArray(payload.reports) ? payload.reports : [];
-  } catch {
-    return [];
-  }
+  const payload = weeklyIndexJson as unknown as { reports?: WeeklyListItem[] };
+  return Array.isArray(payload.reports) ? payload.reports : [];
 }
 
 async function getDatabaseWeeklyReports(limit: number): Promise<WeeklyListItem[] | null> {

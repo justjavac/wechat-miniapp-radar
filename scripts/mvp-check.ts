@@ -34,6 +34,14 @@ async function readJson<T>(file: string): Promise<T | null> {
   }
 }
 
+async function readText(file: string): Promise<string | null> {
+  try {
+    return await readFile(file, "utf8");
+  } catch {
+    return null;
+  }
+}
+
 function checkFile(name: string, file: string) {
   if (existsSync(file)) pass(name, `${file} exists.`);
   else record(name, "fail", `${file} is missing.`);
@@ -107,7 +115,7 @@ const localFiles = [
   ["local:admin-resource-api", "app/api/admin/resources/[id]/route.ts"],
   ["local:sitemap-route", "app/sitemap.ts"],
   ["local:robots-route", "app/robots.ts"],
-  ["local:vercel-config", "vercel.json"],
+  ["local:edgeone-config", "edgeone.json"],
   ["local:vercel-production-workflow", ".github/workflows/verify-vercel.yml"],
   ["local:database-schema", "db/schema.ts"],
   ["local:cli", "bin/miniprogram-radar.mjs"]
@@ -164,10 +172,10 @@ record(
   `${weeklyCount} weekly reports in public/api/weekly/index.json.`
 );
 
-const vercel = await readJson<{ crons?: Array<{ path: string; schedule: string }> }>("vercel.json");
+const scheduledWorkflow = await readText(".github/workflows/scheduled-jobs.yml");
 for (const path of ["/api/cron/enrich", "/api/cron/weekly"]) {
-  const cron = vercel?.crons?.find((item) => item.path === path);
-  record(`vercel-cron:${path}`, cron ? "pass" : "fail", cron ? `${path} scheduled as ${cron.schedule}.` : `${path} is missing.`);
+  const scheduled = Boolean(scheduledWorkflow?.includes(path));
+  record(`cron:${path}`, scheduled ? "pass" : "fail", scheduled ? `${path} is triggered by the scheduled workflow.` : `${path} is missing from the scheduled workflow.`);
 }
 
 checkProductionUrl();

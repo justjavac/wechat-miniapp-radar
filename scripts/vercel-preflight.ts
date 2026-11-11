@@ -37,6 +37,14 @@ async function readJson<T>(file: string): Promise<T | null> {
   }
 }
 
+async function readText(file: string): Promise<string | null> {
+  try {
+    return await readFile(file, "utf8");
+  } catch {
+    return null;
+  }
+}
+
 function resolveProductionUrl() {
   return process.argv[2] ?? process.env.DEPLOYMENT_BASE_URL ?? process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
 }
@@ -108,16 +116,27 @@ async function checkProjectLink() {
 }
 
 async function checkVercelConfig() {
-  const vercel = await readJson<{ crons?: Array<{ path: string; schedule: string }> }>("vercel.json");
-  if (!vercel) {
-    record("vercel:config", "fail", "vercel.json is missing or invalid.");
+  const deployConfig = await readJson<{ schedules?: Array<{ path: string }>; cloudFunctions?: unknown }>("edgeone.json");
+  if (!deployConfig) {
+    record("deploy:config", "fail", "edgeone.json is missing or invalid.");
     return;
   }
 
-  pass("vercel:config", "vercel.json is readable.");
+  pass("deploy:config", "edgeone.json is readable.");
+
+  const scheduledWorkflow = await readText(".github/workflows/scheduled-jobs.yml");
   for (const path of ["/api/cron/enrich", "/api/cron/weekly"]) {
-    const cron = vercel.crons?.find((item) => item.path === path);
-    record(`vercel:cron:${path}`, cron ? "pass" : "fail", cron ? `${path} scheduled as ${cron.schedule}.` : `${path} cron is missing.`);
+    const declared = Boolean(deployConfig.schedules?.some((item) => item.path === path));
+    const workflow = Boolean(scheduledWorkflow?.includes(path));
+    record(
+      `deploy:cron:${path}`,
+      declared || workflow ? "pass" : "fail",
+      declared
+        ? `${path} is declared in edgeone.json schedules.`
+        : workflow
+          ? `${path} is triggered by .github/workflows/scheduled-jobs.yml.`
+          : `${path} is neither scheduled in edgeone.json nor in the scheduled workflow.`
+    );
   }
 }
 

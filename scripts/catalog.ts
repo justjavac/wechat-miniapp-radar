@@ -4,6 +4,7 @@ import { parse, stringify } from "yaml";
 
 export const DATA_FILE = "data/resources.yaml";
 export const API_FILE = "public/api/resources.json";
+export const CATALOG_JSON_FILE = "data/resources.json";
 
 export type Difficulty = "beginner" | "intermediate" | "advanced" | "unknown";
 

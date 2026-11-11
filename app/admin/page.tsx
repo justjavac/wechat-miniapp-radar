@@ -272,7 +272,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
               <StatusBadge enabled={health.integrations.adminToken} />
             </div>
             <div className="flex items-center justify-between gap-3 rounded-md border border-border px-3 py-2">
-              <span>Vercel Blob</span>
+              <span>EdgeOne Blob</span>
               <StatusBadge enabled={health.integrations.blob} />
             </div>
             <div className="flex items-center justify-between gap-3 rounded-md border border-border px-3 py-2 sm:col-span-2">
@@ -295,7 +295,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
               <div>
                 <h2 className="font-bold">生产就绪清单</h2>
                 <p className="mt-1 text-sm leading-6 text-muted-foreground">
-                  按 Vercel 上线顺序汇总缺失配置、验证命令和降级状态。真实 AI 保持可选，用户确认后再进入严格验收。
+                  按部署上线顺序汇总缺失配置、验证命令和降级状态。真实 AI 保持可选，用户确认后再进入严格验收。
                 </p>
               </div>
             </div>

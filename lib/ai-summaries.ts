@@ -1,7 +1,7 @@
-import { readFile } from "node:fs/promises";
 import { eq } from "drizzle-orm";
 import { createDb } from "@/db/client";
 import { resourceAiSummaries, resources as databaseResources } from "@/db/schema";
+import aiSummarySnapshotJson from "@/public/api/ai-summaries.json";
 import { validateGeneratedAiSummary } from "@/lib/ai-output-validation";
 import { getResource, getResources, type RadarResource } from "@/lib/resources";
 
@@ -149,12 +149,10 @@ export async function persistResourceAiSummaries(summaries: GeneratedAiSummary[]
   }
 }
 
-async function readAiSummarySnapshot() {
-  try {
-    return JSON.parse(await readFile("public/api/ai-summaries.json", "utf8")) as AiSummarySnapshot;
-  } catch {
-    return null;
-  }
+const embeddedAiSummarySnapshot = aiSummarySnapshotJson as unknown as AiSummarySnapshot;
+
+async function readAiSummarySnapshot(): Promise<AiSummarySnapshot> {
+  return embeddedAiSummarySnapshot;
 }
 
 async function getDatabaseAiSummary(resourceId: string): Promise<GeneratedAiSummary | null> {
