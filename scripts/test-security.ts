@@ -6,8 +6,6 @@ import { rateLimit } from "@/lib/rate-limit";
 const originalEnv = {
   ADMIN_TOKEN: process.env.ADMIN_TOKEN,
   CRON_SECRET: process.env.CRON_SECRET,
-  KV_REST_API_TOKEN: process.env.KV_REST_API_TOKEN,
-  KV_REST_API_URL: process.env.KV_REST_API_URL,
   NODE_ENV: process.env.NODE_ENV,
   UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
   UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL
@@ -30,8 +28,6 @@ function restoreEnv() {
 try {
   delete process.env.UPSTASH_REDIS_REST_TOKEN;
   delete process.env.UPSTASH_REDIS_REST_URL;
-  delete process.env.KV_REST_API_TOKEN;
-  delete process.env.KV_REST_API_URL;
 
   process.env.CRON_SECRET = "cron-secret";
   setEnv("NODE_ENV", "production");
@@ -51,7 +47,7 @@ try {
   assert.equal(
     isCronAuthorized(
       new Request("https://example.com/api/cron/enrich", {
-        headers: { "x-vercel-cron": "1" }
+        headers: { "x-edgeone-cron": "1" }
       })
     ),
     false

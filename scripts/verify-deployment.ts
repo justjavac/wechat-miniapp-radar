@@ -128,7 +128,7 @@ const rawBaseUrl = process.argv[2] ?? process.env.DEPLOYMENT_BASE_URL ?? process
 
 if (!rawBaseUrl) {
   console.error("DEPLOYMENT_BASE_URL or an explicit URL argument is required.");
-  console.error("Example: npm run deployment:verify -- https://your-project.vercel.app");
+  console.error("Example: npm run deployment:verify -- https://miniapp.denohub.com");
   process.exit(1);
 }
 

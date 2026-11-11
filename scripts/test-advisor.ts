@@ -12,8 +12,6 @@ const originalEnv = {
   OPENAI_API_URL: process.env.OPENAI_API_URL,
   OPENAI_MODEL: process.env.OPENAI_MODEL,
   OPENAI_FALLBACK_MODEL: process.env.OPENAI_FALLBACK_MODEL,
-  KV_REST_API_TOKEN: process.env.KV_REST_API_TOKEN,
-  KV_REST_API_URL: process.env.KV_REST_API_URL,
   UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
   UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL
 };
@@ -64,8 +62,6 @@ try {
   setEnv("OPENAI_FALLBACK_MODEL", undefined);
   setEnv("UPSTASH_REDIS_REST_TOKEN", undefined);
   setEnv("UPSTASH_REDIS_REST_URL", undefined);
-  setEnv("KV_REST_API_TOKEN", undefined);
-  setEnv("KV_REST_API_URL", undefined);
 
   const resources = await getResources();
   const resourceIds = new Set(resources.map((resource) => resource.id));
@@ -332,8 +328,6 @@ try {
   setEnv("OPENAI_API_URL", originalEnv.OPENAI_API_URL);
   setEnv("OPENAI_MODEL", originalEnv.OPENAI_MODEL);
   setEnv("OPENAI_FALLBACK_MODEL", originalEnv.OPENAI_FALLBACK_MODEL);
-  setEnv("KV_REST_API_TOKEN", originalEnv.KV_REST_API_TOKEN);
-  setEnv("KV_REST_API_URL", originalEnv.KV_REST_API_URL);
   setEnv("UPSTASH_REDIS_REST_TOKEN", originalEnv.UPSTASH_REDIS_REST_TOKEN);
   setEnv("UPSTASH_REDIS_REST_URL", originalEnv.UPSTASH_REDIS_REST_URL);
 }

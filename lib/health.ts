@@ -135,7 +135,7 @@ export async function getHealthCheck(): Promise<HealthCheck> {
       github: Boolean(process.env.GITHUB_TOKEN),
       cronSecret: Boolean(process.env.CRON_SECRET),
       adminToken: Boolean(process.env.ADMIN_TOKEN),
-      blob: Boolean(process.env.EDGEONE_BLOB_STORE || process.env.EDGEONE_PROJECT_ID || process.env.BLOB_READ_WRITE_TOKEN),
+      blob: Boolean(process.env.EDGEONE_BLOB_STORE || process.env.EDGEONE_PROJECT_ID),
       upstashRedis: hasUpstashRedis(),
       siteUrl: Boolean(process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL)
     }

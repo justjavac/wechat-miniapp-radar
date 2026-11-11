@@ -3,11 +3,9 @@ import { GET as enrichCron } from "@/app/api/cron/enrich/route";
 import { GET as weeklyCron } from "@/app/api/cron/weekly/route";
 
 const originalEnv = {
-  BLOB_READ_WRITE_TOKEN: process.env.BLOB_READ_WRITE_TOKEN,
+  EDGEONE_BLOB_STORE: process.env.EDGEONE_BLOB_STORE,
   CRON_SECRET: process.env.CRON_SECRET,
   DATABASE_URL: process.env.DATABASE_URL,
-  KV_REST_API_TOKEN: process.env.KV_REST_API_TOKEN,
-  KV_REST_API_URL: process.env.KV_REST_API_URL,
   NODE_ENV: process.env.NODE_ENV,
   UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
   UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL
@@ -26,9 +24,7 @@ try {
   setEnv("NODE_ENV", "production");
   setEnv("CRON_SECRET", "cron-secret");
   setEnv("DATABASE_URL", undefined);
-  setEnv("BLOB_READ_WRITE_TOKEN", undefined);
-  setEnv("KV_REST_API_TOKEN", undefined);
-  setEnv("KV_REST_API_URL", undefined);
+  setEnv("EDGEONE_BLOB_STORE", undefined);
   setEnv("UPSTASH_REDIS_REST_TOKEN", undefined);
   setEnv("UPSTASH_REDIS_REST_URL", undefined);
 
@@ -61,7 +57,7 @@ try {
   assert.ok(payload.weekly?.markdown?.includes("/resources/"), "weekly markdown should link back to resources");
 
   setEnv("DATABASE_URL", "postgres://invalid:invalid@127.0.0.1:1/invalid");
-  setEnv("BLOB_READ_WRITE_TOKEN", "test-blob-token");
+  setEnv("EDGEONE_BLOB_STORE", "test-blob-token");
   const originalWarn = console.warn;
   console.warn = () => {};
   let authorizedWeeklyDryRun: Response;
@@ -112,8 +108,8 @@ try {
   assert.ok((enrichDryRunPayload.result?.attempted ?? 0) > 0, "enrich dry-run should attempt at least one resource");
   assert.equal(enrichDryRunPayload.result?.persisted, false, "enrich dry-run should not persist signals");
 
-  setEnv("KV_REST_API_TOKEN", "test-redis-token");
-  setEnv("KV_REST_API_URL", "https://upstash.example.test");
+  setEnv("UPSTASH_REDIS_REST_TOKEN", "test-redis-token");
+  setEnv("UPSTASH_REDIS_REST_URL", "https://upstash.example.test");
   globalThis.fetch = (async () =>
     new Response(JSON.stringify({ result: null }), {
       status: 200,
@@ -160,11 +156,9 @@ try {
     )
   );
 } finally {
-  setEnv("BLOB_READ_WRITE_TOKEN", originalEnv.BLOB_READ_WRITE_TOKEN);
+  setEnv("EDGEONE_BLOB_STORE", originalEnv.EDGEONE_BLOB_STORE);
   setEnv("CRON_SECRET", originalEnv.CRON_SECRET);
   setEnv("DATABASE_URL", originalEnv.DATABASE_URL);
-  setEnv("KV_REST_API_TOKEN", originalEnv.KV_REST_API_TOKEN);
-  setEnv("KV_REST_API_URL", originalEnv.KV_REST_API_URL);
   setEnv("NODE_ENV", originalEnv.NODE_ENV);
   setEnv("UPSTASH_REDIS_REST_TOKEN", originalEnv.UPSTASH_REDIS_REST_TOKEN);
   setEnv("UPSTASH_REDIS_REST_URL", originalEnv.UPSTASH_REDIS_REST_URL);
