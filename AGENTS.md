@@ -2,6 +2,10 @@
 
 本文件面向开发者和代码代理。README 面向最终用户，资源列表由 `data/resources.yaml` 生成，不要在 README 里维护开发、部署和运维细节。
 
+## 部署平台
+
+生产运行在腾讯云 EdgeOne Makers（serverless，无持久磁盘）。数据要么在构建时内联进产物，要么写入 EdgeOne Blob；不要新增任何依赖本地磁盘读写的运行时逻辑。
+
 ## 项目结构
 
 - `app/`：Next.js App Router 页面和 API route。
@@ -10,8 +14,10 @@
 - `db/`：Drizzle schema 与数据库客户端。
 - `scripts/`：数据生成、验证、导入、运维和测试脚本。
 - `data/resources.yaml`：资源数据源。
+- `data/resources.json`：由 `npm run generate` 生成的构建期数据，运行时直接 `import`，必须提交。
 - `public/api/resources.json`：由 `npm run generate` 生成的静态资源快照。
-- `public/api/ai-summaries.json`、`public/api/radar-scores.json`、`public/api/weekly/*`：生成快照。
+- `edgeone.json`：EdgeOne Makers 构建与部署配置。
+- `public/api/ai-summaries.json`、`public/api/radar-scores.json`、`public/api/weekly/*`：生成快照，同样在构建时内联。
 - `docs/`：本地实施文档，仅保留在本地，不纳入版本库。
 
 ## 本地运行
@@ -47,10 +53,10 @@ npm run db:import:test
 npm run advisor:test
 npm run doctor:test
 npm run cli:test
-npm run deployment:verify -- https://your-project.vercel.app
+npm run deployment:verify -- https://miniapp.denohub.com
 npm run mvp:check
-npm run vercel:preflight -- https://your-project.vercel.app
-npm run production:bootstrap -- https://your-project.vercel.app
+npm run vercel:preflight -- https://miniapp.denohub.com
+npm run production:bootstrap -- https://miniapp.denohub.com
 ```
 
 CLI examples:
@@ -67,15 +73,16 @@ npx miniprogram-radar doctor ./my-weapp
 ## 生成文件
 
 - 修改 `data/resources.yaml` 后运行 `npm run generate`。
-- README 和 `public/api/resources.json` 都由 `scripts/generate.ts` 生成。
+- README、`data/resources.json` 和 `public/api/resources.json` 都由 `scripts/generate.ts` 生成。
 - CI 会运行 `npm run generate:check`，生成源和生成产物必须一致。
+- `data/resources.json` 是线上构建的必需输入，忘记提交会导致 EdgeOne 构建失败。
 
 ## 环境变量
 
 参考 `.env.example`。
 
-- `DATABASE_URL`：可选，配置后资源导入、采集信号、Advisor 会话和周报会写入 Postgres。
-- `SITE_URL` / `NEXT_PUBLIC_SITE_URL`：可选，配置生产站点根地址，用于 canonical sitemap 和 robots 地址。
+- `DATABASE_URL`：可选，配置后资源导入、采集信号、Advisor 会话和周报会写入 Postgres。不配置时全部走文件与 Blob。
+- `SITE_URL` / `NEXT_PUBLIC_SITE_URL`：建议配置，生产站点根地址，用于 canonical sitemap 和 robots 地址。
 - `CRON_SECRET`：建议配置，用于保护 `/api/cron/*`。
 - `ADMIN_TOKEN`：建议配置，用于保护 `/admin` 和 `/api/admin/*`。
 - `GITHUB_TOKEN`：可选，提高 GitHub 采集额度。
@@ -83,10 +90,11 @@ npx miniprogram-radar doctor ./my-weapp
 - `OPENAI_API_URL`：可选，OpenAI-compatible endpoint；OpenRouter 使用 `https://openrouter.ai/api/v1`。
 - `OPENAI_MODEL`：可选，主模型，默认 `openai/gpt-oss-20b:free`。
 - `OPENAI_FALLBACK_MODEL`：可选，备用模型，默认 `nvidia/nemotron-nano-9b-v2:free`。
-- `BLOB_READ_WRITE_TOKEN`：可选，用于上传周报快照、资源导出快照和 Doctor 报告。
-- `UPSTASH_REDIS_REST_URL`、`UPSTASH_REDIS_REST_TOKEN` 或 Vercel Marketplace 注入的 `KV_REST_API_URL`、`KV_REST_API_TOKEN`：可选，用于 Advisor 缓存和分布式限流；未配置时使用内存兜底。
+- `EDGEONE_BLOB_STORE`：可选，EdgeOne Blob 命名空间名，默认 `miniprogram-radar`。
+- `EDGEONE_PROJECT_ID`、`EDGEONE_API_TOKEN`：可选，仅本地脚本或外部服务直接访问 Blob 时需要。
+- `BLOB_BACKEND`：可选，设为 `local` 时把快照写到本地 `public/`，用于调试。
+- `UPSTASH_REDIS_REST_URL`、`UPSTASH_REDIS_REST_TOKEN`：可选，用于 Advisor 缓存和分布式限流；单实例部署可留空，使用内存兜底。
 - `OPERATION_LOG_RETENTION_DAYS`：可选，运行日志保留天数，默认 30 天。
-- `VERCEL_TOKEN`、`VERCEL_PROJECT_ID`、`VERCEL_ORG_ID`：可选，用于非交互 Vercel CLI 部署或 preflight。
 
 ## 部署检查
 
@@ -94,7 +102,7 @@ npx miniprogram-radar doctor ./my-weapp
 - 数据库验证：`EXPECT_DATABASE=1 npm run db:verify`
 - GitHub/Blob/Redis 验证：`EXPECT_GITHUB=1 EXPECT_BLOB=1 EXPECT_UPSTASH_REDIS=1 npm run integrations:verify`
 - 生产就绪 API：`GET /api/admin/readiness`，需 `ADMIN_TOKEN`。
-- Vercel 部署前置检查：`npm run vercel:preflight -- <production-url>`
+- 部署前置检查：`npm run vercel:preflight -- <production-url>`（脚本名沿用历史命名，实际校验 `edgeone.json` 与定时任务配置）
 - MVP 收口检查：`npm run mvp:check`；严格上线模式：`EXPECT_MVP=1 EXPECT_SITE_URL=1 EXPECT_OPENAI=1 npm run mvp:check -- <production-url>`
 - 生产初始化计划：`npm run production:bootstrap -- <production-url>`；执行迁移、导入和线上验证时追加 `execute`。
 - 生产验证：`VERIFY_CRON_SECRET=<CRON_SECRET> VERIFY_ADMIN_TOKEN=<ADMIN_TOKEN> npm run deployment:verify -- <production-url>`
@@ -103,6 +111,7 @@ npx miniprogram-radar doctor ./my-weapp
 
 - 不直接推送到 `main`。
 - 按逻辑分步提交：文档、代码、清理、测试规则等不同类型变更尽量拆成独立 commit。
-- 功能和修复使用独立分支，创建 PR 后通过 Vercel Preview 验证。
-- Preview 和 GitHub checks 通过后再合并。
-- 合并后等待 Vercel Production 部署完成，并确认 `Verify Vercel Production` workflow 通过。
+- 功能和修复使用独立分支，创建 PR 后通过 EdgeOne 预览部署验证。
+- 预览和 GitHub checks 通过后再合并。
+- 合并后等待 EdgeOne 生产部署完成，手动触发一次 `/api/health` 和 `/api/cron/weekly?dryRun=1` 验证线上状态。
+- 定时任务由 `.github/workflows/scheduled-jobs.yml` 触发，需要仓库 Secrets 中配置 `SITE_URL` 和 `CRON_SECRET`。
